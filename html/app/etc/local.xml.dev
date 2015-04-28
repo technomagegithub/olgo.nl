@@ -28,10 +28,10 @@
 <config>
     <global>
         <install>
-            <date><![CDATA[Fri, 01 May 2015 09:45:04 +0000]]></date>
+            <date><![CDATA[Sun, 26 Apr 2015 15:08:03 +0000]]></date>
         </install>
         <crypt>
-            <key><![CDATA[olgo]]></key>
+            <key><![CDATA[9a6032b5bd6800cb5e463f5d4c0661f5]]></key>
         </crypt>
         <disable_local_modules>false</disable_local_modules>
         <resources>
@@ -41,9 +41,9 @@
             <default_setup>
                 <connection>
                     <host><![CDATA[localhost]]></host>
-                    <username><![CDATA[root]]></username>
-                    <password><![CDATA[Sun91d01]]></password>
-                    <dbname><![CDATA[magento]]></dbname>
+                    <username><![CDATA[webshop]]></username>
+                    <password><![CDATA[123456]]></password>
+                    <dbname><![CDATA[olgoshop]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>
