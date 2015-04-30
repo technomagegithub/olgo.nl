@@ -617,6 +617,7 @@ h6, .h6 {
 
 .availability.in-stock {
   color: #11b400;
+  display: none;
 }
 
 .availability.available-soon,
@@ -669,18 +670,15 @@ h6, .h6 {
 .block-title strong {
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
   line-height: 1.4;
   text-rendering: optimizeSpeed;
   text-transform: uppercase;
-  color: #3399cc;
   margin-bottom: 0;
   text-transform: uppercase;
-  font-weight: 600;
 }
 .block-title small {
   font-size: 100%;
@@ -917,7 +915,7 @@ body:not(.customer-account) .block:first-child .block-title {
 .cart-table .product-cart-actions .button,
 #co-shipping-method-form .buttons-set .button,
 .footer .button {
-  background: #3399cc;
+  background: #ef8200;
   display: inline-block;
   padding: 7px 15px;
   border: 0;
@@ -935,21 +933,21 @@ body:not(.customer-account) .block:first-child .block-title {
 .cart-table .product-cart-actions .button:hover,
 #co-shipping-method-form .buttons-set .button:hover,
 .footer .button:hover {
-  background: #2e8ab8;
+  background: #f2af32;
   cursor: pointer;
 }
 .button:active,
 .cart-table .product-cart-actions .button:active,
 #co-shipping-method-form .buttons-set .button:active,
 .footer .button:active {
-  background: #297aa3;
+  background: #f2af32;
   color: #FFFFFF;
 }
 .button:focus,
 .cart-table .product-cart-actions .button:focus,
 #co-shipping-method-form .buttons-set .button:focus,
 .footer .button:focus {
-  background-color: #297aa3;
+  background-color: #f2af32;
   outline: none;
   color: #FFFFFF;
 }
@@ -1295,6 +1293,8 @@ a.button:hover {
   max-width: 1260px;
   margin: 0 auto;
   padding: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .main-container:after,
 .footer-container:after {
@@ -1306,7 +1306,7 @@ a.button:hover {
 @media only screen and (min-width: 480px) {
   .main-container,
   .footer-container {
-    padding: 30px;
+    padding: 20px;
   }
 }
 .footer-container {
@@ -3268,17 +3268,17 @@ body {
 }
 
 .logo:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 @media only screen and (max-width: 771px) {
   .logo {
+  position: fixed;
     max-width: 300px;
-    min-height: 90px;
     margin-top: 0px;
   }
   .logo .small {
-    display: block;
+    display: none;
   }
   .logo .large {
     display: none;
@@ -3492,7 +3492,7 @@ a.skip-link {
   text-decoration: none;
   position: relative;
   display: block;
-  color: #636363;
+  /*color: #636363; */
   line-height: 30px;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 16px;
@@ -3673,10 +3673,10 @@ a.skip-link {
   #header-search {
     display: block;
     position: absolute;
-    top: 55px;
-    right: 0;
+    top: 0px;
     width: 25%;
-    height: 50px;
+    margin-left: 94px;
+    height: 30px;
     padding: 0;
   }
 }
@@ -3693,8 +3693,9 @@ a.skip-link {
 }
 
 #search {
+  margin-top: 2px;
   width: 100%;
-  height: 40px;
+  height: 28px;
   padding-right: 40px;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
@@ -4004,7 +4005,7 @@ a.skip-link {
   padding: 3px 0;
 }
 .footer .block-title strong {
-  font-weight: normal;
+  font-weight: 600;
 }
 .footer .block-title,
 .footer address {
@@ -4964,12 +4965,14 @@ p.product-name a:hover {
 }
 .product-view .product-shop .product-name .h1,
 .product-view .product-img-box .product-name h1 {
-  color: #3399cc;
+  color: #222;
+  color: #ef8200;
   margin-bottom: 10px;
   border: 0;
+  font-weight: bold;
 }
 .product-view .product-shop {
-  width: 50%;
+  width: 40%;
   float: right;
 }
 .product-view .product-shop .product-name {
@@ -4987,9 +4990,10 @@ p.product-name a:hover {
   width: 70%;
 }
 .product-view .product-shop .price-info {
-  float: right;
+  /*float: right;
   padding-left: 15px;
   text-align: right;
+  */
 }
 .product-view .product-shop .extra-info,
 .product-view .product-shop .price-info {
@@ -5008,6 +5012,7 @@ p.product-name a:hover {
 }
 .product-view .product-shop .price-box {
   margin-top: 0;
+  width: 300px;
 }
 .product-view .product-shop .price-box .old-price,
 .product-view .product-shop .price-box .special-price,
@@ -5018,7 +5023,8 @@ p.product-name a:hover {
 .product-view .product-shop .price-box .regular-price .price,
 .product-view .product-shop .price-box .special-price .price,
 .product-view .product-shop .price-box .full-product-price .price {
-  color: #3399cc;
+  /*color: #636363;*/
+  font-weight: 600;
   font-size: 24px;
 }
 .product-view .product-shop .price-box .special-price .price-label {
@@ -5054,7 +5060,7 @@ p.product-name a:hover {
 }
 .product-view .add-to-cart-wrapper,
 .product-view .block-related {
-  width: 50%;
+  width: 40%;
   float: right;
   clear: right;
 }
@@ -5095,7 +5101,7 @@ p.product-name a:hover {
   }
 }
 .product-img-box {
-  width: 50%;
+  width: 60%;
   float: left;
 }
 .product-img-box .product-name h1 {
@@ -5104,16 +5110,31 @@ p.product-name a:hover {
 .product-img-box .product-image {
   margin-bottom: 10px;
 }
+@media only screen and (min-width: 479px) {
+  .product-img-box .product-image {
+   min-height: 500px;
+  }
+}
+
 .product-img-box .product-image img {
   max-width: 100%;
-  max-height: 750px;
+  max-height: 500px;
   margin: 0px auto;
 }
 
 @media only screen and (max-width: 479px) {
+  .product-img-box .product-image {
+    margin-bottom: 5px;
+    min-height: 250px;
+  }
   .product-img-box .product-image img {
     max-height: 450px;
   }
+  .product-view .add-to-cart-buttons {
+    float: none;
+    width: 100%;
+  } 
+
 }
 .product-image-gallery {
   position: relative;
@@ -5199,7 +5220,7 @@ p.product-name a:hover {
 .product-view .add-to-cart {
   padding-bottom: 3px;
   margin-bottom: 10px;
-  border-bottom: 1px solid #cccccc;
+  /*border-bottom: 1px solid #cccccc;*/
 }
 .product-view .add-to-cart .qty-wrapper,
 .product-view .product-options-bottom .price-box,
@@ -5225,8 +5246,9 @@ p.product-name a:hover {
   height: 40px;
 }
 .product-view .add-to-cart-buttons {
-  float: left;
+  /*float: left;
   margin-right: 10px;
+  */
   max-width: 100%;
 }
 .product-view .add-to-cart-buttons .paypal-logo {

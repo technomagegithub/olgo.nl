@@ -101,16 +101,18 @@
                             <?php endif; ?>
                         <?php endif; ?>
                         <?php echo $this->getChildHtml('addto') ?>
-                        <?php echo $this->getChildHtml('sharing') ?>
                     </div>
                     <?php echo $this->getChildHtml('extra_buttons') ?>
                 <?php elseif (!$_product->isSaleable()): ?>
                     <div class="add-to-box">
                         <?php echo $this->getChildHtml('addto') ?>
-                        <?php echo $this->getChildHtml('sharing') ?>
                     </div>
                 <?php endif; ?>
+	        
+	    <?php echo $this->getChildHtml('sharing') ?>
             </div>
+            
+            
 
             <?php echo $this->getChildHtml('related_products') ?>
 
@@ -186,6 +188,6 @@
     </div>
 
     <?php echo $this->getChildHtml('upsell_products') ?>
-    <?php echo $this->getChildHtml('product_additional_data') ?>
+    <!--<?php echo $this->getChildHtml('product_additional_data') ?> -->
 
 </div>
