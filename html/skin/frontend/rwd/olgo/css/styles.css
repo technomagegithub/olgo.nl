@@ -26,6 +26,9 @@
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
+
+html, body {height: 100%;}
+
 /*
  * Corrects `block` display not defined in IE 8/9.
  */
@@ -34,6 +37,7 @@ aside,
 details,
 figcaption,
 figure,
+footer,
 footer,
 header,
 hgroup,
@@ -1175,8 +1179,8 @@ a.button:hover {
 .btn-remove,
 .btn-previous {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border: 1px solid #ededed;
   text-align: center;
   /* Hide text */
@@ -1194,8 +1198,8 @@ a.button:hover {
 .btn-remove:after {
   content: 'X';
   color: #3399cc;
-  height: 20px;
-  line-height: 20px;
+  height: 25px;
+  line-height: 25px;
   width: 100%;
   font-size: 10px;
   font-family: Arial, "Helvetica Neue", Verdana, Arial, sans-serif;
@@ -1255,7 +1259,7 @@ a.button:hover {
 #compare-items .btn-remove,
 #compare-items .btn-previous {
   float: right;
-  margin-left: 6px;
+  margin-left: 2px;
 }
 
 /* -------------------------------------------- *
@@ -1287,7 +1291,15 @@ a.button:hover {
 /* -------------------------------------------- *
  * Container
  */
-.main-container,
+
+@media only screen and (min-width: 770px) {
+  .main-container {
+    height: auto !important;
+    height: 100%;
+    min-height: 400px;
+  }
+}
+.main-container, footer, 
 .footer-container {
   position: relative;
   max-width: 1260px;
@@ -1302,15 +1314,21 @@ a.button:hover {
   display: table;
   clear: both;
 }
+footer {
+  max-width: none;
 
+
+}
 @media only screen and (min-width: 480px) {
   .main-container,
   .footer-container {
-    padding: 20px;
+    padding: 10px;
+    padding-top: 20px;
   }
 }
-.footer-container {
+.footer-container, footer {
   padding-top: 0px;
+  background-color: #222;
 }
 
 /* -------------------------------------------- *
@@ -1331,8 +1349,9 @@ a.button:hover {
 
 .col-left {
   float: left;
-  width: 25%;
+  width: 18%;
   padding-left: 0;
+  padding-right: 2px;
   /* Remove the 15px padding */
   clear: left;
 }
@@ -1352,7 +1371,7 @@ a.button:hover {
 
 .col-main {
   float: left;
-  width: 75%;
+  width: 82%;
 }
 
 .col1-layout .col-main {
@@ -2076,10 +2095,9 @@ span.weee {
 .toolbar {
   margin-top: 10px;
   margin-bottom: 15px;
-  border-bottom: 1px solid #cccccc;
   border-top: 1px solid #cccccc;
-  background: #f4f4f4;
-  padding: 5px 10px 0px 10px;
+  /*background: #f4f4f4;*/
+  padding: 5px 0px 0px 0px;
 }
 .toolbar:after {
   content: '';
@@ -3989,8 +4007,10 @@ a.skip-link {
 .footer {
   clear: both;
   width: 100%;
-  border-top: 1px solid #cccccc;
   padding-top: 30px;
+  max-width: 1260px;
+  position: relative;
+  color: #aaa;
   /* -------------------------------------------- *
    * Social icons
    */
@@ -4001,19 +4021,20 @@ a.skip-link {
   }
 }
 .footer .block-title {
-  border-bottom: 0;
+  border-bottom: solid 1px #373737;
   padding: 3px 0;
 }
 .footer .block-title strong {
-  font-weight: 600;
+ /* font-weight: 600;*/
 }
 .footer .block-title,
 .footer address {
-  color: #3399cc;
+  color: #FFFFFF;
+  border-top: none;
 }
 .footer .links {
   float: left;
-  width: 17%;
+  width: 20%;
   padding: 0 30px 0 0;
   margin-bottom: 30px;
 }
@@ -4023,23 +4044,21 @@ a.skip-link {
   padding: 4px 0;
 }
 .footer .links a {
-  color: #636363;
+  color: #aaa;
 }
 .footer .links a:hover {
-  color: #3399cc;
+  color: #ffffff;
 }
 .footer .block-subscribe {
   float: right;
-  width: 320px;
+  width: 40%;
   margin-bottom: 30px;
 }
-.footer .links,
-.footer .block-subscribe {
-  text-transform: uppercase;
-  font-size: 12px;
-}
-.footer .form-subscribe-header {
-  display: none;
+.footer .form-subscribe-header label {
+  /*display: none;*/
+  font-size: 14px;
+  font-weight: normal;
+  padding-bottom: 5px;
 }
 .footer .links.social-media em {
   background-image: url(../images/social_icons.png);
@@ -4092,7 +4111,7 @@ a.skip-link {
 }
 .footer .block-subscribe .input-box {
   float: left;
-  width: 65.625%;
+  width: 63.625%;
   padding-top: 0;
 }
 .footer .block-subscribe .input-text {
@@ -4105,7 +4124,9 @@ a.skip-link {
   border-radius: 0;
 }
 .footer .block-subscribe .block-content {
-  padding-top: 7px;
+/*  padding: 7px 7px 7px 7px;
+  background-color: #333;*/
+  
 }
 .footer .block-subscribe .block-content:after {
   content: '';
@@ -4140,12 +4161,12 @@ a.skip-link {
   display: none;
 }
 .footer address {
-  border-top: 1px solid #cccccc;
+  background-color: #111;
   text-align: center;
   width: 100%;
   font-size: 11px;
-  margin-top: 30px;
-  padding: 30px 0;
+  margin-top: 10px;
+  padding: 10px 0;
 }
 @media only screen and (max-width: 1199px) {
   .footer .links {
@@ -4158,7 +4179,6 @@ a.skip-link {
   }
   .footer .block-subscribe {
     clear: both;
-    float: none;
     margin: 0 auto 30px auto;
   }
 }
@@ -4171,7 +4191,12 @@ a.skip-link {
 @media only screen and (max-width: 599px) {
   .footer .links {
     width: 48.4375%;
+    width: 100%;
     margin-right: 0;
+  }
+  .footer .links ul li {
+    padding: 7px 10px 7px 14px;
+    background-color: #333;
   }
   .footer .links:nth-child(odd) {
     margin-right: 3.125%;
@@ -4299,14 +4324,14 @@ p.product-name a:hover {
 
 .products-grid .product-info {
   position: relative;
-  padding-bottom: 95px;
+  padding-bottom: 5px;
 }
 
 .products-grid .actions {
   padding-top: 10px;
   position: absolute;
   bottom: 0px;
-  min-height: 85px;
+  min-height: 0px;
   width: 100%;
 }
 
@@ -4707,7 +4732,7 @@ p.product-name a:hover {
   margin-top: -3px;
 }
 .block-layered-nav .block-subtitle--filter:hover {
-  background-color: #ececec;
+  /*background-color: #ececec;*/
 }
 
 .block-layered-nav .block-content .toggle-tabs {
@@ -4733,10 +4758,10 @@ p.product-name a:hover {
   margin-bottom: 0px;
   padding: 7px 10px 7px 24px;
   border-width: 1px;
-  border-style: solid;
+  border-style: none;
   border-color: #cccccc;
   position: relative;
-  background-color: #f4f4f4;
+  /*background-color: #f4f4f4;*/
   display: block;
 }
 .block-layered-nav .block-content > dl > dt:after {
@@ -4757,10 +4782,11 @@ p.product-name a:hover {
   background-color: #ececec;
 }
 .block-layered-nav .block-content > dl > dd {
-  padding: 10px;
+  padding: 0px;
+  padding-left: 0px;
   margin: 0;
   border-width: 0 1px;
-  border-style: solid;
+  border-style: none;
   border-color: #cccccc;
 }
 .block-layered-nav .block-content > dl > dd:last-child {
@@ -4771,17 +4797,24 @@ p.product-name a:hover {
   margin-bottom: 10px;
   margin-top: 10px;
 }
+
+.block-layered-nav dl dd ol > li {
+  background-color: #fbfbfb;
+  margin-bottom: 2px;
+}
+
 .block-layered-nav dl dd ol > li > span, .block-layered-nav dl dd ol > li > a {
-  padding: 5px 15px;
+  padding: 5px 5px;
   display: block;
 }
 .block-layered-nav dl dd ol > li > a .count {
   color: #a0a0a0;
+  font-size: 10px;
 }
 
 @media only screen and (min-width: 771px) {
   .block-layered-nav .block-content > dl > dt {
-    padding-left: 10px;
+    padding-left: 0px;
   }
   .block-layered-nav .block-content > dl > dt:after {
     display: none;
@@ -4921,12 +4954,22 @@ p.product-name a:hover {
   text-rendering: optimizeSpeed;
   text-transform: uppercase;
 }
+.block-layered-nav .currently {
+  /*border-bottom: 1px solid #f4f4f4;*/
+
+}
 .block-layered-nav .currently ol {
-  padding-left: 10px;
+  padding-left: 0px;
   margin-bottom: 10px;
 }
 .block-layered-nav .currently ol li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  background-color: #f4f4f4;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  line-height: 25px;
 }
 .block-layered-nav .currently ol li .label {
   font-weight: bold;
@@ -4940,6 +4983,8 @@ p.product-name a:hover {
 .block-layered-nav .actions {
   text-align: right;
   margin-bottom: 7px;
+  border-bottom: 2px solid #f4f4f4;
+  padding-bottom: 15px;
 }
 
 /* ============================================ *
