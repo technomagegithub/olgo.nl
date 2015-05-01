@@ -1,0 +1,69 @@
+@mixin font-size($f-size, $responsive:false) {
+  .f-size-#{$f-size} {
+    font-size: $f-size+px;
+    @if $responsive == true {
+      @include bp(max-width, $bp-large){
+        font-size: round($f-size/1.23)+px;
+      }
+      @include bp(max-width, $bp-medium){
+        font-size: round($f-size/1.56)+px;
+      }
+      @include bp(max-width, $bp-small){
+        font-size: round($f-size/2)+px;
+      }
+      @include bp(max-width, $bp-xsmall){
+        font-size: round($f-size/3.75)+px;
+      }
+    }
+  }
+}
+@mixin font-em($f-em) {
+  $em:$f-em/10;
+  .f-em-#{$f-em} {
+    font-size: $em+em;
+  }
+}
+@mixin line-height($l-height) {
+  .l-height-#{$l-height} {
+    line-height: $l-height;
+  }
+}
+@mixin responsive-font($f-size) {
+  @include bp(max-width, $bp-xlarge) {
+    font-size: round($f-size/1.3)+px;
+  }
+  @include bp(max-width, $bp-large) {
+    font-size: round($f-size/1.5)+px;
+  }
+  @include bp(max-width, $bp-medium) {
+    font-size: round($f-size/1.7)+px;
+    line-height: 1;
+  }
+  @include bp(max-width, $bp-small) {
+    font-size: round($f-size/2.2)+px;
+  }
+  @include bp(max-width, $bp-xsmall) {
+    font-size: round($f-size/3.7)+px;
+  }
+}
+@mixin owl_controls_type1() {
+  .owl-controls {
+    position: absolute;
+    top: -63px;
+    right: 15px;
+    @include bp(max-width, $bp-medium){
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: -65px;
+    }
+  }
+}
+@mixin  sub_title_type1() {
+    margin-bottom: 30px;
+    font-size: 27px;
+    @include bp(max-width, $bp-medium){
+        text-align: center;
+        margin-bottom: 85px;
+    }
+}

@@ -1,0 +1,706 @@
+<?php
+$store = Mage::app()->getStore();
+$code  = $store->getCode();
+$helper = Mage::helper('granada');
+$d = $helper->getConfigGroupDesign();
+?>
+
+body,
+input,
+select,
+table,
+textarea,
+.fancybox-skin{
+<?php if($d['colors']['c_txt']): ?>
+    color: <?php echo $d['colors']['c_txt'] ?>;
+<?php endif; ?>
+<?php
+if($d['font']['primary_font_family_group'] == 'google'){
+    ?>
+    font-family: <?php echo $d['font']['primary_font_family']; ?>;
+<?php
+} elseif ($d['font']['primary_font_family_group'] == 'custom') {
+    ?>
+    font-family: <?php echo $d['font']['primary_font_family_custom']; ?>;
+<?php
+} else {
+    ?>
+    font-family: <?php echo $d['font']['primary_font_family_group']; ?>;
+<?php
+}
+?>
+}
+body{
+<?php if($d['page_design']['c_page_bg']): ?>
+    background-color: <?php echo $d['page_design']['c_page_bg'] ?>;
+<?php endif; ?>
+<?php if(isset($d['page_design']['body_bg_img']) && $d['page_design']['body_bg_img']): ?>
+    background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'smartwave/granada/'.$d['page_design']['body_bg_img']?>);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+<?php endif; ?>
+}
+.wrapper,
+.opc .section .step-title h2{
+<?php if($d['page_design']['c_wrapper_bg']): ?>
+    background-color: <?php echo $d['page_design']['c_wrapper_bg'] ?>;
+<?php endif; ?>
+}
+a,
+h2.product-name a, h3.product-name a, h4.product-name a, h5.product-name a, p.product-name a,
+.cart-popup-container .mini-products-list p.product-name a,
+.header-minicart .cart-sum .price{
+<?php if($d['colors']['c_link']): ?>
+    color: <?php echo $d['colors']['c_link'] ?>;
+<?php endif; ?>
+}
+a:hover,
+.open > a,
+.active-color,
+h2.product-name a:hover, h3.product-name a:hover, h4.product-name a:hover, h5.product-name a:hover, p.product-name a:hover,
+.cart-popup-container .mini-products-list p.product-name a:hover{
+<?php if($d['colors']['c_active']): ?>
+    color: <?php echo $d['colors']['c_active'] ?>;
+<?php endif; ?>
+}
+.progress-bar > div,
+.header-icon-cart .cart-sum .badge,
+.sw-mobile-menu > li > a:hover,
+.sw-mobile-menu > li:hover > .open-child,
+.sw-mobile-menu > li.over > a,
+.sw-mobile-menu li .open-child:hover,
+.sw-mobile-menu li.over > .open-child{
+<?php if($d['colors']['c_active']): ?>
+    background-color: <?php echo $d['colors']['c_active'] ?>;
+<?php endif; ?>
+}
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6,
+.block-title h2, .block-title h3, .block-title strong,
+.title-font{
+<?php if($d['colors']['c_heading']): ?>
+    color: <?php echo $d['colors']['c_heading'] ?>;
+<?php endif; ?>
+<?php
+if($d['font']['heading_font_family_group'] == 'google'){
+    ?>
+    font-family: <?php echo $d['font']['heading_font_family']; ?>;
+<?php
+} elseif ($d['font']['heading_font_family_group'] == 'custom') {
+    ?>
+    font-family: <?php echo $d['font']['heading_font_family_custom']; ?>;
+<?php
+} else {
+    ?>
+    font-family: <?php echo $d['font']['heading_font_family_group']; ?>;
+<?php
+}
+?>
+}
+.value-date{
+<?php
+if($d['font']['heading_font_family_group'] == 'google'){
+    ?>
+    font-family: <?php echo $d['font']['heading_font_family']; ?>;
+<?php
+} elseif ($d['font']['heading_font_family_group'] == 'custom') {
+    ?>
+    font-family: <?php echo $d['font']['heading_font_family_custom']; ?>;
+<?php
+} else {
+    ?>
+    font-family: <?php echo $d['font']['heading_font_family_group']; ?>;
+<?php
+}
+?>
+}
+.accordion-format li.active-item > a {
+<?php if($d['colors']['c_heading']): ?>
+    color: <?php echo $d['colors']['c_heading'] ?>;
+<?php endif; ?>
+}
+.sub-title{
+<?php if($d['colors']['c_heading']): ?>
+    color: <?php echo $d['colors']['c_heading'] ?>;
+<?php endif; ?>
+<?php
+if($d['font']['sub_font_family_group'] == 'google'){
+    ?>
+    font-family: <?php echo $d['font']['sub_font_family']; ?>;
+<?php
+} elseif ($d['font']['sub_font_family_group'] == 'custom') {
+    ?>
+    font-family: <?php echo $d['font']['sub_font_family_custom']; ?>;
+<?php
+} else {
+    ?>
+    font-family: <?php echo $d['font']['sub_font_family_group']; ?>;
+<?php
+}
+?>
+}
+.price-box .price,
+.price{
+<?php if ($d['colors']['price_color']) { ?>
+    color: <?php echo $d['colors']['price_color'] ?>;
+<?php } ?>
+}
+.footer .footer-title {
+<?php
+if($d['font']['sub_font_family_group'] == 'google'){
+    ?>
+    font-family: <?php echo $d['font']['sub_font_family']; ?>;
+<?php
+} elseif ($d['font']['sub_font_family_group'] == 'custom') {
+    ?>
+    font-family: <?php echo $d['font']['sub_font_family_custom']; ?>;
+<?php
+} else {
+    ?>
+    font-family: <?php echo $d['font']['sub_font_family_group']; ?>;
+<?php
+}
+?>
+}
+.secondary-font,
+.fixed-header .menu > li > a,
+.main-nav .menu > li > a,
+.fixed-header .menu > li.menu-full-width .nav-sublist-dropdown .container ul > li > a.level1,
+.main-nav .menu > li.menu-full-width .nav-sublist-dropdown .container ul > li > a.level1,
+.fixed-header .menu > li.menu-static-width .nav-sublist-dropdown .container ul > li > a.level1,
+.main-nav .menu > li.menu-static-width .nav-sublist-dropdown .container ul > li > a.level1,
+.cart-popup-container .cart-popup .block-subtitle,
+.nav-category-list > li.menu-full-width .nav-sublist-dropdown ul > li > a.level1,
+.nav-category-list > li.menu-static-width .nav-sublist-dropdown ul > li > a.level1,
+.sw-mobile-menu li > a,
+.format-date{
+<?php
+if($d['font']['secondary_font_family_group'] == 'google'){
+    ?>
+    font-family: <?php echo $d['font']['secondary_font_family']; ?>;
+<?php
+} elseif ($d['font']['secondary_font_family_group'] == 'custom') {
+    ?>
+    font-family: <?php echo $d['font']['secondary_font_family_custom']; ?>;
+<?php
+} else {
+    ?>
+    font-family: <?php echo $d['font']['secondary_font_family_group']; ?>;
+<?php
+}
+?>
+}
+.sw-mobile-menu > li > ul > li a{
+<?php
+if($d['font']['primary_font_family_group'] == 'google'){
+    ?>
+    font-family: <?php echo $d['font']['primary_font_family']; ?>;
+<?php
+} elseif ($d['font']['primary_font_family_group'] == 'custom') {
+    ?>
+    font-family: <?php echo $d['font']['primary_font_family_custom']; ?>;
+<?php
+} else {
+    ?>
+    font-family: <?php echo $d['font']['primary_font_family_group']; ?>;
+<?php
+}
+?>
+}
+.products-grid .product-name, .products-list .product-name,
+.granada-tab > ul > li a,
+.product-name,
+h2.product-name, h3.product-name, h4.product-name, h5.product-name, p.product-name {
+<?php
+if($d['font']['sub_font_family_group'] == 'google'){
+    ?>
+    font-family: <?php echo $d['font']['sub_font_family']; ?>;
+<?php
+} elseif ($d['font']['sub_font_family_group'] == 'custom') {
+    ?>
+    font-family: <?php echo $d['font']['sub_font_family_custom']; ?>;
+<?php
+} else {
+    ?>
+    font-family: <?php echo $d['font']['sub_font_family_group']; ?>;
+<?php
+}
+?>
+}
+.button,
+.actions-container .product-add-btn.full-bg{
+<?php if($d['buttons']['c_standard_bg']): ?>
+    background-color: <?php echo $d['buttons']['c_standard_bg'] ?>;
+<?php endif; ?>
+<?php if($d['buttons']['c_standard_txt']): ?>
+    color: <?php echo $d['buttons']['c_standard_txt'] ?>;
+<?php endif; ?>
+}
+.button:hover,
+.owl-controls .owl-buttons div:hover{
+<?php if($d['buttons']['c_standard_hv_bg']): ?>
+    background-color: <?php echo $d['buttons']['c_standard_hv_bg'] ?>;
+    border-color: <?php echo $d['buttons']['c_standard_hv_bg'] ?>;
+<?php endif; ?>
+<?php if($d['buttons']['c_standard_hv_txt']): ?>
+    color: <?php echo $d['buttons']['c_standard_hv_txt'] ?>;
+<?php endif; ?>
+}
+.header-minicart:hover {
+<?php if($d['buttons']['c_standard_hv_bg']): ?>
+    background-color: <?php echo $d['buttons']['c_standard_hv_bg'] ?>;
+<?php endif; ?>
+}
+.header-minicart:hover .cart-sum a,
+.header-minicart:hover .cart-sum .price{
+<?php if($d['buttons']['c_standard_hv_txt']): ?>
+    color: <?php echo $d['buttons']['c_standard_hv_txt'] ?>;
+<?php endif; ?>
+}
+.button-custom,
+.actions-container .product-add-btn,
+.actions-container .links-container .product-btn{
+<?php if($d['buttons']['c_custom_bd']): ?>
+    border-color: <?php echo $d['buttons']['c_custom_bd'] ?>;
+    background: none;
+<?php endif; ?>
+<?php if($d['buttons']['c_custom_txt']): ?>
+    color: <?php echo $d['buttons']['c_custom_txt'] ?>;
+<?php endif; ?>
+}
+.button-custom:hover
+{
+<?php if($d['buttons']['c_custom_hv_bd']): ?>
+    border-color: <?php echo $d['buttons']['c_custom_hv_bd'] ?>;
+    background-color: <?php echo $d['buttons']['c_custom_hv_bd'] ?>;
+<?php endif; ?>
+<?php if($d['buttons']['c_custom_hv_txt']): ?>
+    color: <?php echo $d['buttons']['c_custom_hv_txt'] ?>;
+<?php endif; ?>
+}
+.button-custom-active:hover,
+.products-list-slider .owl-controls .owl-buttons div:hover,
+.show-case:hover .show-icon{
+<?php if($d['buttons']['c_standard_hv_bg']): ?>
+    background-color: <?php echo $d['buttons']['c_standard_hv_bg'] ?>;
+    border-color: <?php echo $d['buttons']['c_standard_hv_bg'] ?>;
+<?php endif; ?>
+<?php if($d['buttons']['c_standard_hv_txt']): ?>
+    color: <?php echo $d['buttons']['c_standard_hv_txt'] ?>;
+<?php endif; ?>
+}
+.button-up, .button-down,
+.button-white{
+color: #ffffff;
+border-color: #ffffff;
+}
+.button-gray {
+border-color:#8c8574;
+color:#8c8574;
+}
+.button-dark-light {
+color: #6c675b;
+border-color: #6c675b;
+}
+.actions-wrapper .product-add-btn {
+<?php if($d['category']['c_add_cart_bg']): ?>
+    background-color: <?php echo $d['category']['c_add_cart_bg'] ?>;
+<?php endif; ?>
+<?php if($d['category']['c_add_cart_txt']): ?>
+    color: <?php echo $d['category']['c_add_cart_txt'] ?>;
+<?php endif; ?>
+}
+.actions-wrapper .product-add-btn:hover,
+.actions-container .product-add-btn:hover{
+<?php if($d['category']['c_add_cart_hv_bg']): ?>
+    background-color: <?php echo $d['category']['c_add_cart_hv_bg'] ?>;
+<?php endif; ?>
+<?php if($d['category']['c_add_cart_hv_txt']): ?>
+    color: <?php echo $d['category']['c_add_cart_hv_txt'] ?>;
+<?php endif; ?>
+}
+.products-grid .actions-wrapper .product-btn {
+<?php if($d['category']['c_cat_link_bg']): ?>
+    background-color: <?php echo $d['category']['c_cat_link_bg'] ?>;
+<?php endif; ?>
+<?php if($d['category']['c_cat_link_txt']): ?>
+    color: <?php echo $d['category']['c_cat_link_txt'] ?>;
+<?php endif; ?>
+}
+.actions-wrapper .product-btn:hover,
+.actions-container .links-container .product-btn:hover{
+<?php if($d['category']['c_cat_link_hv_bg']): ?>
+    background-color: <?php echo $d['category']['c_cat_link_hv_bg'] ?>;
+    border-color: <?php echo $d['category']['c_cat_link_hv_bg'] ?>;
+<?php endif; ?>
+<?php if($d['category']['c_cat_link_hv_txt']): ?>
+    color: <?php echo $d['category']['c_cat_link_hv_txt'] ?>;
+<?php endif; ?>
+}
+.products-grid .actions-wrapper .product-btn:hover {
+border:0;
+border-left:1px solid #e6dfd1;
+}
+/*** For OnepageCheckout Start***/
+.opc-index-index .opc-wrapper-opc .login-trigger,
+.opc-index-index .review-menu-block a.review-total,
+.opc-index-index .expand_plus,
+.opc-index-index .opc-wrapper-opc .btn-checkout.button-disabled,
+.opc-index-index .opc-wrapper-opc .btn-checkout.button-disabled:hover,
+.opc-index-index .opc-wrapper-opc .btn,
+.opc-index-index .opc-wrapper-opc .payment-block dt{
+<?php if($d['buttons']['c_standard_bg']): ?>
+    background-color: <?php echo $d['buttons']['c_standard_bg'] ?>;
+<?php endif; ?>
+<?php if($d['buttons']['c_standard_txt']): ?>
+    color: <?php echo $d['buttons']['c_standard_txt'] ?>;
+<?php endif; ?>
+}
+.opc-index-index .opc-wrapper-opc .login-trigger:hover,
+.opc-index-index .review-menu-block a.review-total:hover,
+.opc-index-index .review-menu-block a.review-total.open,
+.opc-index-index .discount-block h3:hover .expand_plus,
+.opc-index-index .signature-block h3:hover .expand_plus,
+.opc-index-index .comment-block h3:hover .expand_plus,
+.opc-index-index .giftcard h3:hover .expand_plus,
+.opc-index-index .discount-block h3.open-block .expand_plus,
+.opc-index-index .signature-block h3.open-block .expand_plus,
+.opc-index-index .comment-block h3.open-block .expand_plus,
+.opc-index-index .giftcard h3.open-block .expand_plus,
+.opc-index-index .opc-wrapper-opc .btn:hover,
+.opc-index-index .opc-wrapper-opc .payment-block dt:hover,
+.opc-index-index .opc-wrapper-opc .payment-block dt.active{
+<?php if($d['buttons']['c_standard_hv_bg']): ?>
+    background-color: <?php echo $d['buttons']['c_standard_hv_bg'] ?>;
+<?php endif; ?>
+<?php if($d['buttons']['c_standard_hv_txt']): ?>
+    color: <?php echo $d['buttons']['c_standard_hv_txt'] ?>;
+<?php endif; ?>
+}
+.opc-index-index .review-menu-block a.review-total span{
+<?php if($d['buttons']['c_standard_txt']): ?>
+    color: <?php echo $d['buttons']['c_standard_txt'] ?>;
+<?php endif; ?>
+}
+.opc-index-index .review-menu-block a.review-total.open span{
+<?php if($d['buttons']['c_standard_hv_txt']): ?>
+    color: <?php echo $d['buttons']['c_standard_hv_txt'] ?>;
+<?php endif; ?>
+}
+.opc-index-index .review-menu-block .polygon{
+<?php if($d['buttons']['c_standard_hv_bg']): ?>
+    border-top-color:<?php echo $d['buttons']['c_standard_hv_bg'] ?>;
+<?php endif; ?>
+}
+/*** For OnepageCheckout End***/
+.top-bar,
+.input-search{
+<?php if($d['header_design']['c_top_bg']): ?>
+    background-color: <?php echo $d['header_design']['c_top_bg'] ?>;
+<?php endif; ?>
+}
+.top-bar a{
+<?php if($d['header_design']['c_top_txt']): ?>
+    color: <?php echo $d['header_design']['c_top_txt'] ?>;
+<?php endif; ?>
+}
+.top-bar .links li:hover,
+.top-bar .top-bar-item:hover,
+.top-minicart:hover .top-bar-item{
+<?php if($d['header_design']['c_top_bg_active']): ?>
+    background-color: <?php echo $d['header_design']['c_top_bg_active'] ?>;
+<?php endif; ?>
+}
+.top-bar .links li:hover > a,
+.top-bar .top-bar-item:hover > a,
+.top-minicart:hover .top-bar-item > a,
+.top-bar a:hover,
+.top-bar .open > a{
+<?php if($d['header_design']['c_top_txt_active']): ?>
+    color: <?php echo $d['header_design']['c_top_txt_active'] ?>;
+<?php endif; ?>
+}
+.fixed-header,
+.fixed-header .top-icon-search .input-search{
+<?php if($d['header_design']['c_sticky_bg']): ?>
+    background-color: <?php echo $d['header_design']['c_sticky_bg'] ?>;
+<?php endif; ?>
+}
+.header-container,
+.header_widget .input-search,
+.top-icon-search .input-search,
+.input-search-seperated,
+.mobile-nav-shown .mobile-nav{
+<?php if($d['header_design']['c_header_bg']): ?>
+    background-color: <?php echo $d['header_design']['c_header_bg'] ?>;
+<?php endif; ?>
+}
+.dropdown-menu {
+<?php if($d['header_design']['c_dropdown_bg']): ?>
+    background-color: <?php echo $d['header_design']['c_dropdown_bg'] ?>;
+<?php endif; ?>
+}
+.dropdown-menu li a {
+<?php if($d['header_design']['c_dropdown_txt']): ?>
+    color: <?php echo $d['header_design']['c_dropdown_txt'] ?>;
+<?php endif; ?>
+}
+.dropdown-menu li a:hover{
+<?php if($d['header_design']['c_dropdown_hover_bg']): ?>
+    background-color: <?php echo $d['header_design']['c_dropdown_hover_bg'] ?>;
+<?php endif; ?>
+<?php if($d['header_design']['c_dropdown_hover_txt']): ?>
+    color: <?php echo $d['header_design']['c_dropdown_hover_txt'] ?>;
+<?php endif; ?>
+}
+.top-bar .dropdown-menu li a.current-option,
+.top-bar .dropdown-menu li a.current-option:hover,
+.header_widget .dropdown-menu li a.current-option,
+.header_widget .dropdown-menu li a.current-option:hover,
+.dropdown-menu li a.current-option, .dropdown-menu li a.current-option:hover,
+.modal-buttons .dropdown-menu li a.current-option,
+.modal-buttons .dropdown-menu li a.current-option:hover,
+.modal-buttons .dropdown-menu li a:hover{
+<?php if($d['header_design']['c_dropdown_active_bg']): ?>
+    background-color: <?php echo $d['header_design']['c_dropdown_active_bg'] ?>;
+<?php endif; ?>
+<?php if($d['header_design']['c_dropdown_hover_txt']): ?>
+    color: <?php echo $d['header_design']['c_dropdown_hover_txt'] ?>;
+<?php endif; ?>
+}
+.fixed-header .menu > li .nav-sublist-dropdown,
+.main-nav .menu > li .nav-sublist-dropdown,
+.nav-category-list > li .nav-sublist-dropdown,
+.top_main_type_7 .main-nav .menu > li.open,
+.fixed-top_main_type_7.fixed-header-area .menu > li.open{
+<?php if($d['header_design']['c_navigation_popup_bg']): ?>
+    background-color: <?php echo $d['header_design']['c_navigation_popup_bg'] ?>;
+<?php endif; ?>
+}
+.top_main_type_1 .main-nav,
+.top_main_type_1 .mobile-widget-container,
+.top_main_type_1 .top-icon-search .input-search{
+<?php if($d['header_design']['c_navigation_bg']): ?>
+    background-color: <?php echo $d['header_design']['c_navigation_bg'] ?>;
+<?php endif; ?>
+<?php if ($d['header_design']['s_navigation_bd']): ?>
+    <?php if($d['header_design']['c_navigation_bd']): ?>
+        border-color: <?php echo $d['header_design']['c_navigation_bd'] ?>;
+    <?php endif; ?>
+<?php else: ?>
+    border: none;
+<?php endif; ?>
+}
+.top_main_type_1 .top-icon-search .input-search .input-text{
+<?php if($d['header_design']['c_navigation_bg']): ?>
+    background-color: <?php echo $d['header_design']['c_navigation_bg'] ?>;
+<?php endif; ?>
+}
+.fixed-header .menu > li > a,
+.main-nav .menu > li > a,
+.fixed-header .modal-buttons a,
+.header_widget a,
+.menu-icon,
+.input-search-seperated .input-text,
+.input-search-seperated .input-close,
+.fixed-top_main_type_7 .fixed-header .modal-buttons a:hover,
+.top_main_type_7 .header-icon-cart .cart-sum a,
+.top_main_type_7 .top-icon-search a,
+.mobile-nav-shown .top_main_type_7 .menu-icon,
+.mobile-top_main_type_7 .sw-mobile-menu li > a{
+<?php if($d['header_design']['c_navigation_top_txt']): ?>
+    color: <?php echo $d['header_design']['c_navigation_top_txt'] ?>;
+<?php endif; ?>
+}
+.fixed-header .menu > li:hover > a,
+.main-nav .menu > li:hover > a,
+.fixed-header .menu > li.open > a,
+.fixed-header a.act,
+.main-nav a.act,
+.main-nav .open > a,
+.fixed-header .modal-buttons a:hover,
+.header_widget > div:hover > a,
+.header_widget .header-icon-cart:hover .cart-sum a,
+.header_widget .dropdown-menu li a:hover,
+.mobile-nav-shown .menu-icon{
+<?php if($d['header_design']['c_navigation_top_txt_active']): ?>
+    color: <?php echo $d['header_design']['c_navigation_top_txt_active'] ?>;
+<?php endif; ?>
+}
+.fixed-header a,
+.main-nav a,
+.header_widget .dropdown-menu>li>a,
+.modal-buttons .dropdown-menu>li>a,
+.nav-category-list > li .nav-sublist-dropdown a,
+.sw-mobile-menu li > a{
+<?php if($d['header_design']['c_navigation_sub_txt']): ?>
+    color: <?php echo $d['header_design']['c_navigation_sub_txt'] ?>;
+<?php endif; ?>
+}
+.fixed-header a:hover,
+.main-nav a:hover,
+.header_widget .dropdown-menu>li>a:hover,
+.nav-category-list > li .nav-sublist-dropdown a:hover,
+.sw-mobile-menu li > a:hover,
+.sw-mobile-menu li.over > a{
+<?php if($d['header_design']['c_navigation_sub_txt_active']): ?>
+    color: <?php echo $d['header_design']['c_navigation_sub_txt_active'] ?>;
+<?php endif; ?>
+}
+.header_widget .header-icon-cart .cart-popup-container,
+.header_widget .header-icon-cart .cart-popup-container a,
+.header_widget .cart-popup-container .mini-products-list p.product-name a,
+.fixed-header .header-icon-cart .cart-popup-container,
+.fixed-header .header-icon-cart .cart-popup-container a,
+.fixed-header .cart-popup-container .mini-products-list p.product-name a{
+<?php if($d['header_design']['c_dropdown_bg']): ?>
+    background-color: <?php echo $d['header_design']['c_dropdown_bg'] ?>;
+<?php endif; ?>
+<?php if($d['header_design']['c_navigation_sub_txt']): ?>
+    color: <?php echo $d['header_design']['c_navigation_sub_txt'] ?>;
+<?php endif; ?>
+}
+.footer-top {
+<?php if($d['footer']['footer_top_bg_color']): ?>
+    background-color: <?php echo $d['footer']['footer_top_bg_color'] ?>;
+<?php endif; ?>
+<?php if(isset($d['footer']['footer_top_bg_image']) && $d['footer']['footer_top_bg_image']): ?>
+    background-image:url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'smartwave/granada/footer/'.$d['footer']['footer_top_bg_image']; ?>);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+<?php endif; ?>
+<?php if($d['footer']['footer_top_txt_color']): ?>
+    color: <?php echo $d['footer']['footer_top_txt_color'] ?>;
+<?php endif; ?>
+}
+.footer-top a {
+<?php if($d['footer']['footer_top_txt_color']): ?>
+    color: <?php echo $d['footer']['footer_top_txt_color'] ?>;
+<?php endif; ?>
+}
+.footer-top a:hover,
+.footer-top .tweet a{
+<?php if($d['footer']['footer_top_active_color']): ?>
+    color: <?php echo $d['footer']['footer_top_active_color'] ?>;
+<?php endif; ?>
+}
+.footer-top .fb-like-btn a {
+<?php if($d['footer']['footer_top_txt_color']): ?>
+    border-color: <?php echo $d['footer']['footer_top_txt_color'] ?>;
+    color: <?php echo $d['footer']['footer_top_txt_color'] ?>;
+<?php endif; ?>
+}
+.footer-top .fb-like-btn a:hover {
+<?php if($d['footer']['footer_top_active_color']): ?>
+    border-color: <?php echo $d['footer']['footer_top_active_color'] ?>;
+    color: <?php echo $d['footer']['footer_top_active_color'] ?>;
+<?php endif; ?>
+}
+.footer-top .footer-title {
+<?php if($d['footer']['footer_top_ttl_color']): ?>
+    color: <?php echo $d['footer']['footer_top_ttl_color'] ?>;
+<?php endif; ?>
+}
+.footer-top .bordered-wrapper {
+<?php if ($d['footer']['footer_top_border'] && $d['footer']['footer_top_tp_border_color']): ?>
+    border-color: <?php echo $d['footer']['footer_top_tp_border_color'] ?>;
+<?php endif; ?>
+}
+.footer-bottom{
+<?php if($d['footer']['footer_bottom_bg_color']): ?>
+    background-color: <?php echo $d['footer']['footer_bottom_bg_color'] ?>;
+<?php endif; ?>
+<?php if(isset($d['footer']['footer_bottom_bg_image']) && $d['footer']['footer_bottom_bg_image']): ?>
+    background-image:url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'smartwave/granada/footer/'.$d['footer']['footer_bottom_bg_image']; ?>);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+<?php endif; ?>
+<?php if($d['footer']['footer_bottom_txt_color']): ?>
+    color: <?php echo $d['footer']['footer_bottom_txt_color'] ?>;
+<?php endif; ?>
+}
+.footer-bottom a {
+<?php if($d['footer']['footer_bottom_txt_color']): ?>
+    color: <?php echo $d['footer']['footer_bottom_txt_color'] ?>;
+<?php endif; ?>
+}
+.footer-bottom a:hover,
+.footer-bottom .tweet a{
+<?php if($d['footer']['footer_bottom_active_color']): ?>
+    color: <?php echo $d['footer']['footer_bottom_active_color'] ?>;
+<?php endif; ?>
+}
+.footer-bottom .fb-like-btn a {
+<?php if($d['footer']['footer_bottom_txt_color']): ?>
+    border-color: <?php echo $d['footer']['footer_bottom_txt_color'] ?>;
+    color: <?php echo $d['footer']['footer_bottom_txt_color'] ?>;
+<?php endif; ?>
+}
+.footer-bottom .fb-like-btn a:hover {
+<?php if($d['footer']['footer_bottom_active_color']): ?>
+    border-color: <?php echo $d['footer']['footer_bottom_active_color'] ?>;
+    color: <?php echo $d['footer']['footer_bottom_active_color'] ?>;
+<?php endif; ?>
+}
+.footer-bottom .footer-title {
+<?php if($d['footer']['footer_bottom_ttl_color']): ?>
+    color: <?php echo $d['footer']['footer_bottom_ttl_color'] ?>;
+<?php endif; ?>
+}
+.footer-bottom .bordered-wrapper {
+<?php if ($d['footer']['footer_bottom_border'] && $d['footer']['footer_bottom_tp_border_color']): ?>
+    border-color: <?php echo $d['footer']['footer_bottom_tp_border_color'] ?>;
+<?php endif; ?>
+}
+.copyright {
+<?php if ($d['footer']['footer_copyright_bg_color']): ?>
+    background-color: <?php echo $d['footer']['footer_copyright_bg_color'] ?>;
+<?php endif; ?>
+<?php if ($d['footer']['footer_copyright_txt_color']): ?>
+    color: <?php echo $d['footer']['footer_copyright_txt_color'] ?>;
+<?php endif; ?>
+}
+.copyright .bordered-wrapper {
+<?php if ($d['footer']['footer_copyright_border'] && $d['footer']['footer_copyright_tp_border_color']): ?>
+    border-color: <?php echo $d['footer']['footer_copyright_tp_border_color'] ?>;
+<?php endif; ?>
+}
+.top_main_type_6 .header-minicart .cart-sum a:before,
+.top_main_type_6 .header-minicart:hover .cart-sum a,
+.top_main_type_6 .header-minicart:hover .cart-sum .price,
+.top_main_type_6 #search_mini_form .form-search .search-icon-button:before{
+<?php if($d['colors']['c_active']): ?>
+    color: <?php echo $d['colors']['c_active'] ?>;
+<?php endif; ?>
+}
+.top_main_type_6 #search_mini_form .form-search .search-icon-button:hover{
+<?php if($d['colors']['c_active']): ?>
+    background-color: <?php echo $d['colors']['c_active'] ?>;
+<?php endif; ?>
+}
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span,
+html.fsvs #fsvs-pagination li.active > span > span{
+<?php if($d['colors']['c_active']): ?>
+    border-color: <?php echo $d['colors']['c_active'] ?>;
+    background-color: <?php echo $d['colors']['c_active'] ?>;
+<?php endif; ?>
+}
+.tab-round > ul > li.active a{
+<?php if($d['colors']['c_active']): ?>
+    border-color: <?php echo $d['colors']['c_active'] ?>;
+    color: <?php echo $d['colors']['c_active'] ?>;
+<?php endif; ?>
+}
+.sw_vertical_navigation .sw-vertical-navigation.cur_index{
+<?php if($d['colors']['c_active']): ?>
+    background-color: <?php echo $d['colors']['c_active'] ?>;
+    border-color:<?php echo $d['colors']['c_active'] ?>;
+<?php endif; ?>
+}

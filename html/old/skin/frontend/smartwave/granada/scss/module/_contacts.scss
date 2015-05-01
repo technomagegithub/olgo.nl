@@ -1,0 +1,65 @@
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     default_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/* ============================================ *
+ * Contacts
+ * ============================================ */
+
+.contacts-index-index {
+    .buttons-set {
+        p.required {
+            float: left;
+            display: none;
+        }
+
+        @include bp(max-width, $bp-small) {
+            button {
+                float: left;
+                margin-left: 0px;
+            }
+
+            p.required {
+                float: right;
+            }
+        }
+    }
+    .contact-box {
+      h3 {
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 10px;
+      }
+    }
+    .contact-list li, .contact-address {
+      font-size: 14px;
+      line-height: 28px;
+    }
+    .contact-list li > span{
+      text-decoration: underline;
+      margin-right: 6px;
+      font-size: 15px;
+      line-height: 28px;
+    }
+}

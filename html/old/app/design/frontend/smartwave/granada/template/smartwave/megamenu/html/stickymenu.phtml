@@ -1,0 +1,27 @@
+<?php $menuHelper = Mage::helper('megamenu'); ?>
+<div class="fixed-header-area fixed-menu-type hidden-xs hidden-sm fixed-<?php echo Mage::getStoreConfig('granada_setting/header_settings/header_main_type'); ?>">
+    <div class="fixed-header">
+        <div class="container">
+            <div class="menu-wrapper">
+                <div class="menu-icon hidden-md hidden-lg"><i class="fa fa-bars"></i></div>
+                <div class="logo-with-menu">
+                    <?php if ($menuHelper->getIsHomePage()):?>
+                    <h1 class="logo"><strong><?php echo $menuHelper->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $menuHelper->getLogoAlt() ?>"><img src="<?php echo $menuHelper->getLogoSrc() ?>" alt="<?php echo $menuHelper->getLogoAlt() ?>" /></a></h1>
+                    <?php else:?>
+                        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $menuHelper->getLogoAlt() ?>" class="logo"><strong><?php echo $menuHelper->getLogoAlt() ?></strong><img src="<?php echo $menuHelper->getLogoSrc() ?>" alt="<?php echo $menuHelper->getLogoAlt() ?>" /></a>
+                    <?php endif?>
+                </div>
+                <div class="menu-all-pages-container">
+                    <ul class="menu">
+                        <?php echo $menuHelper->getMenuContent('all'); ?>
+                    </ul>
+                </div>
+                <div class="modal-buttons">
+                    <?php echo $this->getChildHtml('icon.cart') ?>
+                    <?php echo $this->getChildHtml('sticky.account') ?>
+                    <?php echo $this->getChildHtml('sticky.icon.search') ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

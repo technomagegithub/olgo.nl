@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    
+    <!-- Product page -->
+    <catalog_product_view>        
+        <reference name="head">
+            <!-- CSS -->
+            <action method="addItem" ifconfig="zoom/general/enable"><type>js_css</type><name>smartwave/jquery/plugins/owlslider/css/owl.carousel.css</name></action>
+            <action method="addItem"
+                ifconfig="zoom/lightbox/lb_enable"><type>js_css</type><name>smartwave/jquery/plugins/fancybox/css/jquery.fancybox.css</name></action>
+            <action method="addItem" ifconfig="zoom/general/enable"><type>skin_css</type><name>zoom/css/style.css</name></action>
+            <!-- js -->
+            <action method="addJs"><script>smartwave/jquery/jquery-1.10.2.min.js</script></action>
+            <action method="addJs"><script>smartwave/jquery/jquery-noconflict.js</script></action>          
+            <action method="addJs" ifconfig="zoom/general/enable"><script>smartwave/jquery/plugins/owlslider/js/owl.carousel.min.js</script></action>
+            <action method="addJs"
+                ifconfig="zoom/general/enable"><script>smartwave/jquery/plugins/elevate/jquery.elevatezoom.js</script></action>
+            <action method="addJs"
+                ifconfig="zoom/lightbox/lb_enable"><script>smartwave/jquery/plugins/fancybox/js/jquery.fancybox.js</script></action>
+        </reference>
+        
+        <reference name="product.info.media">
+            <action method="setTemplate" ifconfig="zoom/general/enable"><template>smartwave/zoom/product/view/media.phtml</template></action>
+        </reference>
+    </catalog_product_view>
+    <!-- Product page -->
+    <review_product_list>
+        <reference name="head">
+            <!-- CSS -->
+            <action method="addItem" ifconfig="zoom/general/enable"><type>js_css</type><name>smartwave/jquery/plugins/owlslider/css/owl.carousel.css</name></action>
+            <action method="addItem"
+                    ifconfig="zoom/lightbox/lb_enable"><type>js_css</type><name>smartwave/jquery/plugins/fancybox/css/jquery.fancybox.css</name></action>
+            <action method="addItem" ifconfig="zoom/general/enable"><type>skin_css</type><name>zoom/css/style.css</name></action>
+            <!-- js -->
+            <action method="addJs"><script>smartwave/jquery/jquery-1.10.2.min.js</script></action>
+            <action method="addJs"><script>smartwave/jquery/jquery-noconflict.js</script></action>
+            <action method="addJs" ifconfig="zoom/general/enable"><script>smartwave/jquery/plugins/owlslider/js/owl.carousel.min.js</script></action>
+            <action method="addJs"
+                    ifconfig="zoom/general/enable"><script>smartwave/jquery/plugins/elevate/jquery.elevatezoom.js</script></action>
+            <action method="addJs"
+                    ifconfig="zoom/lightbox/lb_enable"><script>smartwave/jquery/plugins/fancybox/js/jquery.fancybox.js</script></action>
+        </reference>
+
+        <reference name="product.info.media">
+            <action method="setTemplate" ifconfig="zoom/general/enable"><template>smartwave/zoom/product/view/media.phtml</template></action>
+        </reference>
+    </review_product_list>
+    <PRODUCT_TYPE_configurable translate="label" module="catalog">
+        <label>Catalog Product View (Configurable)</label>
+        <reference name="product.info.media">
+            <block type="core/text_list" name="product.info.media.after" as="after" />
+        </reference>
+        <reference name="product.info">
+            <block type="catalog/product_view_type_configurable" name="product.info.configurable" as="product_type_data" template="catalog/product/view/type/default.phtml">
+                <block type="core/text_list" name="product.info.configurable.extra" as="product_type_data_extra" translate="label">
+                    <label>Product Extra Info</label>
+                </block>
+            </block>
+            <block type="catalog/product_view_type_configurable" name="product.info.availability" as="product_type_availability" template="catalog/product/view/type/availability/default.phtml" />
+        </reference>
+        <reference name="product.info.options.wrapper">
+            <block type="catalog/product_view_type_configurable" name="product.info.options.configurable" as="options_configurable" before="-" template="catalog/product/view/type/options/configurable.phtml">
+                <block type="core/text_list" name="product.info.options.configurable.renderers" as="attr_renderers" />
+                <block type="core/text_list" name="product.info.options.configurable.after" as="after" />
+            </block>
+        </reference>
+    </PRODUCT_TYPE_configurable>
+</layout>

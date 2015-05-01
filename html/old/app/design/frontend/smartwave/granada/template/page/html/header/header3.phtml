@@ -1,0 +1,73 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+ 
+/**
+* Granada Theme Version 1.0.0
+* granada header
+*/
+?>
+<?php echo $this->getChildHtml('sticky.nav') ?>
+<div class="header-container <?php echo Mage::getStoreConfig('granada_setting/header_settings/header_main_type'); ?>">
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <?php echo $this->getChildHtml('top.links.list') ?>
+                <?php echo $this->getChildHtml('top.links.dropdown') ?>
+            </div>
+            <div class="top-bar-right">
+                <?php echo $this->getChildHtml('top.language') ?>
+                <?php echo $this->getChildHtml('top.currency') ?>
+                <?php echo $this->getChildHtml('top.cart') ?>
+                <?php echo $this->getChildHtml('header.input.search') ?>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="container">
+            <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo abs-center-logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+            <?php echo $this->getChildHtml('topMenu') ?>
+        </div>
+    </div>
+    <div class="mobile-widget-container">
+        <div class="container">
+            <div class="mobile-widget-wrapper clearfix">
+                <div class="menu-icon f-left">
+                    <i class="icon-reorder"><?php echo $this->__('menu') ?></i>
+                </div>
+                <div class="pos-rel f-right">
+                    <?php echo $this->getChildHtml('icon.cart') ?>
+                    <?php echo $this->getChildHtml('header.icon.search') ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php if(Mage::getStoreConfig('megamenu/general/enable')): ?>
+<?php echo $this->getChildHtml('mobile.nav') ?>
+<?php endif; ?>

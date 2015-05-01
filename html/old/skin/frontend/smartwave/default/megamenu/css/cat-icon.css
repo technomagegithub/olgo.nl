@@ -1,0 +1,145 @@
+@font-face {
+	font-family: "CatFont";
+	src: url("fonts/flaticon.eot");
+	src: url("fonts/flaticon.eot#iefix") format("embedded-opentype"),
+	url("fonts/flaticon.woff") format("woff"),
+	url("fonts/flaticon.ttf") format("truetype"),
+	url("fonts/flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+.nav-category-list [class^="caticon-"]:before, 
+.nav-category-list [class*=" caticon-"]:before,
+.nav-category-list [class^="caticon-"]:after, 
+.nav-category-list [class*=" caticon-"]:after {   
+	font-family: CatFont;
+    font-size: 16px;
+	font-style: normal;
+	margin-right: 12px;
+}
+.nav-category-list .caticon-e000:before {
+	content: "\e000";
+}
+.nav-category-list .caticon-e001:before {
+	content: "\e001";
+}
+.nav-category-list .caticon-e002:before {
+	content: "\e002";
+}
+.nav-category-list .caticon-e003:before {
+	content: "\e003";
+}
+.nav-category-list .caticon-e004:before {
+	content: "\e004";
+}
+.nav-category-list .caticon-e005:before {
+	content: "\e005";
+}
+.nav-category-list .caticon-e006:before {
+	content: "\e006";
+}
+.nav-category-list .caticon-e007:before {
+	content: "\e007";
+}
+.nav-category-list .caticon-e008:before {
+	content: "\e008";
+}
+.nav-category-list .caticon-e009:before {
+	content: "\e009";
+}
+.nav-category-list .caticon-e00a:before {
+	content: "\e00a";
+}
+.nav-category-list .caticon-e00b:before {
+	content: "\e00b";
+}
+.nav-category-list .caticon-e00c:before {
+	content: "\e00c";
+}
+.nav-category-list .caticon-e00d:before {
+	content: "\e00d";
+}
+.nav-category-list .caticon-e00e:before {
+	content: "\e00e";
+}
+.nav-category-list .caticon-e00f:before {
+	content: "\e00f";
+}
+.nav-category-list .caticon-e010:before {
+	content: "\e010";
+}
+.nav-category-list .caticon-e011:before {
+	content: "\e011";
+}
+.nav-category-list .caticon-e012:before {
+	content: "\e012";
+}
+.nav-category-list .caticon-e013:before {
+	content: "\e013";
+}
+.nav-category-list .caticon-e014:before {
+	content: "\e014";
+}
+.nav-category-list .caticon-e015:before {
+	content: "\e015";
+}
+.nav-category-list .caticon-e016:before {
+	content: "\e016";
+}
+.nav-category-list .caticon-e017:before {
+	content: "\e017";
+}
+.nav-category-list .caticon-e018:before {
+	content: "\e018";
+}
+.nav-category-list .caticon-e019:before {
+	content: "\e019";
+}
+.nav-category-list .caticon-e01a:before {
+	content: "\e01a";
+}
+.nav-category-list .caticon-e01b:before {
+	content: "\e01b";
+}
+.nav-category-list .caticon-e01c:before {
+	content: "\e01c";
+}
+.nav-category-list .caticon-e01d:before {
+	content: "\e01d";
+}
+.nav-category-list .caticon-e01e:before {
+	content: "\e01e";
+}
+.nav-category-list .caticon-e01f:before {
+	content: "\e01f";
+}
+.nav-category-list .caticon-e020:before {
+	content: "\e020";
+}
+.nav-category-list .caticon-e021:before {
+	content: "\e021";
+}
+.nav-category-list .caticon-e022:before {
+	content: "\e022";
+}
+.nav-category-list .caticon-e023:before {
+	content: "\e023";
+}
+.nav-category-list .caticon-e024:before {
+	content: "\e024";
+}
+.nav-category-list .caticon-e025:before {
+	content: "\e025";
+}
+.nav-category-list .caticon-e026:before {
+	content: "\e026";
+}
+.nav-category-list .caticon-e027:before {
+	content: "\e027";
+}
+.nav-category-list .caticon-e028:before {
+	content: "\e028";
+}
+.nav-category-list .caticon-e029:before {
+	content: "\e029";
+}

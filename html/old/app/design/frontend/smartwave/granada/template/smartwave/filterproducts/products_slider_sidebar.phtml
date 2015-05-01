@@ -1,0 +1,118 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Product list template
+ *
+ * @see Mage_Catalog_Block_Product_List
+ */
+$_grhelper =  Mage::helper('granada');
+?>
+<?php
+$store = Mage::app()->getStore();
+$_helper = $this->helper('catalog/output');
+$code  = $store->getCode();
+$enable = $this->isEnable();
+$storeId    = $store->getId();
+?>
+<?php if($enable == 1 && $this->getItems()->getSize()): ?>
+    <?php
+        $counts = count($this->getItems());
+        $_i = 0;
+    ?>
+    <div class="block products-slider <?php echo $this->getSliderBlockName(); ?>-container">
+        <div class="block-title">
+            <strong><?php echo $this->getTitle() ?></strong>
+            <?php if ($counts > 3): ?>
+            <div class="arrows-container">
+                <div class="button button-custom button-custom-active arrows-left best-seller-arrows-left button-white"></div>
+                <div class="button button-custom button-custom-active arrows-right best-seller-arrows-right button-white"></div>
+            </div>
+            <?php endif; ?>
+        </div>
+        <div class="block-content">
+            <div class="products-slider-sidebar home_<?php echo $this->getSliderBlockName(); ?> products-list">
+                <?php foreach($this->getItems() as $_item): ?>
+                    <?php if($_i%3 == 0): ?>
+                        <ul class="product-item">
+                    <?php endif; ?>
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-4 col-side-product">
+                                        <div class="product-image-wrapper">
+                                            <div class="product-image">
+                                                <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_item, 'small_image'), null, true) ?>">
+                                                    <img src="<?php echo Mage::helper('catalog/image')->init($_item,'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(250); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_item, 'small_image'), null, true) ?>" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-description col-xs-8">
+                                        <h4 class="product-name"><a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->stripTags($_item->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_item, $_item->getName(), 'name') ?></a></h4>
+                                        <?php
+                                        $summaryData = Mage::getModel('review/review_summary')
+                                            ->setStoreId($storeId)
+                                            ->load($_item->getId());
+                                        ?>
+                                        <?php if($summaryData->getRatingSummary()): ?>
+                                            <?php echo $this->getReviewsSummaryHtml($_item,'short',false) ?>
+                                        <?php endif; ?>
+                                        <?php echo $this->getPriceHtml($_item, true) ?>
+                                    </div>
+                                </div>
+                            </li>
+                    <?php if($_i%3 == 2 || $_i == $counts - 1):?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php $_i++; ?>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        jQuery(document).ready(function(){
+            var bestseller_slider = jQuery('.<?php echo $this->getSliderBlockName(); ?>-container .home_<?php echo $this->getSliderBlockName(); ?>').owlCarousel({
+                items: 1,
+                itemsDesktop: [1199, 1],
+                itemsDesktopSmall: [991, 1],
+                itemsTablet: [768, 1],
+                itemsMobile: [479, 1],
+                lazyLoad: true,
+                pagination: false,
+                autoHeight: true
+            });
+            jQuery('.best-seller-arrows-left').on('click', function(){
+                bestseller_slider.trigger('owl.prev');
+            });
+            jQuery('.best-seller-arrows-right').on('click', function(){
+                bestseller_slider.trigger('owl.next');
+            });
+        });
+        //]]>
+    </script>
+<?php endif; ?>

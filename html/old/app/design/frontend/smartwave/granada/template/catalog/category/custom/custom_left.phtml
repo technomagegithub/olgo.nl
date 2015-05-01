@@ -1,0 +1,15 @@
+<?php
+    $_grhelper = Mage::helper('granada');
+    if ($_grhelper->getCatCustomBlock('left')) {
+        $blockIds = preg_replace('/\s/', '', $_grhelper->getCatCustomBlock('left'));
+        $IDs = explode(',', $blockIds);
+        echo '<div class="catalog-custom-block">';
+        foreach ($IDs as $blockId) {
+            $cat_side_block = Mage::getModel('cms/block')->load($blockId);
+            if($cat_side_block->getIsActive()){
+                echo '<div class="cat-custom-item">'.$this->getLayout()->createBlock('cms/block')->setBlockId($blockId)->toHtml().'</div>';
+            }
+        }
+        echo '</div>';
+    }
+?>

@@ -1,0 +1,16 @@
+<?php
+/**
+ * @var Mage_Core_Template $this
+ */
+ 
+/**
+* Granada Theme Version 1.0.0
+* granada header
+*/
+?>
+<?php $top_bar_type = Mage::getStoreConfig('granada_setting/header_settings/header_top_type'); ?>
+<div class="top-bar <?php echo $top_bar_type ?>">
+    <div class="container">
+        <?php echo $this->getChildHtml() ?>
+    </div>
+</div>

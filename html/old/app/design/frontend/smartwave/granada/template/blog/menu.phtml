@@ -1,0 +1,96 @@
+<?php if ($this->getCategories()->count()): ?>  
+<div class="block block-blog-categories">
+    <div class="block-title">
+        <strong><span><?php echo Mage::helper('blog')->__('Blog Categories'); ?></span></strong>
+    </div>
+    <div class="block-content">
+        <?php $cats = $this->getCategories(); ?>
+        <ul class="list-arrow">
+        <?php foreach ($cats as $cat): ?>
+                    <li>
+                        <a href="<?php echo $cat->getAddress(); ?>"><?php echo $cat->getTitle(); ?></a>
+                    </li>
+        <?php endforeach; ?>
+        </ul>
+    </div>
+</div>
+<?php endif; ?>
+
+<div class="slider-blog-container on-blog-side">	
+<?php $posts = $this->getRecent() ?>
+	<div class="block-title">
+		<strong><?php echo $this->__("Latest Posts"); ?></strong>
+		<?php if (count($posts)> 2): ?>
+		<div class="arrows-container">
+			<div class="button button-custom button-custom-active arrows-left blog-arrows-left"></div>
+			<div class="button button-custom button-custom-active arrows-right blog-arrows-right"></div>
+		</div>
+		<?php endif; ?>
+	</div>	
+	<?php if (count($posts)): ?>
+	<?php $_i = 0; ?>
+	<div class="block-content">
+		<div class="row">
+			<div class="items-slider posts-slider side-blog-type-3 blog-slider-type-3">
+				<?php foreach ($posts as $post): ?>
+				<?php if($_i%2 == 0): ?>
+				<div class="blog-item">
+				<?php endif; ?>
+				<div class="slide-item post-slide">
+					<div class="post-content-container">
+						<?php
+							if($banner_image = $post->getBanner()){
+						?>
+						<div class="post-images">
+							<a href="<?php echo $post->getAddress(); ?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).$banner_image; ?>" alt=""/></a>
+							<div class="post-date-icon">
+								<div class="posted-on"></div>
+								<div class="post-date">
+									<?php echo $post->getDay()." ".$post->getMonthShort(); ?>
+								</div>
+							</div>
+						</div>
+						<?php } ?>
+						<h3 class="post-title"><a href="<?php echo $post->getAddress(); ?>" ><?php echo $post->getTitle(); ?></a></h3>
+						<div class="postContent"><?php echo $post->getShortContent(); ?></div>
+						<a href="<?php echo $post->getAddress(); ?>" class="button button-custom button-custom-active"><?php echo $this->__('Read More') ?></a>
+					</div>
+				</div>
+				<?php if($_i%2 == 1 || $_i == count($posts) - 1): ?>
+					</div>
+				<?php endif; ?>
+				<?php $_i++; ?>
+				<?php endforeach; ?>
+			</div>
+		 </div>
+	 </div>
+	<script type="text/javascript">
+	//<![CDATA[
+		var blog_side_custom = jQuery('.slider-blog-container .side-blog-type-3').owlCarousel({
+			items: 1,
+			itemsDesktop: [1199, 1],
+			itemsDesktopSmall: [991, 1],
+			itemsTablet: [768, 1],
+			itemsMobile: [479, 1],
+			lazyLoad: true,
+			pagination: false,
+			navigation: false
+		});
+		jQuery('.blog-arrows-left').on('click', function(){
+			blog_side_custom.trigger('owl.prev');
+		});
+		jQuery('.blog-arrows-right').on('click', function(){
+			blog_side_custom.trigger('owl.next');
+		});
+	//]]>
+	</script>
+	<?php else: ?>
+	<div class="content-element">
+		<div class="note-msg"><span class="msg-content"><?php echo $this->__('There are no blogs.') ?></span></div>
+	</div>
+	<?php endif; ?>
+</div>
+
+<?php echo $this->getChildHtml('blog_tags'); ?>
+
+<?php echo $this->getChildHtml('blog_flickr'); ?>

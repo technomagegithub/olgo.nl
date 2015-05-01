@@ -1,0 +1,10 @@
+<?php 
+    $store = Mage::app()->getStore();
+    $code  = $store->getCode();
+    $helper = Mage::helper('granada');
+    $s = $helper->getConfigGroup();
+?>
+body {
+
+}
+<?php echo $s['custom_settings']['custom_style'];?>

@@ -1,0 +1,45 @@
+<?php
+    $store = Mage::app()->getStore();
+    $code  = $store->getCode();
+?>
+<?php
+$loaderSrc = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'ajaxcart/'.Mage::getStoreConfig('ajaxcart/general/loader_image', $code);
+$imageSize = 0;
+if(Mage::getStoreConfig('ajaxcart/general/loader_image', $code)){ $imageSize = getimagesize($loaderSrc); }
+if (!is_array($imageSize)){
+	$loaderSrc = $this->getJsUrl('smartwave/ajaxcart/ajax-loader.gif');
+}
+?>
+<div id="loading-mask">
+    <div class ="background-overlay"></div>
+	<p id="loading_mask_loader" class="loader">
+		<img alt="Loading.." src='<?php echo $loaderSrc; ?>'/>
+	</p>
+</div>
+<div id="after-loading-success-message">
+	<div class ="background-overlay"></div>
+	<div id="success-message-container" class="loader" >
+        <div class="bordered-container">
+            <p id="success-message"><?php echo $this->__("Product was successfully added to your shopping cart.") ?></p>
+            <?php $autoclose = Mage::getStoreConfig('ajaxcart/addtocart/autoclose', $code);?>
+            <div class="timer active-color"><?php echo ($autoclose && is_numeric($autoclose))?$autoclose:5; ?></div>
+            <button type="button" name="finish_and_checkout" id="finish_and_checkout" class="button btn-cart" ><span><span><?php echo $this->__("Go to cart page") ?></span></span></button>
+            <button type="button" name="continue_shopping" id="continue_shopping" class="button btn-cart" ><span><span><?php echo $this->__("Continue shopping") ?></span></span></button>
+        </div>
+    </div>
+</div>
+<div id="after-loading-cw-message">
+    <div class ="background-overlay"></div>
+    <div id="success-cw-message-container" class="loader" >
+        <div class="bordered-container">
+            <p id="cw-success-message"><?php echo $this->__("Product was successfully added to your comparison list.") ?></p>
+            <button type="button" name="continue_shopping" id="continue_view" class="button button-custom button-custom-active" ><span><span><?php echo $this->__("Close") ?></span></span></button>
+        </div>
+    </div>
+</div>
+<script type='text/javascript'>
+        var init_timer = <?php echo ($autoclose && is_numeric($autoclose))?$autoclose:5; ?>;
+		jQuery('#finish_and_checkout').click(function(){location.href = '<?php echo $this->getUrl('checkout/cart') ?>'});
+		jQuery('#continue_shopping').click(function(){jQuery('#after-loading-success-message').fadeOut();});
+        jQuery('#continue_view').click(function(){jQuery('#after-loading-cw-message').fadeOut();});
+</script>

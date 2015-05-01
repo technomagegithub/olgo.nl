@@ -1,0 +1,218 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Product list template
+ *
+ * @see Mage_Catalog_Block_Product_List
+ */
+?>
+<?php
+$store = Mage::app()->getStore();
+$_helper = $this->helper('catalog/output');
+$code  = $store->getCode();
+$_grhelper =  Mage::helper('granada');
+$enable = $this->isEnable();
+?>
+<?php if($enable == 1 && $this->getItems()->getSize()): ?>
+    <div id="vslider_body" class="home-product-slider slider-type-vertical">
+    <?php if (Mage::helper('core')->isModuleEnabled('Apptha_Timer') && Mage::getStoreConfig('timer/general/enabled')):?>
+        <?php
+        $blockTimer = new Apptha_Timer_Block_Product_List();
+        $count = 1;
+        ?>
+    <?php endif; ?>
+    <?php foreach($this->getItems() as $_product): ?>
+        <div class="slide">
+            <div class="row">
+                <div class="product-image col-md-6">
+                    <img src="<?php echo Mage::helper('catalog/image')->init($_product,'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(960); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                    <?php if($_product->isSaleable()): ?>
+                        <?php
+                        // Get the Special Price
+                        $specialprice = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialPrice();
+                        // Get the Special Price FROM date
+                        $specialPriceFromDate = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialFromDate();
+                        // Get the Special Price TO date
+                        $specialPriceToDate = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialToDate();
+                        // Get Current date
+                        $today =  time();
+                        $is_special = 0;
+                        if ($specialprice){
+                            if($today >= strtotime( $specialPriceFromDate) && $today <= strtotime($specialPriceToDate) || $today >= strtotime( $specialPriceFromDate) && is_null($specialPriceToDate)){
+                                if(Mage::getStoreConfig("granada_setting/product_label/sale", $code)){
+                                    ?>
+                                    <?php $is_special = 1; ?>
+                                    <span class="label-icon sale-label"><?php echo $this->__('Sale') ?></span>
+                                <?php
+                                }
+                            }
+                        }
+                        ?>
+                        <?php
+                        $now = date("Y-m-d");
+                        $newsFrom= substr($_product->getData('news_from_date'),0,10);
+                        $newsTo=  substr($_product->getData('news_to_date'),0,10);
+                        if ($newsTo != '' || $newsFrom != ''){
+                            if (($newsTo != '' && $newsFrom != '' && $now>=$newsFrom && $now<=$newsTo) || ($newsTo == '' && $now >=$newsFrom) || ($newsFrom == '' && $now<=$newsTo))
+                            {
+                                if(Mage::getStoreConfig("granada_setting/product_label/new", $code)){
+                                    ?>
+                                    <?php if ($is_special): ?>
+                                        <span class="label-icon new-label second-label"><?php echo $this->__('New') ?></span>
+                                    <?php else: ?>
+                                        <span class="label-icon new-label"><?php echo $this->__('New') ?></span>
+                                    <?php endif; ?>
+                                <?php
+                                }
+                            }
+                        }
+                        ?>
+                    <?php else: ?>
+                        <span class="label-icon outofstock-label"><?php echo $this->__('Out Of Stock') ?></span>
+                    <?php endif; ?>
+                </div>
+                <div class="product-shop col-md-6">
+                    <?php if (Mage::helper('core')->isModuleEnabled('Apptha_Timer') && Mage::getStoreConfig('timer/general/enabled')):?>
+                        <?php if($blockTimer->getPriceCountDown($_product)) :?>
+                            <div class="timer-caption sub-title"><?php echo $this->__('Deal Of The Day'); ?></div>
+                            <div id="countbox_<?php echo $count; ?>" class="timer-list"></div>
+                        <?php $toDate = $_product->getSpecialTODate();?>
+                            <script type="text/javascript">
+                                var dthen<?php echo $count; ?> = new Date("<?php echo Date("m/d/y", strtotime($toDate)).' 11:59:00 PM'; ?>");
+                                start = "<?php echo Date("m/d/y h:i:s A", strtotime(Mage_Core_Model_Locale::date(null, null, "en_US", true))); ?>";
+                                start_date = Date.parse(start);
+                                var dnow<?php echo $count; ?> = new Date(start_date);
+                                if(CountStepper>0)
+                                    ddiff= new Date((dnow<?php echo $count; ?>)-(dthen<?php echo $count; ?>));
+                                else
+                                    ddiff = new Date((dthen<?php echo $count; ?>)-(dnow<?php echo $count; ?>));
+                                gsecs<?php echo $count; ?> = Math.floor(ddiff.valueOf()/1000);
+                                var iid<?php echo $count; ?> = "countbox_<?php echo $count; ?>";
+                                CountBack(gsecs<?php echo $count; ?>,"countbox_"+timer, timer);
+                            </script>
+                        <?php endif; ?>
+                    <?php endif;?>
+                    <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
+                    <?php echo $this->getPriceHtml($_product, true) ?>
+                    <div class="product-information">
+                    <?php if($_product->getRatingSummary()): ?>
+                        <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+                    <?php endif; ?>
+                    <div class="sku-wrapper">
+                        <?php echo $this->__('SKU: '); ?>
+                        <?php echo $_helper->productAttribute($_product, nl2br($_product->getSku()), 'sku') ?>
+                    </div>
+                    </div>
+                    <?php if ($_product->getShortDescription()):?>
+                        <div class="short-description">
+                            <div class="std" <?php if($enabled_richsnippets): ?>itemprop="description"<?php endif; ?>><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+                        </div>
+                    <?php endif;?>
+                    <div class="actions-wrapper">
+                    <?php if($_product->isSaleable()): ?>
+                        <?php if(Mage::getStoreConfig('ajaxcart/addtocart/enablecategory')): ?>
+                            <?php  if ( !($_product->getData('has_options') || $_product->isGrouped()) ) :  ?>
+                                <a title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart product-add-btn" onclick="setLocationAjax('<?php echo $this->getAddToCartUrl($_product) ?>','<?php echo $_product->getId()?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></a>
+                            <?php else: ?>
+                                <a title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart product-add-btn" onclick="showOptions('<?php echo $_product->getId()?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></a>
+                                <a href='<?php echo $this->getUrl('ajaxcart/index/options',array('product_id'=>$_product->getId()));?>' class='fancybox' id='fancybox<?php echo $_product->getId()?>' style='display:none'>Options</a>
+                            <?php endif; ?>
+                        <?php else: ?>
+                            <a title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart product-add-btn" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></a>
+                        <?php endif; ?>
+                    <?php else: ?>
+                        <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->__('Read More') ?>" class="button btn-cart product-add-btn read-link"><span><span><?php echo $this->__('Read') ?></span></span></a>
+                    <?php endif; ?>
+                    <?php if(Mage::getStoreConfig('ajaxcart/addtolinks/enablecategory')): ?>
+                        <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                            <a href="#" onclick='ajaxWishlist("<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>","<?php echo $_product->getId()?>");return false;' class="product-btn link-wishlist" title="<?php echo $this->__('Add to Wishlist') ?>"><?php echo $this->__('Add to Wishlist') ?></a>
+                        <?php endif; ?>
+                        <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+                            <a href="#" title="<?php echo $this->__('Add to Compare') ?>" onclick='ajaxCompare("<?php echo $_compareUrl ?>","<?php echo $_product->getId()?>");return false;' class="product-btn link-compare"><?php echo $this->__('Add to Compare') ?></a>
+                        <?php endif; ?>
+                    <?php else: ?>
+                        <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                            <a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist product-btn" title="<?php echo $this->__('Add to Wishlist') ?>"><?php echo $this->__('Add to Wishlist') ?></a>
+                        <?php endif; ?>
+                        <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+                            <a href="<?php echo $_compareUrl ?>" title="<?php echo $this->__('Add to Compare') ?>" class="link-compare product-btn"><?php echo $this->__('Add to Compare') ?></a>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php if (Mage::helper('core')->isModuleEnabled('Apptha_Timer') && Mage::getStoreConfig('timer/general/enabled')):?>
+            <?php if($blockTimer->getPriceCountDown($_product)) :?>
+                <?php $toDate = $_product->getSpecialTODate();?>
+                    <script type="text/javascript">
+                        var dthen<?php echo $count; ?> = new Date("<?php echo Date("m/d/y", strtotime($toDate)).' 11:59:00 PM'; ?>");
+                        start = "<?php echo Date("m/d/y h:i:s A", strtotime(Mage_Core_Model_Locale::date(null, null, "en_US", true))); ?>";
+                        start_date = Date.parse(start);
+                        var dnow<?php echo $count; ?> = new Date(start_date);
+                        if(CountStepper>0)
+                            ddiff= new Date((dnow<?php echo $count; ?>)-(dthen<?php echo $count; ?>));
+                        else
+                            ddiff = new Date((dthen<?php echo $count; ?>)-(dnow<?php echo $count; ?>));
+                        gsecs<?php echo $count; ?> = Math.floor(ddiff.valueOf()/1000);
+                        var iid<?php echo $count; ?> = "countbox_<?php echo $count; ?>";
+                        CountBack(gsecs<?php echo $count; ?>,"countbox_"+timer, timer);
+                        timer++;
+                    </script>
+                <?php $count = $count + 1; ?>
+            <?php endif;?>
+        <?php endif; ?>
+    <?php endforeach; ?>
+    </div>
+    <script type="text/javascript">
+        jQuery(document).ready(function($){
+            $("html").addClass("fsvs");
+            var slider = $.fn.fsvs({
+                speed               : 1000,
+                bodyID              : 'vslider_body',
+                selector            : '> .slide',
+                mouseSwipeDisance   : 40,
+                afterSlide          : function(){},
+                beforeSlide         : function(){},
+                endSlide            : function(){},
+                mouseWheelEvents    : true,
+                mouseWheelDelay     : false,
+                mouseDragEvents     : true,
+                touchEvents         : true,
+                arrowKeyEvents      : true,
+                pagination          : true,
+                nthClasses          : 2,
+                detectHash          : true
+            });
+        });
+    </script>
+<?php else: ?>
+    <div class="content-element">
+        <div class="note-msg"><span class="msg-content"><?php echo $this->__('There are no products matching the selection.') ?></span></div>
+    </div>
+<?php endif; ?>

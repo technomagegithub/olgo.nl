@@ -1,0 +1,552 @@
+<root>
+	<pages>
+		<cms_block>
+			<title>About Us</title>
+			<identifier>about-magento-demo-store</identifier>
+			<content><![CDATA[<div>{{block type="cms/block" block_id="about_us_banner" }}</div>
+				<div class="about-us-block gray-button-container">
+				<div class="container">
+				<div class="icon-quote a-center">&amp;nbps;</div>
+				<p class="secondary-font about-us-block-desc a-center">Granada is modern and clean theme and built upon the 1170px Twitter Bootstrap framework.</p>
+				{{block type="cms/block" block_id="home_about_us_3" }}</div>
+				</div>
+				<div class="sw_section parallax-section about-us-testimonial" style="background-image: url('{{media url="wysiwyg/testimonial_bg_4.jpg"}}');" data-parallax-speed="0.05">
+				<div class="container">{{block type="cms/block" block_id="testominial-block" }}</div>
+				</div>
+				<div class="lg-margin3x hidden-xs">&nbsp;</div>
+				<div class="lg-margin2x visible-xs">&nbsp;</div>
+				<div>{{block type="cms/block" block_id="about_our_service" }}</div>
+				<div class="about-us-skill">{{block type="cms/block" block_id="about_our_skills" }}</div>
+				<div class="xlg-margin2x hidden-xs">&nbsp;</div>
+				<div class="xlg-margin visible-xs">&nbsp;</div>
+				<div>{{block type="cms/block" block_id="about_fun_facts_block" }}</div>
+				<div class="about-meet-our-team">{{block type="cms/block" block_id="about_meet_our_team" }}</div>
+				<div>{{block type="cms/block" block_id="home_latest_projects_secondary" }}</div>]]></content>
+			<is_active>1</is_active>
+			<stores><item>0</item></stores>
+			<root_template>one_column</root_template>
+			<layout_update_xml><![CDATA[<reference name="head">
+			    <action method="addItem"><type>skin_js</type><name>js/waypoints.min.js</name></action>
+			</reference>
+			<reference name="root">
+				<action method="addBodyClass"><classname>abs_breadcrumb</classname></action>
+				<action method="addBodyClass"><classname>full_height</classname></action>
+			</reference>]]></layout_update_xml>
+		</cms_block>
+		<cms_block>
+			<title>404 Not Found</title>
+			<identifier>no-route</identifier>
+			<content><![CDATA[<div class="no-content-box wow fadeInRightBig animated" style="background-image:url('{{media url="wysiwyg/404-contentbg.png"}}');background-repeat: no-repeat;visibility: visible; -webkit-animation: fadeInRightBig;">
+				<div class="vcontainer">
+					<div class="valign-middle">
+						<h2 class="active-color">error 404</h2>
+						<h3 class="sub-title">Oops, This page cannot be found</h3>
+						<p class="secondary-font">Sorry, the page you are looking for is not available. Maybe you want to perform a search?</p>
+						{{block type="core/template" template="catalogsearch/form.cms.phtml"}}
+					</div>
+				</div>
+			</div>]]></content>
+			<is_active>1</is_active>
+			<stores><item>0</item></stores>
+			<root_template>one_column</root_template>
+			<layout_update_xml><![CDATA[]]></layout_update_xml>
+		</cms_block>
+		<cms_block>
+			<title>Granada Home - One</title>
+			<identifier>granada_home_1</identifier>
+			<content><![CDATA[<div id="home_demo_1">
+<div class="sw_section_full sw_vertical parallax-section" style="background-image: url('{{media url="wysiwyg/home_1_1.jpg"}}');" data-parallax-speed="0.05">
+<div class="vcontainer">
+<div class="a-center white-font season-block valign-middle">
+<p class="season-duration sub-title white-font">10/04/14 - 10/05/14</p>
+<p class="season-sub-title sub-title white-font">Mid Season Sale</p>
+<h1 class="season-title white-font">Up To <span class="season-large-title title-font white-font">50</span>% off</h1>
+<p class="season-description">Mauris commodo nisl eu odio luctus, sed iaculis orci tincidunt.Suspendisse vulpuate luctus.</p>
+<a class="button button-custom button-custom-active button-white btn-lg" href="#">show now</a></div>
+</div>
+</div>
+<div class="sw_section_full sw_vertical gray-button-container">
+<div class="vcontainer pos-abs">
+<div class="valign-middle">
+<div class="container">
+<div class="row">
+<div class="arrival-block a-center">
+<p class="arrival-sub-title gray-font upper-font sub-title">Our Spring / Summer</p>
+<div class="bg-slider-arrows"><span class="no-border button-prev">preview</span> <span class="no-border button-next">next</span></div>
+<h2 class="arrival-title gray-font">New Arrivalse</h2>
+<p class="arrival-description secondary-font">Donec gravida elit sed rhoncus eleifend. Nam viverra lacus non lobortis malescuada fusce.</p>
+<a class="button button-custom button-custom-active button-gray btn-lg" href="#">show now</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="full-bg-slider-1 owl-carousel owl-theme full-screen-slider">
+<div class="item">
+<div style="width: 100%; height: 100%; background: url('{{media url="wysiwyg/full_bg_1.jpg"}}') center center no-repeat; background-size: cover;">&nbsp;</div>
+</div>
+<div class="item">
+<div style="width: 100%; height: 100%; background: url('{{media url="wysiwyg/full_bg_2.jpg"}}') center center no-repeat; background-size: cover;">&nbsp;</div>
+</div>
+<div class="item">
+<div style="width: 100%; height: 100%; background: url('{{media url="wysiwyg/full_bg_3.jpg"}}') center center no-repeat; background-size: cover;">&nbsp;</div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+			var fullbgslider1 = jQuery('.full-bg-slider-1').owlCarousel({
+				navigation : false,
+				pagination: false,
+				singleItem:true,
+				autoPlay:true,
+				mouseDrag: true,
+				transitionStyle : "fade"			
+			});
+			jQuery('.arrival-block .button-prev').click(function(){
+				fullbgslider1.trigger('owl.prev');
+			});
+			jQuery('.arrival-block .button-next').click(function(){
+				fullbgslider1.trigger('owl.next');
+			});
+		});
+</script>
+</div>
+<div class="sw_section_full sw_vertical" style="background-image: url({{media url='wysiwyg/home_1_3.jpg'}});">{{block type="granada/home_product" product_id="30" icon_xpos="569" icon_ypos="456" popup_direction="right-bottom"}} {{block type="granada/home_product" product_id="29" icon_xpos="845" icon_ypos="840" popup_direction="left-bottom"}}
+<div class="vcontainer">
+<div class="valign-middle">
+<div class="container">
+<div class="row">
+<div class="a-center collection-block">
+<p class="collection-sub-title secondary-font white-font" style="margin-bottom: 0;">new men's</p>
+<h2 class="collection-title white-font">Collection</h2>
+<p class="collection-sub-title white-font sub-title upper-font">Chies Summer New</p>
+<a class="button button-custom button-custom-active button-white btn-lg" href="#">show now</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sw_vertical gray-button-container">
+<div class="home-products">
+<div class="container">{{block type="filterproducts/latest_home_list" product_count="16" product_column='4' template="smartwave/filterproducts/products_slider_doubled.phtml"}}</div>
+</div>
+</div>
+<div class="sw_section_full sw_vertical">
+<div class="vcontainer pos-abs">
+<div class="valign-middle">
+<div class="container">
+<div class="row">
+<div class="arrival-block a-center white-font">
+<p class="arrival-sub-title upper-font sub-title white-font">Autumn / Winter 2014</p>
+<div class="bg-slider-arrows"><span class="no-border button-prev white-button">preview</span> <span class="no-border button-next white-button">next</span></div>
+<h2 class="arrival-title white-font">Lookbook</h2>
+<p class="arrival-description secondary-font">Aenean eu vulputate tortor, quis iaclis sapien. Phasellus pharetra faucibus hendrerit nam ipsum.</p>
+<a class="button button-custom button-custom-active button-white btn-lg" href="#">Take Look</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="full-bg-slider-2 owl-carousel owl-theme full-screen-slider">
+<div class="item">
+<div style="width: 100%; height: 100%; background: url('{{media url="wysiwyg/full_bg_4.jpg"}}') center center no-repeat; background-size: cover;">&nbsp;</div>
+</div>
+<div class="item">
+<div style="width: 100%; height: 100%; background: url('{{media url="wysiwyg/full_bg_5.jpg"}}') center center no-repeat; background-size: cover;">&nbsp;</div>
+</div>
+<div class="item">
+<div style="width: 100%; height: 100%; background: url('{{media url="wysiwyg/full_bg_6.jpg"}}') center center no-repeat; background-size: cover;">&nbsp;</div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+			var fullbgslider2 = jQuery('.full-bg-slider-2').owlCarousel({
+				navigation : false,
+				pagination: false,
+				singleItem:true,
+				autoPlay:true,
+				mouseDrag: true,
+				transitionStyle : "fade"			
+			});
+			jQuery('.arrival-block .button-prev').click(function(){
+				fullbgslider2.trigger('owl.prev');
+			});
+			jQuery('.arrival-block .button-next').click(function(){
+				fullbgslider2.trigger('owl.next');
+			});
+		});
+</script>
+</div>
+<div class="sw_vertical blog-section gray-button-container">
+<div class="container">{{block type="blog/menu_recents" blog_widget_recent_count="4" template="blog/home_slider_block.phtml"}}</div>
+<div class="sw_section_full_width parallax-section" style="background-image: url('{{media url="wysiwyg/home_1_6.jpg"}}');" data-parallax-speed="0.05">
+<div class="container">{{block type="cms/block" block_id="testominial-block" }}</div>
+</div>
+</div>
+<div class="sw_section_full sw_vertical parallax-section" style="background-image: url('{{media url="wysiwyg/home_1_7.jpg"}}');" data-parallax-speed="0.05">
+<div class="vcontainer">
+<div class="valign-middle">
+<div class="container">
+<div class="row">
+<div class="trend-block a-center">
+<p class="trend-sub-title upper-font sub-title" style="color: #675f56;">The</p>
+<h2 class="trend-title" style="color: #675f56;">Latest Trend</h2>
+<p class="trend-description secondary-font" style="color: #675f56;">This season must-haves.</p>
+<a class="button button-custom button-custom-active button-gray btn-lg" href="#">shop now</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sw_vertical about-us-block gray-button-container">
+<div class="container">
+<h2 class="sub-title about-us-block-title a-center">About Us</h2>
+<div class="icon-quote">&amp;nbps;</div>
+<p class="secondary-font about-us-block-desc a-center">Granada is modern and clean theme and built upon the 1170px Twitter Bootstrap framework.</p>
+{{block type="cms/block" block_id="home_about_us_1" }}</div>
+</div>
+<div class="sw_section_full sw_vertical parallax-section a-center newsletter-block_dark" style="background-image: url('{{media url="wysiwyg/newsletter_bg_4.jpg"}}');" data-parallax-speed="0.05">
+<div class="vcontainer">
+<div class="valign-middle">
+<div class="container">
+<h3 class="newsletter-sub-title sub-title white-font">Times A Ticking</h3>
+<h1 class="newletter-title white-font">Don't Miss Out</h1>
+<div class="newsletter-desc secondary-font white-font">Subscribe for the latest styles and sales, plus get 25% off your first order.</div>
+{{block type="newsletter/subscribe" template="newsletter/subscribe_home_dark.phtml"}}</div>
+</div>
+</div>
+</div>
+{{block type="core/template" template="page/html/googlemap.phtml" }}</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+		jQuery('#home_demo_1').fullWindow();
+		});
+</script>]]></content>
+			<is_active>1</is_active>
+			<stores><item>0</item></stores>
+			<root_template>full_width</root_template>
+			<layout_update_xml><![CDATA[<reference name="root"><action method="addBodyClass"><classname>abs_pos</classname></action>
+<remove name="page.totop"/></reference>
+			<reference name="head"><action method="addJs"><script>granada/jquery/vpsticker/js/jquery.vpsticker-1.0.0.js</script></action></reference>]]></layout_update_xml>
+		</cms_block>
+		<cms_block>
+			<title>Granada Home - Two</title>
+			<identifier>granada_home_2</identifier>
+			<content><![CDATA[<div>{{block type="cms/block" block_id="advertising_block_1"}}</div>
+<div>{{block type="filterproducts/newproduct_home_list" product_count="8" products_column="4" template="smartwave/filterproducts/products_slider_type2.phtml"}}</div>
+<div class="sw_section home2_testimonial parallax-section" style="background-image: url('{{media url="wysiwyg/home_1_6.jpg"}}'); background-position: 50% 50%;" data-parallax-speed="0.1">
+<div class="container">{{block type="cms/block" block_id="testominial-block" }}</div>
+</div>
+<div>{{block type="filterproducts/bestsellers_home_list" product_count="8" products_column="4" template="smartwave/filterproducts/products_slider_type2.phtml"}}</div>
+<div>{{block type="cms/block" block_id="theme_featured_block" }}</div>
+<div>{{block type="blog/menu_recents" blog_widget_recent_count="4" template="blog/home_slider_block_custom.phtml"}}</div>
+<div>{{block type="cms/block" block_id="brands_slider_block" }}</div>]]></content>
+			<is_active>1</is_active>
+			<stores><item>0</item></stores>
+			<root_template>one_column</root_template>
+			<layout_update_xml><![CDATA[]]></layout_update_xml>
+		</cms_block>
+		<cms_block>
+			<title>Granada Home - Three</title>
+			<identifier>granada_home_3</identifier>
+			<content><![CDATA[<div>{{block type="cms/block" block_id="home_slider_2"}}</div>
+<div>{{block type="cms/block" block_id="products_tab_block" }}</div>
+<div>{{block type="cms/block" block_id="advertising_block_2" }}</div>
+<div>{{block type="cms/block" block_id="home_about_us" }}</div>
+<div>{{block type="cms/block" block_id="home_shop" }}</div>
+<div>{{block type="filterproducts/latest_home_list" product_count="8" products_column="4" template="smartwave/filterproducts/products_slider_type2.phtml"}}</div>
+<div class="sw_section home2_testimonial parallax-section" style="background-image: url('{{media url="wysiwyg/home_1_6.jpg"}}'); background-position: 50% 50%;" data-parallax-speed="0.1">
+<div class="container">{{block type="cms/block" block_id="testominial-block" }}</div>
+</div>
+<div>{{block type="blog/menu_recents" blog_widget_recent_count="4" columns="3" template="blog/home_slider_block_custom.phtml"}}</div>
+<div>{{block type="cms/block" block_id="brands_slider_block" }}</div>]]></content>
+			<is_active>1</is_active>
+			<stores><item>0</item></stores>
+			<root_template>one_column</root_template>
+			<layout_update_xml><![CDATA[]]></layout_update_xml>
+		</cms_block>
+		<cms_block>
+			<title>Granada Home - Four</title>
+			<identifier>granada_home_4</identifier>
+			<content><![CDATA[<div style="margin-bottom: 30px;">{{block type="cms/block" block_id="home_slider_3"}}</div>
+<div style="margin-bottom: 20px;">{{block type="cms/block" block_id="advertising_block_3" }}</div>
+<div>{{block type="cms/block" block_id="products_grid_tab_block" }}</div>
+<div>{{block type="cms/block" block_id="newsletter_block_small" }}</div>
+<div class="md-title">{{block type="cms/block" block_id="home_about_us_2" }}</div>
+<div class="md-title">{{block type="cms/block" block_id="home_our_service" }}</div>
+<div class="md-title" style="margin: 80px 0;">{{block type="blog/menu_recents" blog_widget_recent_count="4" columns="2" template="blog/home_slider_block_short.phtml"}}</div>]]></content>
+			<is_active>1</is_active>
+			<stores><item>0</item></stores>
+			<root_template>two_columns_left</root_template>
+			<layout_update_xml><![CDATA[<reference name="root">
+				<action method="addBodyClass"><classname>content-type</classname></action>
+			</reference>
+			<reference name="left">
+				<block type="megamenu/toggle" name="category_list" template="smartwave/megamenu/html/catlist.phtml"/>
+				<block type="zeon_manufacturer/left" name="manufacturers_list" template="zeon/manufacturer/left.phtml" />
+				<block type="filterproducts/bestsellers_home_list" name="home_bestseller" template="smartwave/filterproducts/products_slider_sidebar.phtml" />
+				<block type="blog/menu_recents" name="footer_blog" template="blog/side_block_custom.phtml"><action method="setData"><name>blog_widget_recent_count</name><value>6</value></action></block>
+				<block type="filterproducts/bestsellers_home_list" name="home_bestseller_single" template="smartwave/filterproducts/products_slider_sidebar_single.phtml" />
+<block type="cms/block" name="side_youtube"><action method="setBlockId"><block_id>block_youtube</block_id></action></block>
+<block type="filterproducts/sale_home_list" name="home_sale_single" template="smartwave/filterproducts/products_slider_sidebar_single.phtml" />
+				<block type="cms/block" name="side_advertising"><action method="setBlockId"><block_id>side_adver_block</block_id></action></block>
+			</reference>]]></layout_update_xml>
+		</cms_block>
+		<cms_block>
+			<title>Granada Home - Five</title>
+			<identifier>granada_home_5</identifier>
+			<content><![CDATA[<div>{{block type="cms/block" block_id="home_shop2" }}</div>
+<div>{{block type="cms/block" block_id="arrivals_slider_block" }}</div>
+<div>{{block type="cms/block" block_id="products_grid_ctab_block" }}</div>
+<div class="sw_section parallax-section white-font" style="background-image: url('{{media url="wysiwyg/testimonial_bg_3.jpg"}}');" data-parallax-speed="0.05">
+<div class="container">{{block type="cms/block" block_id="testominial-block" }}</div>
+</div>
+<div>{{block type="cms/block" block_id="meet_our_team" }}</div>
+<div>{{block type="cms/block" block_id="our_skills_block" }}</div>
+<div>{{block type="cms/block" block_id="fun_facts_block" }}</div>
+<div>{{block type="cms/block" block_id="home_our_service_secondary"}}</div>
+<div>{{block type="cms/block" block_id="home_latest_projects"}}</div>
+<div>{{block type="cms/block" block_id="newsletter_block_dark"}}</div>
+<div class="home-custom-blog">{{block type="blog/menu_recents" blog_widget_recent_count="4" template="blog/home_slider_block_secondary.phtml"}}</div>]]></content>
+			<is_active>1</is_active>
+			<stores><item>0</item></stores>
+			<root_template>one_column</root_template>
+			<layout_update_xml><![CDATA[<reference name="root">
+<action method="addBodyClass"><classname>abs_pos</classname></action>
+</reference>]]></layout_update_xml>
+		</cms_block>
+		<cms_block>
+			<title>Granada Home - Six</title>
+			<identifier>granada_home_6</identifier>
+			<content><![CDATA[<div class="banner-block">
+<div class="row banner-row">
+<div class="banner-col banner-col-3-2"><img alt="" src="{{media url="wysiwyg/b1.jpg"}}" />
+<div class="vertical-middle banner-row-center bb1">
+<div class="secondary-font bb-sub-title">new men's</div>
+<h1 class="bb-title">collection</h1>
+<div class="sub-title bb-comment">Choices Summer New</div>
+<a class="button button-custom button-custom-active button-white btn-lg" href="#">shop now</a></div>
+</div>
+<div class="banner-col banner-col-3-1"><img alt="" src="{{media url="wysiwyg/b2.jpg"}}" />
+<div class="vertical-middle banner-row-left bb2">
+<div class="secondary-font bb-sub-title">new shops</div>
+<h1 class="sub-title bb-title">arrivals</h1>
+<a class="button button-custom button-custom-active button-gray btn-lg" href="#">buy it now</a></div>
+</div>
+</div>
+</div>
+<div class="lookbook-slider-container">{{block type="cms/block" block_id="lookbook_slider"}}</div>
+<div class="banner-block">
+<div class="row banner-row">
+<div class="banner-col banner-col-3-1"><a class="banner-row-link" href="#"><img alt="" src="{{media url="wysiwyg/facebook.jpg"}}" /></a> <a class="banner-row-link" href="#"><img alt="" src="{{media url="wysiwyg/twitter.jpg"}}" /></a></div>
+<div class="banner-col banner-col-3-2"><img alt="" src="{{media url="wysiwyg/b3.jpg"}}" />
+<div class="vertical-middle banner-row-left bb3">
+<div class="sub-title bb-sub-title">Our Spring / Summer</div>
+<h1 class="bb-title">New Arrivals</h1>
+<div class="secondary-font bb-comment">Donec gravida elit sed rhoncus eleifend. Nam viverra lacus non lobortis malesuada fusce.</div>
+<a class="button button-custom button-custom-active button-gray btn-lg" href="#">shop now</a></div>
+</div>
+</div>
+</div>
+<div class="banner-block">
+<div class="row banner-row">
+<div class="banner-col banner-col-3-2 larger">
+<div class="row banner-row">
+<div class="banner-col banner-col-1-2"><img alt="" src="{{media url="wysiwyg/b4.jpg"}}" />
+<div class="vertical-middle banner-row-center bb4">
+<div class="sub-title bb-sub-title">Exclusive</div>
+<h1 class="bb-title">Discount Codes <span>&amp; Offers</span></h1>
+<a class="button button-custom button-custom-active button-white btn-lg" href="#">shop now</a></div>
+</div>
+<div class="banner-col banner-col-1-2"><img alt="" src="{{media url="wysiwyg/b5.jpg"}}" />
+<div class="vertical-middle banner-row-center bb5">
+<div class="secondary-font bb-sub-title">Top Rated</div>
+<h1 class="sub-title bb-title">Dress Shirt</h1>
+<a class="button button-custom button-custom-active button-gray btn-lg" href="#">dress shirt</a></div>
+</div>
+<div class="banner-col banner-col-1 banner-last"><img alt="" src="{{media url="wysiwyg/b6.jpg"}}" />
+<div class="vertical-middle banner-row-center bb6">
+<div class="secondary-font bb-sub-title">14/07/14 - 14/08/14</div>
+<h1 class="bb-title">Mid Season Sale</h1>
+<div class="secondary-font bb-comment">Aliquam erat volutpat. Aliquam erat volutpat. Vestibulum ante ipsum faucibus orci luctus et ultrices posuere cubilia curae.</div>
+<a class="button button-custom button-custom-active button-white btn-lg" href="#">take look</a></div>
+</div>
+</div>
+</div>
+<div class="banner-col banner-col-3-1 larger">
+<div class="row banner-row">
+<div class="banner-col banner-col-1"><img alt="" src="{{media url="wysiwyg/b7.jpg"}}" />
+<div class="vertical-middle banner-row-center bb7">
+<div class="secondary-font bb-sub-title">children</div>
+<h1 class="bb-title">Suits &amp; Coats</h1>
+<div class="secondary-font bb-comment">Nulla dignissim felis, quis mollis quam elementum. Volutpat ultrices. Duis convallis consequat</div>
+<a class="button button-custom button-custom-active button-white btn-lg" href="#">learn more</a></div>
+</div>
+<div class="banner-col banner-col-1 banner-last"><img alt="" src="{{media url="wysiwyg/pinterest.jpg"}}" /></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-fans-block">{{block type="cms/block" block_id="fun_facts_custom_block" }}</div>
+<div class="banner-block">
+<div class="row banner-row">
+<div class="banner-col banner-col-3-1"><img alt="" src="{{media url="wysiwyg/allabout.jpg"}}" />
+<div class="vertical-middle banner-row-center bb8">
+<div class="secondary-font bb-sub-title">All About</div>
+<h1 class="sub-title bb-title">White</h1>
+<a class="button button-custom button-custom-active button-gray btn-lg" href="#">shop new</a></div>
+</div>
+<div class="banner-col banner-col-3-2"><img alt="" src="{{media url="wysiwyg/newsletter_bg_3.jpg"}}" />
+<div class="vertical-middle banner-row-center bb9">
+<div class="sub-title bb-sub-title">Times A Ticking</div>
+<h1 class="bb-title">Don't Miss Out</h1>
+<div class="secondary-font bb-comment">Sybscribe for the latest styles and sales, plus get 25% off your first order.</div>
+{{block type="newsletter/subscribe" template="newsletter/subscribe_home_dark.phtml"}}</div>
+</div>
+</div>
+</div>
+<div class="sw_section_full parallax-section bb-para-block" style="background-image: url('{{media url="wysiwyg/home_1_7.jpg"}}');" data-parallax-speed="0.05">
+<div class="vcontainer">
+<div class="valign-middle">
+<div class="container">
+<div class="row">
+<div class="trend-block a-center">
+<p class="trend-sub-title upper-font sub-title" style="color: #675f56;">The</p>
+<h2 class="trend-title" style="color: #675f56;">Latest Trend</h2>
+<p class="trend-description secondary-font" style="color: #675f56;">This season must-haves.</p>
+<a class="button button-custom button-custom-active button-gray btn-lg" href="#">shop now</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="banner-block">
+<div class="row banner-row">
+<div class="banner-col banner-col-3-2 bb-sm-full"><img alt="" src="{{media url="wysiwyg/testimonial.jpg"}}" />
+<div class="vertical-middle banner-row-center white-font bb10">{{block type="cms/block" block_id="testominial-block" }}</div>
+</div>
+<div class="banner-col banner-col-3-1 hidden-sm"><a class="banner-row-link" href="#"><img alt="" src="{{media url="wysiwyg/sale.jpg"}}" /></a></div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+			<stores><item>0</item></stores>
+			<root_template>full_width</root_template>
+			<layout_update_xml><![CDATA[]]></layout_update_xml>
+		</cms_block>
+		<cms_block>
+			<title>Granada Home - Seven</title>
+			<identifier>granada_home_7</identifier>
+			<content><![CDATA[<div>{{block type="cms/block" block_id="home_7_banner" }}</div>
+<div>{{block type="cms/block" block_id="products_grid_round_tab" }}</div>
+<div class="lg-margin2x">&nbsp;</div>
+<div class="sw_section parallax-section white-font" style="background-image: url('{{media url="wysiwyg/testimonial_bg_5.jpg"}}');" data-parallax-speed="0.05">
+<div class="container">{{block type="cms/block" block_id="testominial-block" }}</div>
+</div>
+<div class="lg-margin2x">&nbsp;</div>
+<div>{{block type="filterproducts/mostviewed_home_list" product_count="10" products_column="5" template="smartwave/filterproducts/products_slider_type3.phtml"}}</div>
+<div class="xlg-margin">&nbsp;</div>
+<div class="centered-nav">{{block type="blog/menu_recents" blog_widget_recent_count="4" columns="3" template="blog/home_slider_block_custom.phtml"}}</div>
+<div class="lg-margin2x">&nbsp;</div>
+<div class="s-newsletter">{{block type="cms/block" block_id="newsletter_block_dark_demo7"}}</div>
+<div class="lg-margin2x">&nbsp;</div>
+<div class="home-mixed-products">
+<h2 class="secondary-font">Special Products</h2>
+<div class="row">
+<div class="col-sm-7">{{block type="filterproducts/sale_home_list" product_count="12" products_column="3" template="smartwave/filterproducts/products_slider_notitle.phtml"}}</div>
+<div class="col-sm-5">{{block type="filterproducts/sale_home_list" product_count="1" products_column="1" template="smartwave/filterproducts/home_product_single.phtml"}}</div>
+</div>
+</div>
+<div class="centered-nav">{{block type="cms/block" block_id="brands_slider_block" }}</div>]]></content>
+			<is_active>1</is_active>
+			<stores><item>0</item></stores>
+			<root_template>one_column</root_template>
+			<layout_update_xml><![CDATA[]]></layout_update_xml>
+		</cms_block>
+		<cms_block>
+			<title>Granada Home - Eight</title>
+			<identifier>granada_home_8</identifier>
+			<content><![CDATA[<div>{{block type="cms/block" block_id="home_8_banner_1" }}</div>
+<div class="md-margin2x">&nbsp;</div>
+<div>{{block type="granada/home_category_products" category_id="1" product_count="6" products_column='4' static_id="cat_cms_block_3" title_color="1694d6" icon_code="e002" template="smartwave/granada/home_list.phtml"}}</div>
+<div>{{block type="granada/home_category_products" category_id="2" product_count="6" products_column='4' static_id="cat_cms_block_4" title_color="e61446" icon_code="e000" template="smartwave/granada/home_list.phtml"}}</div>
+<div>{{block type="cms/block" block_id="home_8_banner_2" }}</div>
+<div class="md-margin2x">&nbsp;</div>
+<div>{{block type="granada/home_category_products" category_id="3" product_count="6" products_column='4' static_id="cat_cms_block_5" title_color="1ab06f" icon_code="e001" template="smartwave/granada/home_list.phtml"}}</div>
+<div>{{block type="granada/home_category_products" category_id="4" product_count="6" products_column='4' static_id="cat_cms_block_6" title_color="c114e6" icon_code="e004" template="smartwave/granada/home_list.phtml"}}</div>
+<div>{{block type="cms/block" block_id="brands_slider_block_demo8" }}</div>]]></content>
+			<is_active>1</is_active>
+			<stores><item>0</item></stores>
+			<root_template>one_column</root_template>
+			<layout_update_xml><![CDATA[]]></layout_update_xml>
+		</cms_block>
+		<cms_block>
+			<title>Granada Home - Nine</title>
+			<identifier>granada_home_9</identifier>
+			<content><![CDATA[<div id="home_demo_9">
+<div class="sw_section_full sw_vertical_nav"><img class="sw_section_full" alt="" src="{{media url="wysiwyg/home_9_1.jpg"}}" />
+<div class="vertical-middle banner-row-center bb11">
+<div class="sub-title bb-sub-title">Cute Kitchen Decor</div>
+<h2 class="bb-title">Organic Modern</h2>
+<div class="secondary-font bb-comment">From serving trays and tea towels to glassware and bowls, we sell a great selection of kitchen accessories.</div>
+<a class="button button-custom button-custom-active button-dark-light btn-lg" href="#">Explore</a></div>
+</div>
+<div class="sw_section_full sw_vertical_nav"><img class="sw_section_full" alt="" src="{{media url="wysiwyg/home_9_2.jpg"}}" />
+<div class="vertical-middle col-sm-6 abs-left a-center bb12">
+<div class="sub-title bb-sub-title">Soft Industrial</div>
+<h2 class="bb-title">Sofas &amp; Chairs</h2>
+<div class="secondary-font bb-comment">Carefully considered designs for your comfort and leisure. Morbi eget pharetra orci.</div>
+<a class="button button-custom button-custom-active button-dark-light btn-lg" href="#">See More</a></div>
+</div>
+<div class="sw_section_full sw_vertical_nav"><img class="sw_section_full" alt="" src="{{media url="wysiwyg/home_9_3.jpg"}}" />
+<div class="vertical-middle col-md-6 abs-right bb13">
+<div class="bb13-item">
+<div class="bb13-item-icon item-icon-1">paint</div>
+<div class="bb13-item-content">
+<h3 class="bb-item-title">Morder Design</h3>
+<div class="secondary-font bb-item-desc ">Quisque ac quam id quam ullam. lorem corper dignissim ullamcorper utrisi. Cras ullamcorper ullamcorper. Integer aliquam malesuada.</div>
+</div>
+</div>
+<div class="bb13-item">
+<div class="bb13-item-icon item-icon-2">star</div>
+<div class="bb13-item-content">
+<h3 class="bb-item-title">High Quality</h3>
+<div class="secondary-font bb-item-desc">Mauris id magna ut dui pulvinar mattis in quis lorem. Vivamus eleifend, dui fringilla imperdiet, nulla nibh luctus, quis hendrerit libero nibh.</div>
+</div>
+</div>
+<div class="bb13-item">
+<div class="bb13-item-icon item-icon-3">sofa</div>
+<div class="bb13-item-content">
+<h3 class="bb-item-title">Comfort</h3>
+<div class="secondary-font bb-item-desc">Praesent gravida malesuada faucibus. Etiam vehicula massa eget nisl ante, posuere vel bibend nisl elementum. Sed vel erat interdum.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sw_section_full sw_vertical_nav"><img class="sw_section_full" alt="" src="{{media url="wysiwyg/home_9_4.jpg"}}" />
+<div class="vertical-middle col-sm-6 a-center abs-left bb14">
+<div class="sub-title bb-sub-title">New Arrivals In</div>
+<h2 class="bb-title">Interrior Lighting</h2>
+<div class="secondary-font bb-comment">We sell premium pendants, table &amp; desk lamps, floor lamps, wall &amp; celing lights from design icons.</div>
+<a class="button button-custom button-custom-active button-dark-light btn-lg" href="#">Shop Now</a></div>
+</div>
+<div class="sw_section_full sw_vertical_nav"><img class="sw_section_full" alt="" src="{{media url="wysiwyg/home_9_5.jpg"}}" />
+<div class="vertical-middle col-sm-8 abs-right a-center bb15">
+<div class="sub-title bb-sub-title">Home Decorations</div>
+<h2 class="bb-title">New And Updated</h2>
+<div class="secondary-font bb-comment">Hot solutions by top brands inspire you to design, build and furnish! Create new visual effects.</div>
+<a class="button button-custom button-custom-active button-dark-light btn-lg" href="#">Discover</a></div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+		jQuery('#home_demo_9').vslider();
+		});
+</script>]]></content>
+			<is_active>1</is_active>
+			<stores><item>0</item></stores>
+			<root_template>full_width</root_template>
+			<layout_update_xml><![CDATA[<reference name="root">
+<action method="addBodyClass"><classname>abs_pos</classname></action>
+<remove name="page.totop"/>
+</reference>]]></layout_update_xml>
+		</cms_block>
+	</pages>
+</root>

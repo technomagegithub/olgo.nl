@@ -1,0 +1,7 @@
+<div class="top-bar-customer top-bar-item">
+    <?php if(Mage::helper('customer')->isLoggedIn()): ?>
+        <a class="top-customer-logout" href="<?php echo Mage::helper('customer')->getLogoutUrl(); ?>"><?php echo $this->__('Logout')?></a>
+    <?php else: ?>
+        <a class="top-customer-login" href="<?php echo Mage::helper('customer')->getLoginUrl(); ?>"><?php echo $this->__('Log In')?>/<?php echo $this->__('Register')?></a>
+    <?php endif; ?>
+</div>

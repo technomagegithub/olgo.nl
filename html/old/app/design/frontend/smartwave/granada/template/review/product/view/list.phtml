@@ -1,0 +1,105 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+
+<?php $_items = $this->getReviewsCollection()->getItems();?>
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php $_product = $this->getProduct(); ?>
+<?php $_items = $this->getReviewsCollection()->getItems();?>
+<div class="box-collateral box-reviews" id="customer-reviews">
+    <div class="reviews-container clearfix">
+        <?php if (count($_items)):?>
+            <h2 class="reviews-title"><?php echo $this->__('Customer Reviews') ?></h2>
+            <ol>
+                <?php foreach ($_items as $_review):?>
+                    <li>
+                        <div class="comment-container">
+                            <div class="avatar-image">
+                                <img src="<?php echo Mage::getDesign()->getSkinUrl("images/avatar.png"); ?>" width="100" height="100"/>
+                            </div>
+                            <div class="comment-text">
+                                <div class="comment-top">
+                                    <div class="meta">
+                                        <p><strong class="review-title"><?php echo $this->htmlEscape($_review->getTitle()); ?></strong></p>
+                                        <p><span class="review-date"><?php $cdate = date_create($_review->getCreatedAt()); echo $this->__('by ').$this->escapeHtml($_review->getNickname()). $this->__(' on ').$this->__(date_format($cdate,"m D,Y")); ?></span></p>
+                                    </div>
+                                    <?php $_votes = $_review->getRatingVotes(); ?>
+                                    <?php if (count($_votes)): ?>
+                                        <div class="ratings-list">
+                                            <?php foreach ($_votes as $_vote): ?>
+                                                <div class="rating-item">
+                                                    <span class="label"><?php echo $_vote->getRatingCode() ?></span>
+                                                    <div class="rating-box">
+                                                        <div class="rating" style="width: <?php echo $_vote->getPercent() ?>%;"></div>
+                                                    </div>
+                                                </div>
+                                            <?php endforeach; ?>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="review-comment">
+                                    <p><?php echo nl2br($this->htmlEscape($_review->getDetail())) ?></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                <?php endforeach; ?>
+            </ol>
+            <?php echo $this->getChildHtml('toolbar') ?>
+        <?php else:?>
+            <ol><li><?php echo $this->__('Be the first to review this product'); ?></li></ol>
+        <?php endif;?>
+    </div>
+    <div class="add-review" id="add-custom-reviews">
+        <?php echo $this->getLayout()->createBlock('review/form')->setBlockId('product.review.form')->toHtml() ?>
+    </div>
+</div>
+

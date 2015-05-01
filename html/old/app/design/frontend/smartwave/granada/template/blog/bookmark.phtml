@@ -1,0 +1,7 @@
+<?php $post = $this->getPost() ?>
+<div class="postBookmarks">
+    <a href="http://www.facebook.com/sharer.php?u=<?php echo $this->getPost()->getAddress();?>&amp;t=<?php echo $this->getPost()->getTitle();?>" class="bm"><div class="icon-facebook"></div></a>
+    <a href="http://twitter.com/home?status=<?php echo $this->getPost()->getTitle();?>%20<?php echo $this->getPost()->getAddress();?>" class="bm"><div class="icon-twitter"></div></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo $this->getPost()->getAddress();?>&title=<?php echo $this->getPost()->getTitle();?>&summary=&source=" class="bm"><div class="icon-linkedin"></div></a>
+    <a href="https://plus.google.com/share?url=<?php echo $this->getPost()->getAddress();?>" class="bm"><div class="icon-googleplus"></div></a>
+</div>

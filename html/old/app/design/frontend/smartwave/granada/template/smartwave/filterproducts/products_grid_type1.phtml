@@ -1,0 +1,189 @@
+<?php
+$store = Mage::app()->getStore();
+$_helper = $this->helper('catalog/output');
+$code  = $store->getCode();
+$_grhelper =  Mage::helper('granada');
+$enable = $this->isEnable();
+?>
+<?php if($enable == 1 && $this->getItems()->getSize()): ?>
+    <ul class="products-grid grid-type-1 column<?php echo $this->get_product_column(); ?> row">
+        <?php foreach ($this->getItems() as $_product): ?>
+            <li class="item">
+                <div class="product-image-wrapper">
+                    <?php if($_product->isSaleable()): ?>
+                        <?php
+                        // Get the Special Price
+                        $specialprice = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialPrice();
+                        // Get the Special Price FROM date
+                        $specialPriceFromDate = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialFromDate();
+                        // Get the Special Price TO date
+                        $specialPriceToDate = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialToDate();
+                        // Get Current date
+                        $today =  time();
+                        $is_special = 0;
+                        if ($specialprice){
+                            if($today >= strtotime( $specialPriceFromDate) && $today <= strtotime($specialPriceToDate) || $today >= strtotime( $specialPriceFromDate) && is_null($specialPriceToDate)){
+                                if(Mage::getStoreConfig("granada_setting/product_label/sale", $code)){
+                                    ?>
+                                    <?php $is_special = 1; ?>
+                                    <span class="label-icon sale-label"><?php echo $this->__('Sale') ?></span>
+                                <?php
+                                }
+                            }
+                        }
+                        ?>
+                        <?php
+                        $now = date("Y-m-d");
+                        $newsFrom= substr($_product->getData('news_from_date'),0,10);
+                        $newsTo=  substr($_product->getData('news_to_date'),0,10);
+                        if ($newsTo != '' || $newsFrom != ''){
+                            if (($newsTo != '' && $newsFrom != '' && $now>=$newsFrom && $now<=$newsTo) || ($newsTo == '' && $now >=$newsFrom) || ($newsFrom == '' && $now<=$newsTo))
+                            {
+                                if(Mage::getStoreConfig("granada_setting/product_label/new", $code)){
+                                    ?>
+                                    <?php if ($is_special): ?>
+                                        <span class="label-icon new-label second-label"><?php echo $this->__('New') ?></span>
+                                    <?php else: ?>
+                                        <span class="label-icon new-label"><?php echo $this->__('New') ?></span>
+                                    <?php endif; ?>
+                                <?php
+                                }
+                            }
+                        }
+                        ?>
+                    <?php else: ?>
+                        <span class="label-icon outofstock-label"><?php echo $this->__('Out Of Stock') ?></span>
+                    <?php endif; ?>
+                    <?php
+                    $effect = $_grhelper->getEffect();
+                    ?>
+                    <?php if ($effect == 'no'): ?>
+                        <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image no-effect">
+                            <?php if ($_grhelper->isKeepRatio()):?>
+                                <img src="<?php echo Mage::helper('catalog/image')->init($_product,'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(350); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                            <?php else: ?>
+                                <?php $imgWidth = $_grhelper->getImgWidth(); ?>
+                                <?php $imgHeight = $_grhelper->getImgHeight(); ?>
+                                <img src="<?php echo Mage::helper('catalog/image')->init($_product,'small_image')->resize($imgWidth, $imgHeight); ?>" width="<?php echo $imgWidth ?>" height="<?php echo $imgHeight ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                            <?php endif; ?>
+                        </a>
+                    <?php elseif ($effect == 'alt_img'): ?>
+                        <?php
+                        $product = $_product->load('media_gallery');
+                        $productMediaGallery = $product->getMediaGalleryImages();
+                        $altImg = $productMediaGallery->getItemByColumnValue($_grhelper->getAltCol(), $_grhelper->getAltColVal());
+                        ?>
+                        <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image alt-image-effect">
+                            <?php if ($_grhelper->isKeepRatio()):?>
+                                <img class="cat-main-img" src="<?php echo Mage::helper('catalog/image')->init($_product,'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(350); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                                <?php if ($altImg): ?>
+                                    <?php if($altImg->getFile()): ?>
+                                        <img class="alt-image" src="<?php echo Mage::helper('catalog/image')->init($_product,'small_image',$altImg->getFile())->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(350)?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                                    <?php else: ?>
+                                        <img class="alt-image" src="<?php echo Mage::helper('catalog/image')->init($_product,'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(350); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                                    <?php endif; ?>
+                                <?php else: ?>
+                                    <img class="alt-image" src="<?php echo Mage::helper('catalog/image')->init($_product,'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(350); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                                <?php endif; ?>
+                            <?php else: ?>
+                                <?php $imgWidth = $_grhelper->getImgWidth(); ?>
+                                <?php $imgHeight = $_grhelper->getImgHeight(); ?>
+                                <img class="cat-main-img" src="<?php echo Mage::helper('catalog/image')->init($_product,'small_image')->resize($imgWidth, $imgHeight); ?>" width="<?php echo $imgWidth ?>" height="<?php echo $imgHeight ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                                <?php if ($altImg): ?>
+                                    <?php if($altImg->getFile()): ?>
+                                        <img class="alt-image" src="<?php echo Mage::helper('catalog/image')->init($_product,'small_image',$altImg->getFile())->resize($imgWidth, $imgHeight); ?>" width="<?php echo $imgWidth ?>" height="<?php echo $imgHeight ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                                    <?php else: ?>
+                                        <img class="alt-image" src="<?php echo Mage::helper('catalog/image')->init($_product,'small_image')->resize($imgWidth, $imgHeight); ?>" width="<?php echo $imgWidth ?>" height="<?php echo $imgHeight ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                                    <?php endif; ?>
+                                <?php else: ?>
+                                    <img class="alt-image" src="<?php echo Mage::helper('catalog/image')->init($_product,'small_image')->resize($imgWidth, $imgHeight); ?>" width="<?php echo $imgWidth ?>" height="<?php echo $imgHeight ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                                <?php endif; ?>
+                            <?php endif; ?>
+                        </a>
+                    <?php elseif ($effect == 'listed_img'): ?>
+                        <?php
+                        $imgList = '';
+                        $product = $_product->load('media_gallery');
+                        foreach ($product->getMediaGalleryImages() as $image) {
+                            // If no image, skip
+                            if ($image->getFile() == NULL)
+                                continue;
+                            if ($_grhelper->isKeepRatio()) {
+                                $imgList .= Mage::helper('catalog/image')->init($_product,'small_image',$image->getFile())->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(350).',';
+                            } else {
+                                $imgWidth = $_grhelper->getImgWidth();
+                                $imgHeight = $_grhelper->getImgHeight();
+                                $imgList .= Mage::helper('catalog/image')->init($_product,'small_image',$image->getFile())->resize($imgWidth, $imgHeight).',';
+                            }
+                        }
+                        $imgList = substr($imgList, 0, strlen($imgList) - 1);
+                        ?>
+                        <div class="list-image-effect">
+                            <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image" data-images-list="<?php echo $imgList; ?>">
+                                <img src="<?php if($_grhelper->isKeepRatio()):?><?php echo $this->helper('catalog/image')->init($_product, 'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(350); ?><?php else: ?><?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($_grhelper->getImgWidth(), $_grhelper->getImgHeight()); ?><?php endif; ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                            </a>
+                        </div>
+                    <?php endif; ?>
+                    <div class="actions">
+                        <div class="actions-wrapper">
+                            <?php if($_product->isSaleable()): ?>
+                                <?php if(Mage::getStoreConfig('ajaxcart/addtocart/enablecategory')): ?>
+                                    <?php  if ( !($_product->getData('has_options') || $_product->isGrouped()) ) :  ?>
+                                        <a title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart product-add-btn" onclick="setLocationAjax('<?php echo $this->getAddToCartUrl($_product) ?>','<?php echo $_product->getId()?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></a>
+                                    <?php else: ?>
+                                        <a title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart product-add-btn" onclick="showOptions('<?php echo $_product->getId()?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></a>
+                                        <a href='<?php echo $this->getUrl('ajaxcart/index/options',array('product_id'=>$_product->getId()));?>' class='fancybox' id='fancybox<?php echo $_product->getId()?>' style='display:none'>Options</a>
+                                    <?php endif; ?>
+                                <?php else: ?>
+                                    <a title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart product-add-btn" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></a>
+                                <?php endif; ?>
+                            <?php else: ?>
+                                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->__('Read More') ?>" class="button btn-cart product-add-btn read-link"><span><span><?php echo $this->__('Read') ?></span></span></a>
+                            <?php endif; ?>
+                            <?php if (Mage::getStoreConfig('quickview/general/enableview', $code)): ?>
+                                <a href="<?php echo $_product->getId() ?>" title="<?php echo $this->__('quick view') ?>" class="sw-product-quickview product-btn"><?php echo $this->__('Quick View') ?></a>
+                            <?php endif; ?>
+                            <?php if(Mage::getStoreConfig('ajaxcart/addtolinks/enablecategory')): ?>
+                                <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                                    <a href="#" onclick='ajaxWishlist("<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>","<?php echo $_product->getId()?>");return false;' class="product-btn link-wishlist" title="<?php echo $this->__('Add to Wishlist') ?>"><?php echo $this->__('Add to Wishlist') ?></a>
+                                <?php endif; ?>
+                                <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+                                    <a href="#" title="<?php echo $this->__('Add to Compare') ?>" onclick='ajaxCompare("<?php echo $_compareUrl ?>","<?php echo $_product->getId()?>");return false;' class="product-btn link-compare"><?php echo $this->__('Add to Compare') ?></a>
+                                <?php endif; ?>
+                            <?php else: ?>
+                                <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                                    <a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist product-btn" title="<?php echo $this->__('Add to Wishlist') ?>"><?php echo $this->__('Add to Wishlist') ?></a>
+                                <?php endif; ?>
+                                <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+                                    <a href="<?php echo $_compareUrl ?>" title="<?php echo $this->__('Add to Compare') ?>" class="link-compare product-btn"><?php echo $this->__('Add to Compare') ?></a>
+                                <?php endif; ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
+                <?php if($_product->getRatingSummary()): ?>
+                    <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+                <?php endif; ?>
+                <?php echo $this->getPriceHtml($_product, true) ?>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+
+    <script type="text/javascript">
+        jQuery('.col-main .products-grid > li:nth-child(2n)').addClass('nth-child-2n');
+        jQuery('.col-main .products-grid > li:nth-child(2n+1)').addClass('nth-child-2np1');
+        jQuery('.col-main .products-grid > li:nth-child(3n)').addClass('nth-child-3n');
+        jQuery('.col-main .products-grid > li:nth-child(3n+1)').addClass('nth-child-3np1');
+        jQuery('.col-main .products-grid > li:nth-child(4n)').addClass('nth-child-4n');
+        jQuery('.col-main .products-grid > li:nth-child(4n+1)').addClass('nth-child-4np1');
+        jQuery('.col-main .products-grid > li:nth-child(5n)').addClass('nth-child-5n');
+        jQuery('.col-main .products-grid > li:nth-child(5n+1)').addClass('nth-child-5np1');
+        jQuery('.col-main .products-grid > li:nth-child(6n)').addClass('nth-child-6n');
+        jQuery('.col-main .products-grid > li:nth-child(6n+1)').addClass('nth-child-6np1');
+    </script>
+<?php else: ?>
+    <div class="content-element">
+        <div class="note-msg"><span class="msg-content"><?php echo $this->__('There are no products matching the selection.') ?></span></div>
+    </div>
+<?php endif; ?>

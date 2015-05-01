@@ -1,0 +1,16 @@
+body {
+
+}
+.cms-index-index input#search_o{background:#EEEEEE;}
+input#search_o{background:#FBFAF4;}
+.header-container{border-bottom:1px solid #888888}
+.header-container {
+  border-bottom: 1px solid #888888;
+}
+@media only screen and (max-width: 991px){
+.top_main_type_4 .header_widget{
+  padding: 52px 0;
+}
+.abs-pos .header-container{position:relative;}
+.sw-mobile-menu{position:relative; z-index:10;background:#f4f4f4;}
+.sw-mobile-menu li{z-index:10;}}

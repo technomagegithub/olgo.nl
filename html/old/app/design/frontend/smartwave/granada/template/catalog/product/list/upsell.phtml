@@ -1,0 +1,177 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php if($itemNum = count($this->getItemCollection()->getItems())): ?>
+<?php $_grhelper =  Mage::helper('granada');?>
+<div class="box-collateral products-list-slider box-up-sell">
+    <h2 class="slider-title secondary-font"><?php echo $this->__('Upsell Products') ?></h2>
+    <div class="products-grid" id="upsell-product-table">
+    <?php // $this->setColumnCount(5); // uncomment this line if you want to have another number of columns. also can be changed in layout ?>
+    <?php $this->resetItemsIterator() ?>
+    <?php for($_i=0;$_i<$itemNum;$_i++): ?>
+        <?php if($_link=$this->getIterableItem()): ?>
+        <div class="item">
+            <div class="product-image-wrapper">
+                <?php
+                // Get the Special Price
+                $specialprice = Mage::getModel('catalog/product')->load($_link->getId())->getSpecialPrice();
+                // Get the Special Price FROM date
+                $specialPriceFromDate = Mage::getModel('catalog/product')->load($_link->getId())->getSpecialFromDate();
+                // Get the Special Price TO date
+                $specialPriceToDate = Mage::getModel('catalog/product')->load($_link->getId())->getSpecialToDate();
+                // Get Current date
+                $today =  time();
+                $is_special = 0;
+                if ($specialprice){
+                    if($today >= strtotime( $specialPriceFromDate) && $today <= strtotime($specialPriceToDate) || $today >= strtotime( $specialPriceFromDate) && is_null($specialPriceToDate)){
+                        if(Mage::getStoreConfig("granada_setting/product_label/sale", $code)){
+                            ?>
+                            <?php $is_special = 1; ?>
+                            <span class="label-icon sale-label">Sale</span>
+                        <?php
+                        }
+                    }
+                }
+                ?>
+                <?php
+                $now = date("Y-m-d");
+                $newsFrom= substr($_link->getData('news_from_date'),0,10);
+                $newsTo=  substr($_link->getData('news_to_date'),0,10);
+                if ($newsTo != '' || $newsFrom != ''){
+                    if (($newsTo != '' && $newsFrom != '' && $now>=$newsFrom && $now<=$newsTo) || ($newsTo == '' && $now >=$newsFrom) || ($newsFrom == '' && $now<=$newsTo))
+                    {
+                        if(Mage::getStoreConfig("granada_setting/product_label/new", $code)){
+                            ?>
+                            <?php if ($is_special): ?>
+                                <span class="label-icon new-label second-label">New</span>
+                            <?php else: ?>
+                                <span class="label-icon new-label">New</span>
+                            <?php endif; ?>
+                        <?php
+                        }
+                    }
+                }
+                ?>
+                <?php
+                $effect = $_grhelper->getEffect();
+                ?>
+                <?php if ($effect == 'no'): ?>
+                    <a href="<?php echo $_link->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_link, 'small_image'), null, true) ?>" class="product-image no-effect">
+                        <?php if ($_grhelper->isKeepRatio()):?>
+                            <img src="<?php echo Mage::helper('catalog/image')->init($_link,'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(350); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_link, 'small_image'), null, true) ?>" />
+                        <?php else: ?>
+                            <?php $imgWidth = $_grhelper->getImgWidth(); ?>
+                            <?php $imgHeight = $_grhelper->getImgHeight(); ?>
+                            <img src="<?php echo Mage::helper('catalog/image')->init($_link,'small_image')->resize($imgWidth, $imgHeight); ?>" width="<?php echo $imgWidth ?>" height="<?php echo $imgHeight ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_link, 'small_image'), null, true) ?>" />
+                        <?php endif; ?>
+                    </a>
+                <?php elseif ($effect == 'alt_img'): ?>
+                    <?php
+                    $product = $_link->load('media_gallery');
+                    $productMediaGallery = $product->getMediaGalleryImages();
+                    $altImg = $productMediaGallery->getItemByColumnValue($_grhelper->getAltCol(), $_grhelper->getAltColVal());
+                    ?>
+                    <a href="<?php echo $_link->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_link, 'small_image'), null, true) ?>" class="product-image alt-image-effect">
+                        <?php if ($_grhelper->isKeepRatio()):?>
+                            <img class="cat-main-img" src="<?php echo Mage::helper('catalog/image')->init($_link,'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(350); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_link, 'small_image'), null, true) ?>" />
+                            <?php if ($altImg): ?>
+                                <?php if($altImg->getFile()): ?>
+                                    <img class="alt-image" src="<?php echo Mage::helper('catalog/image')->init($_link,'small_image',$altImg->getFile())->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(350)?>" alt="<?php echo $this->stripTags($this->getImageLabel($_link, 'small_image'), null, true) ?>" />
+                                <?php endif; ?>
+                            <?php endif; ?>
+                        <?php else: ?>
+                            <?php $imgWidth = $_grhelper->getImgWidth(); ?>
+                            <?php $imgHeight = $_grhelper->getImgHeight(); ?>
+                            <img class="cat-main-img" src="<?php echo Mage::helper('catalog/image')->init($_link,'small_image')->resize($imgWidth, $imgHeight); ?>" width="<?php echo $imgWidth ?>" height="<?php echo $imgHeight ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_link, 'small_image'), null, true) ?>" />
+                            <?php if ($altImg): ?>
+                                <?php if($altImg->getFile()): ?>
+                                    <img class="alt-image" src="<?php echo Mage::helper('catalog/image')->init($_link,'small_image',$altImg->getFile())->resize($imgWidth, $imgHeight); ?>" width="<?php echo $imgWidth ?>" height="<?php echo $imgHeight ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_link, 'small_image'), null, true) ?>" />
+                                <?php endif; ?>
+                            <?php endif; ?>
+                        <?php endif; ?>
+                    </a>
+                <?php elseif ($effect == 'listed_img'): ?>
+                    <?php
+                    $imgList = '';
+                    $product = $_link->load('media_gallery');
+                    foreach ($product->getMediaGalleryImages() as $image) {
+                        // If no image, skip
+                        if ($image->getFile() == NULL)
+                            continue;
+                        if ($_grhelper->isKeepRatio()) {
+                            $imgList .= Mage::helper('catalog/image')->init($_link,'small_image',$image->getFile())->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(350).',';
+                        } else {
+                            $imgWidth = $_grhelper->getImgWidth();
+                            $imgHeight = $_grhelper->getImgHeight();
+                            $imgList .= Mage::helper('catalog/image')->init($_link,'small_image',$image->getFile())->resize($imgWidth, $imgHeight).',';
+                        }
+                    }
+                    $imgList = substr($imgList, 0, strlen($imgList) - 1);
+                    ?>
+                    <div class="list-image-effect">
+                        <a href="<?php echo $_link->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_link, 'small_image'), null, true) ?>" class="product-image" data-images-list="<?php echo $imgList; ?>">
+                            <img src="<?php if($_grhelper->isKeepRatio()):?><?php echo $this->helper('catalog/image')->init($_link, 'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(350); ?><?php else: ?><?php echo $this->helper('catalog/image')->init($_link, 'small_image')->resize($_grhelper->getImgWidth(), $_grhelper->getImgHeight()); ?><?php endif; ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_link, 'small_image'), null, true) ?>" />
+                        </a>
+                    </div>
+                <?php endif; ?>
+                <div class="actions">
+                    <div class="actions-wrapper">
+                        <?php if($_link->isSaleable()): ?>
+                            <a title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart product-add-btn" onclick="setLocation('<?php echo $this->getAddToCartUrl($_link) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></a>
+                        <?php else: ?>
+                            <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                        <?php endif; ?>
+                        <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                            <a href="<?php echo $this->helper('wishlist')->getAddUrl($_link) ?>" title="<?php echo $this->__('Add to Wishlist') ?>" class="link-wishlist product-btn"><?php echo $this->__('Add to Wishlist') ?></a>
+                        <?php endif; ?>
+                        <?php if($_compareUrl=$this->getAddToCompareUrl($_link)): ?>
+                            <a href="<?php echo $_compareUrl ?>" title="<?php echo $this->__('Add to Compare') ?>" class="link-compare product-btn"><?php echo $this->__('Add to Compare') ?></a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            <?php echo $this->getPriceHtml($_link, true) ?>
+            <h2 class="product-name"><a href="<?php echo $_link->getProductUrl() ?>" title="<?php echo $this->escapeHtml($_link->getName()) ?>"><?php echo $this->escapeHtml($_link->getName()) ?></a></h2>
+        </div>
+        <?php endif; ?>
+    <?php endfor; ?>
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        jQuery('.box-up-sell .products-grid').owlCarousel({
+            items: 4,
+            itemsDesktop: [1199, 3],
+            itemsDesktopSmall: [991, 3],
+            itemsTablet: [768, 2],
+            itemsMobile: [479, 1],
+            lazyLoad: true,
+            pagination: false,
+            navigation: true
+        });
+        //]]>
+    </script>
+</div>
+<?php endif ?>

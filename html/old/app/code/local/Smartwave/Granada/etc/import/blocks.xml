@@ -1,0 +1,2407 @@
+<root>
+	<blocks>
+		<cms_block>
+			<title>Home About Us</title>
+			<identifier>home_about_us_1</identifier>
+			<content><![CDATA[<div class="home-about-us-1">
+<div class="about-featured-block a-center clearfix">
+<div class="col-sm-4 about-featured">
+<div class="icon-font icon-truck">Delivery</div>
+<h3 class="about-feature-title sub-title">Free Delivery</h3>
+<div class="about-feature-desc">Cras pellentesque, nisi ac tempus pellentesque, orci sem commodo urna, amet egestas ipsum orci sit amet.</div>
+</div>
+<div class="col-sm-4 about-featured">
+<div class="icon-font icon-phone">Service</div>
+<h3 class="about-feature-title sub-title">24/h customer service</h3>
+<div class="about-feature-desc">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas praesent tempor.</div>
+</div>
+<div class="col-sm-4 about-featured">
+<div class="icon-font icon-lock">Payment</div>
+<h3 class="about-feature-title sub-title">payment secured</h3>
+<div class="about-feature-desc">Aenean porta adipiscing tortor, nec consequat nisi mollis sed. Aliquam orn are magna sed leo varius, quis.</div>
+</div>
+</div>
+<div class="home-intro-title">
+<h2 style="text-transform: initial;">Who we are?</h2>
+</div>
+<div class="intro-block">
+<div class="row">
+<div class="col-sm-4">
+<ul class="accordion-format intro-accordion">
+<li><a class="title-font" href="javascript:void(0)">What We Do</a>
+<ul class="children">
+<li>Marius maurs arcu volutpat interdum;</li>
+<li>Class astent taciti sociosqu ad litora;</li>
+<li>Um sociis natoque penatibus et mmagnis;</li>
+<li>Proin nec do or elit in lorem neqe</li>
+</ul>
+</li>
+<li><a class="title-font" href="javascript:void(0)">Companu History</a>
+<ul class="children">
+<li>Marius maurs arcu volutpat interdum;</li>
+<li>Class astent taciti sociosqu ad litora;</li>
+<li>Um sociis natoque penatibus et mmagnis;</li>
+<li>Proin nec do or elit in lorem neqe</li>
+</ul>
+</li>
+<li><a class="title-font" href="javascript:void(0)">What is our priorities</a>
+<ul class="children">
+<li>Marius maurs arcu volutpat interdum;</li>
+<li>Class astent taciti sociosqu ad litora;</li>
+<li>Um sociis natoque penatibus et mmagnis;</li>
+<li>Proin nec do or elit in lorem neqe</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="col-sm-4">
+<h3 class="title-font">Our History.</h3>
+<p>Phasellus iaculis enim et mauris augue euismod fermentum, at cursus augue bibendum. In vitae fringilla lorem. Proin bibendum magna ut ultricces accumsan.</p>
+<p>Phasellus iaculis enim et mauris augue euismod ultrices. Donec mattis urna arcu, convalis sodales augue vehicula in. Suspendisse tempus lacus augue, eu iaculis ipsum pretium. Sed mollis, eros ut hendrerit ornare, lecus sapien.</p>
+</div>
+<div class="col-sm-4"><img alt="" src="{{media url="wysiwyg/home_3_about_us.jpg"}}" /></div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Testominial Block</title>
+			<identifier>testominial-block</identifier>
+			<content><![CDATA[<div class="testimonials-section">
+<h1 class="testimonials-title">Testimonials</h1>
+<div id="testimonials-slider" class="owl-carousel owl-theme">
+<div class="item">
+<div class="icon-quote">&amp;nbsp;</div>
+<div class="testimonials-content">Maecenas semper aliquam massa. Praesent pharetra sem vitae nisi eleifend molestie. Aliquam molestie scelerisque ultricies. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivaus tempor dictum ornare. Maecenas pellentesque nibh ac susclipit sodales.</div>
+<div class="testimonials-author">Anna Retallick</div>
+</div>
+<div class="item">
+<div class="icon-quote">&amp;nbsp;</div>
+<div class="testimonials-content">Maecenas semper aliquam massa. Praesent pharetra sem vitae nisi eleifend molestie. Aliquam molestie scelerisque ultricies. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivaus tempor dictum ornare. Maecenas pellentesque nibh ac susclipit sodales.</div>
+<div class="testimonials-author">Anna Retallick</div>
+</div>
+<div class="item">
+<div class="icon-quote">&amp;nbsp;</div>
+<div class="testimonials-content">Maecenas semper aliquam massa. Praesent pharetra sem vitae nisi eleifend molestie. Aliquam molestie scelerisque ultricies. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivaus tempor dictum ornare. Maecenas pellentesque nibh ac susclipit sodales.</div>
+<div class="testimonials-author">Anna Retallick</div>
+</div>
+</div>
+<script type="text/javascript">
+				jQuery(document).ready(function(){
+					jQuery('#testimonials-slider').owlCarousel({
+								navigation : true,
+								pagination: false,
+								slideSpeed : 400,
+								paginationSpeed : 400,
+								autoPlay: 9600,
+								singleItem:true,
+								mouseDrag: true,
+								transitionStyle : "backSlide"			
+					});
+				});				
+</script>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Advertising Block</title>
+			<identifier>advertising_block_1</identifier>
+			<content><![CDATA[<div class="home-advertise-1">
+<div class="row">
+<div class="col-sm-6">
+<div class="banner hover-zoom">
+<div class="banner-content">
+<div class="col-sm-7 adver-content a-center vertical-middle">
+<div class="adver-sub-title sub-title">New Men</div>
+<h3 class="adver-title">Collection</h3>
+<div class="adver-button"><a class="button button-custom button-custom-active" href="#">By It Now</a></div>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/home_2_banner1.jpg"}}" /></div>
+</div>
+<div class="col-sm-6">
+<div class="banner hover-zoom">
+<div class="banner-content">
+<div class="col-sm-8 adver-content a-center vertical-middle">
+<div class="adver-sub-title sub-title">Our Hot</div>
+<h3 class="adver-title">New Arrivals</h3>
+<div class="adver-button"><a class="button button-custom button-custom-active" href="#">By It Now</a></div>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/home_2_banner2.jpg"}}" /></div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Brand Slider</title>
+			<identifier>brands_slider_block</identifier>
+			<content><![CDATA[<div class="brands-slider-block">
+<h2 class="brands-title sub-title secondary-font">Our Brands</h2>
+<div class="row">
+<div class="brnads-slider">
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+</div>
+</div>
+<script type="text/javascript">
+				jQuery(document).ready(function(){
+					jQuery('.brnads-slider').owlCarousel({
+						items: 6,
+						itemsDesktop: [1199, 5],
+						itemsDesktopSmall: [991, 4],
+						itemsTablet: [768, 3],
+						itemsMobile: [600, 2],
+						lazyLoad: true,
+						pagination: false,
+						navigation: true
+					});
+				});
+				
+</script>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Theme Features</title>
+			<identifier>theme_featured_block</identifier>
+			<content><![CDATA[<div class="theme-featured-block">
+<div class="row">
+<div class="functions col-md-4">
+<div class="function-icon icon-truck">Delivery</div>
+<div class="function-description">
+<div class="function-title sub-title">Free Delivery</div>
+<div class="function-desc-content">Cras pellentesque, nisi ac tempus pellentesque, orci sem commodo urna, amet egestas ipsum orci sit amet.</div>
+</div>
+</div>
+<div class="functions col-md-4">
+<div class="function-icon icon-phone">Service</div>
+<div class="function-description">
+<div class="function-title sub-title">24/h customer service</div>
+<div class="function-desc-content">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas praesent tempor.</div>
+</div>
+</div>
+<div class="functions col-md-4">
+<div class="function-icon icon-lock">Payment</div>
+<div class="function-description">
+<div class="function-title sub-title">payment secured</div>
+<div class="function-desc-content">Aenean porta adipiscing tortor, nec consequat nisi mollis sed. Aliquam orn are magna sed leo varius, quis.</div>
+</div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Advertising Block</title>
+			<identifier>advertising_block_2</identifier>
+			<content><![CDATA[<div class="home-advertise-2">
+<div class="row">
+<div class="col-sm-5">
+<div class="banner hover-zoom">
+<div class="banner-content">
+<div class="adver-content a-center vertical-middle">
+<div class="adver-sub-title dark-light-font secondary-font">New Shoes</div>
+<h3 class="adver-title sub-title dark-light-font">Collection</h3>
+<div class="adver-button"><a class="button button-custom button-custom-active button-dark-light" href="#">By It Now</a></div>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/home_3_banner1.jpg"}}" /></div>
+</div>
+<div class="col-sm-4 small-banner">
+<div class="banner hover-zoom">
+<div class="banner-content">
+<div class="adver-content a-center vertical-middle">
+<div class="adver-sub-title white-font secondary-font">The</div>
+<h3 class="adver-title sub-title white-font">Candy Bag</h3>
+<div class="adver-button"><a class="button button-custom button-custom-active button-white" href="#">Take a look</a></div>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/home_3_banner2.jpg"}}" /></div>
+<div class="banner hover-zoom">
+<div class="banner-content">
+<div class="adver-content a-center vertical-middle">
+<div class="adver-sub-title dark-light-font secondary-font">Top Rated</div>
+<h3 class="adver-title sub-title dark-light-font">Dress Shirt</h3>
+<div class="adver-button"><a class="button button-custom button-custom-active button-dark-light" href="#">Dress Shirt</a></div>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/home_3_banner3.jpg"}}" /></div>
+</div>
+<div class="col-sm-3">
+<div class="banner hover-zoom">
+<div class="banner-content">
+<div class="adver-content a-center vertical-middle">
+<div class="adver-sub-title dark-light-font secondary-font">Our Hot New</div>
+<h3 class="adver-title sub-title dark-light-font">Arrivals</h3>
+<div class="adver-button"><a class="button button-custom button-custom-active button-dark-light" href="#">Shop New</a></div>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/home_3_banner4.jpg"}}" /></div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Home About Us</title>
+			<identifier>home_about_us</identifier>
+			<content><![CDATA[<div class="sw_section home-about-us">
+<div class="container">
+<div class="home-about-title">
+<h2 class="sub-title" style="color: #8c8574;">About Us</h2>
+</div>
+<div class="about-featured-block a-center clearfix">
+<div class="col-sm-4 about-featured">
+<div class="icon-font icon-truck">Delivery</div>
+<h3 class="about-feature-title sub-title">Free Delivery</h3>
+<div class="about-feature-desc">Cras pellentesque, nisi ac tempus pellentesque, orci sem commodo urna, amet egestas ipsum orci sit amet.</div>
+</div>
+<div class="col-sm-4 about-featured">
+<div class="icon-font icon-phone">Service</div>
+<h3 class="about-feature-title sub-title">24/h customer service</h3>
+<div class="about-feature-desc">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas praesent tempor.</div>
+</div>
+<div class="col-sm-4 about-featured">
+<div class="icon-font icon-lock">Payment</div>
+<h3 class="about-feature-title sub-title">payment secured</h3>
+<div class="about-feature-desc">Aenean porta adipiscing tortor, nec consequat nisi mollis sed. Aliquam orn are magna sed leo varius, quis.</div>
+</div>
+</div>
+<div class="home-intro-title">
+<h2 class="secondary-font">Who We Are?</h2>
+</div>
+<div class="intro-block">
+<div class="row">
+<div class="col-sm-4">
+<ul class="accordion-format intro-accordion">
+<li><a class="title-font" href="javascript:void(0)">What We Do</a>
+<ul class="children">
+<li>Marius maurs arcu volutpat interdum;</li>
+<li>Class astent taciti sociosqu ad litora;</li>
+<li>Um sociis natoque penatibus et mmagnis;</li>
+<li>Proin nec do or elit in lorem neqe</li>
+</ul>
+</li>
+<li><a class="title-font" href="javascript:void(0)">Companu History</a>
+<ul class="children">
+<li>Marius maurs arcu volutpat interdum;</li>
+<li>Class astent taciti sociosqu ad litora;</li>
+<li>Um sociis natoque penatibus et mmagnis;</li>
+<li>Proin nec do or elit in lorem neqe</li>
+</ul>
+</li>
+<li><a class="title-font" href="javascript:void(0)">What is our priorities</a>
+<ul class="children">
+<li>Marius maurs arcu volutpat interdum;</li>
+<li>Class astent taciti sociosqu ad litora;</li>
+<li>Um sociis natoque penatibus et mmagnis;</li>
+<li>Proin nec do or elit in lorem neqe</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="col-sm-4">
+<h3 class="title-font">Our History.</h3>
+<p>Phasellus iaculis enim et mauris augue euismod fermentum, at cursus augue bibendum. In vitae fringilla lorem. Proin bibendum magna ut ultricces accumsan.</p>
+<p>Phasellus iaculis enim et mauris augue euismod ultrices. Donec mattis urna arcu, convalis sodales augue vehicula in. Suspendisse tempus lacus augue, eu iaculis ipsum pretium. Sed mollis, eros ut hendrerit ornare, lecus sapien.</p>
+</div>
+<div class="col-sm-4"><img alt="" src="{{media url="wysiwyg/home_3_about_us.jpg"}}" /></div>
+</div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Home Shop</title>
+			<identifier>home_shop</identifier>
+			<content><![CDATA[<div class="home-shop-block">
+<h2 class="secondary-font">Shope The Look</h2>
+<div class="row">
+<div class="col-sm-6">
+<div class="banner hover-zoom full-inner black-bg white-inner">
+<div class="banner-content">
+<div class="banner-inner adver-content a-center vertical-middle" style="padding: 28px 0;">
+<div class="adver-sub-title secondary-font" style="font-size: 26px; color: #44413b;">Women Style</div>
+<h3 class="adver-title sub-title" style="font-size: 60px; color: #504c43;">LookBook</h3>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/home_3_shop_img1.jpg"}}" /></div>
+</div>
+<div class="col-sm-6">
+<div class="row">
+<div class="col-sm-6">{{block type="granada/home_productBtype" product_id="40"}}</div>
+<div class="col-sm-6">{{block type="granada/home_productBtype" product_id="41"}}</div>
+<div class="clearfix">&nbsp;</div>
+<div class="col-sm-6">{{block type="granada/home_productBtype" product_id="42"}}</div>
+<div class="col-sm-6">{{block type="granada/home_productBtype" product_id="43"}}</div>
+</div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Products Tab</title>
+			<identifier>products_tab_block</identifier>
+			<content><![CDATA[<div class="granada-tab product-list-tab">
+<ul class="product-list">
+<li id="tab_new" class="active first"><a href="#">New Arrivals</a></li>
+<li id="tab_bestseller"><a href="#">Bestsellers</a></li>
+</ul>
+<div id="tab_new_contents" class="tab-content">{{block type="filterproducts/newproduct_home_list" product_count="8" products_column="4" template="smartwave/filterproducts/products_slider_type2.phtml"}}</div>
+<div id="tab_bestseller_contents" class="tab-content">{{block type="filterproducts/bestsellers_home_list" product_count="8" products_column="4" template="smartwave/filterproducts/products_slider_type2.phtml"}}</div>
+</div>
+<script type="text/javascript">
+				var product_list_tabs = new Varien.Tabs('.product-list-tab ul');			
+</script>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Advertising Block</title>
+			<identifier>advertising_block_3</identifier>
+			<content><![CDATA[<div class="row">
+<div class="col-sm-6">
+<div class="banner hover-zoom full-inner">
+<div class="banner-content">
+<div class="adver-content aa-center vertical-middle">
+<div class="adver-sub-title white-font">The</div>
+<h3 class="adver-title sub-title white-font">Candy Bag</h3>
+<div class="adver-button"><a class="button button-custom button-custom-active button-white" href="#">Take a look</a></div>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/home_3_banner2.jpg"}}" /></div>
+</div>
+<div class="col-sm-6">
+<div class="banner hover-zoom">
+<div class="banner-content">
+<div class="adver-content aa-center vertical-middle">
+<div class="adver-sub-title dark-light-font">Top Rated</div>
+<h3 class="adver-title sub-title dark-light-font">Dress Shirt</h3>
+<div class="adver-button"><a class="button button-custom button-custom-active button-dark-light" href="#">Dress Shirt</a></div>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/home_3_banner3.jpg"}}" /></div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Home About Us</title>
+			<identifier>home_about_us_2</identifier>
+			<content><![CDATA[<div style="margin: 85px 0;">
+<div class="home-intro-title">
+<h2 class="secondary-font">Who We Are?</h2>
+</div>
+<div class="intro-block">
+<div class="row">
+<div class="col-sm-7">
+<ul class="accordion-format intro-accordion">
+<li class="opened"><a class="title-font" href="javascript:void(0)">What We Do</a>
+<ul class="children" style="display: block;">
+<li>Marius maurs arcu volutpat interdum;</li>
+<li>Class astent taciti sociosqu ad litora;</li>
+<li>Um sociis natoque penatibus et mmagnis;</li>
+<li>Proin nec do or elit in lorem neqe</li>
+</ul>
+</li>
+<li><a class="title-font" href="javascript:void(0)">Companu History</a>
+<ul class="children">
+<li>Marius maurs arcu volutpat interdum;</li>
+<li>Class astent taciti sociosqu ad litora;</li>
+<li>Um sociis natoque penatibus et mmagnis;</li>
+<li>Proin nec do or elit in lorem neqe</li>
+</ul>
+</li>
+<li><a class="title-font" href="javascript:void(0)">What is our priorities</a>
+<ul class="children">
+<li>Marius maurs arcu volutpat interdum;</li>
+<li>Class astent taciti sociosqu ad litora;</li>
+<li>Um sociis natoque penatibus et mmagnis;</li>
+<li>Proin nec do or elit in lorem neqe</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="col-sm-5"><img alt="" src="{{media url="wysiwyg/home_about_us2.jpg"}}" /></div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Home Our Service</title>
+			<identifier>home_our_service</identifier>
+			<content><![CDATA[<div class="home-our-service">
+<div class="service-title">
+<h1 class="secondary-font">Our Services</h1>
+</div>
+<div class="row">
+<div class="service-wrapper col-sm-6">
+<div class="service-dev-icon">&nbsp;</div>
+<div class="service-content">
+<h2>Development</h2>
+<div class="service-desc">Quisque ac quam id quam ullam. Iorem corper dignissim ullamcorper ut nisi. Cras ullamcorper ullamcorper. Omteger aliquam malesuada mi.</div>
+</div>
+</div>
+<div class="service-wrapper col-sm-6">
+<div class="service-marketing-icon">&nbsp;</div>
+<div class="service-content">
+<h2>Marketing</h2>
+<div class="service-desc">Praesent gravida malesuada faucibus. Etiam vehicula massa eget nisl ante, posuere vel bibendum nisl elementum Sed vel erat interdum volutpat.</div>
+</div>
+</div>
+<div class="service-wrapper col-sm-6">
+<div class="service-design-icon">&nbsp;</div>
+<div class="service-content">
+<h2>Design</h2>
+<div class="service-desc">Proin eget sodales magna. Proin ac est convallis, interdum oio vel, luctus nibh. Fusce iaculis solicitudin metus sed. Vivamus quis phareta, viverra.</div>
+</div>
+</div>
+<div class="service-wrapper col-sm-6">
+<div class="service-hosting-icon">&nbsp;</div>
+<div class="service-content">
+<h2>Web Hosting</h2>
+<div class="service-desc">Proin eget sodales magna. Proin ac est convallis, interdum odio vel, luctus nibh. Fusce iaculis sollicitudin metus sed. Cras vel augue eu augue.</div>
+</div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Newsletter Block</title>
+			<identifier>newsletter_block_gray</identifier>
+			<content><![CDATA[<div class="a-center parallax-section newsletter-block1" style="background-image: url('{{media url="wysiwyg/newsletter_bg_1.jpg"}}');" data-parallax-speed="0.05">
+<h3 class="newsletter-sub-title sub-title">Times A Ticking</h3>
+<h1 class="newletter-title" style="color: #5e5c58;">Don't Miss Out</h1>
+<div class="newsletter-desc secondary-font" style="color: #807b6e;">Sybscribe for the latest styles and sales, plus get 25% off your first order.</div>
+{{block type="newsletter/subscribe" template="newsletter/subscribe_home.phtml"}}</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Products Tab</title>
+			<identifier>products_grid_tab_block</identifier>
+			<content><![CDATA[<div class="granada-tab product-grid-tab product-centered-tab tab-lg">
+<ul class="product-tab">
+<li id="grid_tab_new" class="secondary-font active first"><a href="#">New Arrivals</a></li>
+<li id="grid_tab_bestseller" class="secondary-font"><a href="#">Bestsellers</a></li>
+</ul>
+<div id="grid_tab_new_contents" class="tab-content">{{block type="filterproducts/newproduct_home_list" product_count="6" products_column="3" template="smartwave/filterproducts/products_grid_type3.phtml"}}</div>
+<div id="grid_tab_bestseller_contents" class="tab-content">{{block type="filterproducts/bestsellers_home_list" product_count="6" products_column="3" template="smartwave/filterproducts/products_grid_type3.phtml"}}</div>
+</div>
+<script type="text/javascript">
+var product_grid_tabs = new Varien.Tabs('.product-grid-tab > ul');
+</script>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Advertising Side</title>
+			<identifier>side_adver_block</identifier>
+			<content><![CDATA[<div class="banner hover-zoom">
+<div class="banner-content">
+<div class="adver-content a-center vertical-middle">
+<div class="adver-sub-title sub-title" style="color: #696459;">New Men</div>
+<h3 class="adver-title" style="font-size: 45px; color: #696459;">Collection</h3>
+<div class="adver-button"><a class="button button-custom button-custom-active button-dark-light" href="#">By It Now</a></div>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/s_adver_1.jpg"}}" /></div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Fun Facts</title>
+			<identifier>fun_facts_block</identifier>
+			<content><![CDATA[<div class="a-center sw_section parallax-section funs-block" style="background-image: url('{{media url="wysiwyg/home_5_1.jpg"}}'); background-color: #ebe9e1;" data-parallax-speed="0.05">
+<div class="container">
+<div class="row">
+<p class="title-font white-font funs-title">Some Funs Facts</p>
+<p class="secondary-font white-font funs-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus est a hendreit bibendum.</p>
+<div class="ga-5 white-font a-center"><span class="animated-counter funs-counter secondary-font" data-value="270">1</span> <span class="secondary-font upper-font funs-subdesc">Happy Client</span></div>
+<div class="ga-5 white-font a-center"><span class="animated-counter funs-counter secondary-font" data-value="284">1</span> <span class="secondary-font upper-font funs-subdesc">Completed Projects</span></div>
+<div class="ga-5 white-font a-center"><span class="animated-counter funs-counter secondary-font" data-value="885">1</span> <span class="secondary-font upper-font funs-subdesc">Tweets</span></div>
+<div class="ga-5 white-font a-center"><span class="animated-counter funs-counter secondary-font" data-value="125">1</span> <span class="secondary-font upper-font funs-subdesc">Pizza Ordered</span></div>
+<div class="ga-5 white-font a-center"><span class="animated-counter funs-counter secondary-font" data-value="250">1</span> <span class="secondary-font upper-font funs-subdesc">Coffee Cups</span></div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Latest Projects</title>
+			<identifier>home_latest_projects</identifier>
+			<content><![CDATA[<div class="latest-project">
+<h2 class="secondary-font latest-project-title">Latest Projects</h2>
+<div class="latest-project-block">
+<div class="row">
+<div class="latest-project-slider">
+<div class="item">
+<div class="project-photo"><img alt="Lorem ipsum dolor" src="{{media url="wysiwyg/home_project_1.jpg"}}" /></div>
+<h3 class="project-title">Lorem ipsum dolor</h3>
+<p>Design</p>
+</div>
+<div class="item">
+<div class="project-photo"><img alt="Fusce mattis euismod" src="{{media url="wysiwyg/home_project_2.jpg"}}" /></div>
+<h3 class="project-title">Fusce mattis euismod</h3>
+<p>Photography</p>
+</div>
+<div class="item">
+<div class="project-photo"><img alt="Vestibulum lorem" src="{{media url="wysiwyg/home_project_3.jpg"}}" /></div>
+<h3 class="project-title">Vestibulum lorem</h3>
+<p>Design</p>
+</div>
+<div class="item">
+<div class="project-photo"><img alt="Quisque urna dui" src="{{media url="wysiwyg/home_project_4.jpg"}}" /></div>
+<h3 class="project-title">Quisque urna dui</h3>
+<p>Illustration</p>
+</div>
+<div class="item">
+<div class="project-photo"><img alt="Lorem ipsum dolor" src="{{media url="wysiwyg/home_project_1.jpg"}}" /></div>
+<h3 class="project-title">Lorem ipsum dolor</h3>
+<p>Design</p>
+</div>
+<div class="item">
+<div class="project-photo"><img alt="Fusce mattis euismod" src="{{media url="wysiwyg/home_project_2.jpg"}}" /></div>
+<h3 class="project-title">Fusce mattis euismod</h3>
+<p>Photography</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+				jQuery(document).ready(function(){
+					jQuery('.latest-project-slider').owlCarousel({
+						items: 4,
+						itemsDesktop: [1199, 4],
+						itemsDesktopSmall: [991, 3],
+						itemsTablet: [768, 2],
+						itemsMobile: [600, 1],
+						lazyLoad: true,
+						pagination: false,
+						navigation: true
+					});
+				});				
+</script>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Our Service</title>
+			<identifier>home_our_service_secondary</identifier>
+			<content><![CDATA[<div class="home-our-service home-our-service-secondary">
+<div class="service-title">
+<h1 class="secondary-font" style="font-size: 20px; text-align: center;">Our Services</h1>
+</div>
+<div class="row">
+<div class="service-wrapper col-sm-6">
+<div class="service-dev-icon">&nbsp;</div>
+<div class="service-content">
+<h2>Development</h2>
+<div class="service-desc">Quisque ac quam id quam ullam. Iorem corper dignissim ullamcorper ut nisi. Cras ullamcorper ullamcorper. Omteger aliquam malesuada mi.</div>
+</div>
+</div>
+<div class="service-wrapper col-sm-6">
+<div class="service-marketing-icon">&nbsp;</div>
+<div class="service-content">
+<h2>Marketing</h2>
+<div class="service-desc">Praesent gravida malesuada faucibus. Etiam vehicula massa eget nisl ante, posuere vel bibendum nisl elementum Sed vel erat interdum volutpat.</div>
+</div>
+</div>
+<div class="service-wrapper col-sm-6">
+<div class="service-design-icon">&nbsp;</div>
+<div class="service-content">
+<h2>Design</h2>
+<div class="service-desc">Proin eget sodales magna. Proin ac est convallis, interdum oio vel, luctus nibh. Fusce iaculis solicitudin metus sed. Vivamus quis phareta, viverra.</div>
+</div>
+</div>
+<div class="service-wrapper col-sm-6">
+<div class="service-hosting-icon">&nbsp;</div>
+<div class="service-content">
+<h2>Web Hosting</h2>
+<div class="service-desc">Proin eget sodales magna. Proin ac est convallis, interdum odio vel, luctus nibh. Fusce iaculis sollicitudin metus sed. Cras vel augue eu augue.</div>
+</div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Home Shop</title>
+			<identifier>home_shop2</identifier>
+			<content><![CDATA[<div class="home-shop-block">
+<p class="secondary-font" style="font-size: 20px; text-align: center; margin: 55px 0 50px;">Shop The Look</p>
+<div class="row">
+<div class="col-sm-6">
+<div class="banner hover-zoom full-inner black-bg white-inner">
+<div class="banner-content">
+<div class="banner-inner adver-content a-center vertical-middle" style="padding: 28px 0;">
+<div class="adver-sub-title sub-title" style="font-size: 26px; color: #44413b; text-transform: none;">Women Style</div>
+<h3 class="adver-title sub-title" style="font-size: 60px; color: #504c43;">LookBook</h3>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/home_3_shop_img1.jpg"}}" /></div>
+</div>
+<div class="col-sm-6">
+<div class="row">
+<div class="col-sm-6">{{block type="granada/home_productBtype" product_id="40"}}</div>
+<div class="col-sm-6">{{block type="granada/home_productBtype" product_id="41"}}</div>
+<div class="clearfix">&nbsp;</div>
+<div class="col-sm-6">{{block type="granada/home_productBtype" product_id="42"}}</div>
+<div class="col-sm-6">{{block type="granada/home_productBtype" product_id="43"}}</div>
+</div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Meet Our Team</title>
+			<identifier>meet_our_team</identifier>
+			<content><![CDATA[<div class="meet-our-team">
+<h2 class="sub-title" style="text-transform:none;">Meet Our Team</h2>
+<div class="meet-team-block">
+<div class="row">
+<div class="meet-team-slider">
+<div class="item">
+<div class="team-mb-wrapper">
+<div class="team-photo"><img alt="" src="{{media url="wysiwyg/team-mm-1.jpg"}}" /></div>
+<div class="team-desc">
+<div class="team-mb-name title-font" style="font-size: 25px; font-style: italic;">Courtney Bryant</div>
+<div class="team-mb-duty active-color" style="font-size: 14px;">SysAdmin</div>
+<div class="team-mb-desc" style="font-size: 14px;">Phasellus iaculis enim et mauris augue euismod fermentum, at cursus augue bibendum. In vitae fringilla lorem. Proin bibendum magna ut ltrices.</div>
+<div class="team-social-wrapper"><a class="button button-custom button-custom-active team-social-fb" href="#">facebook</a> <a class="button button-custom button-custom-active team-social-tt" href="#">twitter</a> <a class="button button-custom button-custom-active team-social-db" href="#">dribbble</a> <a class="button button-custom button-custom-active team-social-mail" href="#">mail</a></div>
+</div>
+</div>
+<div class="team-mb-wrapper">
+<div class="team-photo"><img alt="" src="{{media url="wysiwyg/team-mm-2.jpg"}}" /></div>
+<div class="team-desc">
+<div class="team-mb-name title-font" style="font-size: 25px; font-style: italic;">Walter Allen</div>
+<div class="team-mb-duty active-color" style="font-size: 14px;">Project Manager</div>
+<div class="team-mb-desc" style="font-size: 14px;">Phasellus iaculis enim et mauris augue euismod fermentum, at cursus augue bibendum. In vitae fringilla lorem. Proin bibendum magna ut ltrices.</div>
+<div class="team-social-wrapper"><a class="button button-custom button-custom-active team-social-fb" href="#">facebook</a> <a class="button button-custom button-custom-active team-social-tt" href="#">twitter</a> <a class="button button-custom button-custom-active team-social-db" href="#">dribbble</a> <a class="button button-custom button-custom-active team-social-mail" href="#">mail</a></div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="team-mb-wrapper">
+<div class="team-photo"><img alt="" src="{{media url="wysiwyg/team-mm-3.jpg"}}" /></div>
+<div class="team-desc">
+<div class="team-mb-name title-font" style="font-size: 25px; font-style: italic;">Phoebe Bryant</div>
+<div class="team-mb-duty active-color" style="font-size: 14px;">Singer</div>
+<div class="team-mb-desc" style="font-size: 14px;">Phasellus iaculis enim et mauris augue euismod fermentum, at cursus augue bibendum. In vitae fringilla lorem. Proin bibendum magna ut ltrices.</div>
+<div class="team-social-wrapper"><a class="button button-custom button-custom-active team-social-fb" href="#">facebook</a> <a class="button button-custom button-custom-active team-social-tt" href="#">twitter</a> <a class="button button-custom button-custom-active team-social-db" href="#">dribbble</a> <a class="button button-custom button-custom-active team-social-mail" href="#">mail</a></div>
+</div>
+</div>
+<div class="team-mb-wrapper">
+<div class="team-photo"><img alt="" src="{{media url="wysiwyg/team-mm-4.jpg"}}" /></div>
+<div class="team-desc">
+<div class="team-mb-name title-font" style="font-size: 25px; font-style: italic;">Chandler Allen</div>
+<div class="team-mb-duty active-color" style="font-size: 14px;">Unknown</div>
+<div class="team-mb-desc" style="font-size: 14px;">Phasellus iaculis enim et mauris augue euismod fermentum, at cursus augue bibendum. In vitae fringilla lorem. Proin bibendum magna ut ltrices.</div>
+<div class="team-social-wrapper"><a class="button button-custom button-custom-active team-social-fb" href="#">facebook</a> <a class="button button-custom button-custom-active team-social-tt" href="#">twitter</a> <a class="button button-custom button-custom-active team-social-db" href="#">dribbble</a> <a class="button button-custom button-custom-active team-social-mail" href="#">mail</a></div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="team-mb-wrapper">
+<div class="team-photo"><img alt="" src="{{media url="wysiwyg/team-mm-1.jpg"}}" /></div>
+<div class="team-desc">
+<div class="team-mb-name title-font" style="font-size: 25px; font-style: italic;">Arron Rivera</div>
+<div class="team-mb-duty active-color" style="font-size: 14px;">Sales Manager</div>
+<div class="team-mb-desc" style="font-size: 14px;">Phasellus iaculis enim et mauris augue euismod fermentum, at cursus augue bibendum. In vitae fringilla lorem. Proin bibendum magna ut ltrices.</div>
+<div class="team-social-wrapper"><a class="button button-custom button-custom-active team-social-fb" href="#">facebook</a> <a class="button button-custom button-custom-active team-social-tt" href="#">twitter</a> <a class="button button-custom button-custom-active team-social-db" href="#">dribbble</a> <a class="button button-custom button-custom-active team-social-mail" href="#">mail</a></div>
+</div>
+</div>
+<div class="team-mb-wrapper">
+<div class="team-photo"><img alt="" src="{{media url="wysiwyg/team-mm-2.jpg"}}" /></div>
+<div class="team-desc">
+<div class="team-mb-name title-font" style="font-size: 25px; font-style: italic;">Evan Brooks</div>
+<div class="team-mb-duty active-color" style="font-size: 14px;">Project Manager</div>
+<div class="team-mb-desc" style="font-size: 14px;">Phasellus iaculis enim et mauris augue euismod fermentum, at cursus augue bibendum. In vitae fringilla lorem. Proin bibendum magna ut ltrices.</div>
+<div class="team-social-wrapper"><a class="button button-custom button-custom-active team-social-fb" href="#">facebook</a> <a class="button button-custom button-custom-active team-social-tt" href="#">twitter</a> <a class="button button-custom button-custom-active team-social-db" href="#">dribbble</a> <a class="button button-custom button-custom-active team-social-mail" href="#">mail</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+				jQuery('.meet-team-slider').owlCarousel({
+					items: 2,
+					itemsDesktop: [1199, 2],
+					itemsDesktopSmall: [991, 2],
+					itemsTablet: [768, 1],
+					itemsMobile: [600, 1],
+					lazyLoad: true,
+					pagination: false,
+					navigation: true
+				});
+			});
+</script>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Newsletter Block</title>
+			<identifier>newsletter_block_dark</identifier>
+			<content><![CDATA[<div class="a-center sw_section parallax-section newsletter-block_dark" style="background-image: url('{{media url="wysiwyg/newsletter_bg_2.jpg"}}');" data-parallax-speed="0.05">
+<div class="container">
+<h3 class="newsletter-sub-title sub-title white-font">Times A Ticking</h3>
+<h1 class="newletter-title white-font">Don't Miss Out</h1>
+<div class="newsletter-desc secondary-font white-font">Sybscribe for the latest styles and sales, plus get 25% off your first order.</div>
+{{block type="newsletter/subscribe" template="newsletter/subscribe_home_dark.phtml"}}</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Our Skills</title>
+			<identifier>our_skills_block</identifier>
+			<content><![CDATA[<div class="our-skills">
+<h2 class="sub-title">Our Skills</h2>
+<div class="row">
+<div class="col-sm-6">
+<div class="progress-bars">
+<div class="sub-title">Wordpress</div>
+<div class="progress-bar" data-width="85">
+<div>&nbsp;</div>
+<span class="animated-counter-wrapper secondary-font"><span class="animated-counter" data-value="85">1</span>%</span></div>
+<div class="sub-title">Photoshop</div>
+<div class="progress-bar" data-width="73">
+<div>&nbsp;</div>
+<span class="animated-counter-wrapper secondary-font"><span class="animated-counter" data-value="73">1</span>%</span></div>
+<div class="sub-title">HTML/Css</div>
+<div class="progress-bar" data-width="67">
+<div>&nbsp;</div>
+<span class="animated-counter-wrapper secondary-font"><span class="animated-counter" data-value="67">1</span>%</span></div>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="progress-bars">
+<div class="sub-title">Illustrator</div>
+<div class="progress-bar" data-width="69">
+<div>&nbsp;</div>
+<span class="animated-counter-wrapper secondary-font"><span class="animated-counter" data-value="69">1</span>%</span></div>
+<div class="sub-title">Logo Design</div>
+<div class="progress-bar" data-width="87">
+<div>&nbsp;</div>
+<span class="animated-counter-wrapper secondary-font"><span class="animated-counter" data-value="87">1</span>%</span></div>
+<div class="sub-title">Ecommerce</div>
+<div class="progress-bar" data-width="92">
+<div>&nbsp;</div>
+<span class="animated-counter-wrapper secondary-font"><span class="animated-counter" data-value="92">1</span>%</span></div>
+</div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Parallex Block</title>
+			<identifier>parallex_block1</identifier>
+			<content><![CDATA[<div class="sw_section sw_section_full sw_vertical parallax-section" style="background-image: url('{{media url="wysiwyg/home_1_2.png"}}'); background-color: #ebe9e1;" data-parallax-speed="0.05">
+<div class="vcontainer">
+<div class="valign-middle">
+<div class="container">
+<div class="row">
+<div class="arrival-block col-md-7 a-center">
+<p class="arrival-sub-title gray-font upper-font sub-title">Our Spring / Summer</p>
+<h2 class="arrival-title gray-font">New Arrivalse</h2>
+<p class="arrival-description secondary-font">Donec gravida elit sed rhoncus eleifend. Nam viverra lacus non lobortis malescuada fusce.</p>
+<a class="button button-custom button-custom-active button-gray" href="#">show now</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Products Tab</title>
+			<identifier>products_grid_ctab_block</identifier>
+			<content><![CDATA[<div class="granada-ctab product-grid-tab product-centered-tab">
+<ul class="product-tab">
+<li id="grid_tab_new" class="active first secondary-font"><a href="#">Featured</a></li>
+<li id="grid_tab_bestseller" class="secondary-font"><a href="#">Bestsellers</a></li>
+<li id="grid_tab_special" class="secondary-font"><a href="#">Special</a></li>
+</ul>
+<div id="grid_tab_new_contents" class="tab-content">{{block type="filterproducts/featured_home_list" product_count="8" products_column="4" template="smartwave/filterproducts/products_grid_type2.phtml"}}</div>
+<div id="grid_tab_bestseller_contents" class="tab-content">{{block type="filterproducts/bestsellers_home_list" product_count="8" products_column="4" template="smartwave/filterproducts/products_grid_type2.phtml"}}</div>
+<div id="grid_tab_special_contents" class="tab-content">{{block type="filterproducts/sale_home_list" product_count="8" products_column="4" template="smartwave/filterproducts/products_grid_type2.phtml"}}</div>
+</div>
+<script type="text/javascript">
+var product_grid_tabs = new Varien.Tabs('.product-grid-tab > ul');
+</script>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Fun Facts</title>
+			<identifier>fun_facts_custom_block</identifier>
+			<content><![CDATA[<div class="a-center parallax-section funs-block" style="background-image: url('{{media url="wysiwyg/home_6_1.jpg"}}'); background-color: #f6f4f7; color: #78746a;" data-parallax-speed="0.05">
+<div class="container">
+<div class="row">
+<p class="title-font funs-title">Some Funs Facts</p>
+<p class="sub-title funs-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus est a hendreit bibendum.</p>
+<div class="ga-5 a-center"><span class="animated-counter funs-counter secondary-font" data-value="270">1</span> <span class="secondary-font upper-font funs-subdesc">Happy Client</span></div>
+<div class="ga-5 a-center"><span class="animated-counter funs-counter secondary-font" data-value="284">1</span> <span class="secondary-font upper-font funs-subdesc">Completed Projects</span></div>
+<div class="ga-5 a-center"><span class="animated-counter funs-counter secondary-font" data-value="885">1</span> <span class="secondary-font upper-font funs-subdesc">Tweets</span></div>
+<div class="ga-5 a-center"><span class="animated-counter funs-counter secondary-font" data-value="125">1</span> <span class="secondary-font upper-font funs-subdesc">Pizza Ordered</span></div>
+<div class="ga-5 a-center"><span class="animated-counter funs-counter secondary-font" data-value="250">1</span> <span class="secondary-font upper-font funs-subdesc">Coffee Cups</span></div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Products Show Case</title>
+			<identifier>products_show_case_2</identifier>
+			<content><![CDATA[<div class="show-case-block show-case-block2" style="background-image: url({{media url='wysiwyg/show_case_bg2.jpg'}});">{{block type="granada/home_product" product_id="7" icon_xpos="935" icon_ypos="690" popup_direction="left-bottom"}} {{block type="granada/home_product" product_id="8" icon_xpos="1218" icon_ypos="55" popup_direction="right-top"}}
+<div class="col-md-6 a-center">
+<p class="collection-sub-title white-font upper-font sub-title">Autumn / Winter 2015</p>
+<div class="custom-arrows-white">&nbsp;</div>
+<h2 class="collection-title white-font">Lookbook</h2>
+<p class="collection-desc white-font secondary-font">Aenean eu vulputate tortor, quis iaculis sapien. Phasellus pharetra faucibus hendreit nam ipsum.</p>
+<a class="button button-custom button-custom-active button-white btn-lg" href="#">Take Look</a></div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Demo Footer Account</title>
+			<identifier>footer_demo_account</identifier>
+			<content><![CDATA[<h4 class="footer-title">My Account</h4>
+<ul class="footer-links">
+<li><a title="My account" href="#">My account</a></li>
+<li><a title="Personal information" href="#">Personal information</a></li>
+<li><a title="Addresses" href="#">Addresses</a></li>
+<li><a title="Discount" href="#">Discount</a></li>
+<li><a title="Orders history" href="#">Orders history</a></li>
+<li><a title="Your vouchers" href="#">Your vouchers</a></li>
+</ul>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Demo Footer Service</title>
+			<identifier>footer_demo_service</identifier>
+			<content><![CDATA[<h4 class="footer-title">Customer Service</h4>
+<ul class="footer-links">
+<li><a title="Help &amp; Contact" href="#">Help &amp; contact</a></li>
+<li><a title="Shipping &amp; taxes" href="#">Shipping &amp; taxes</a></li>
+<li><a title="Return policy" href="#">Return policy</a></li>
+<li><a title="Careers" href="#">Careers</a></li>
+<li><a title="Affiliates" href="#">Affiliates</a></li>
+<li><a title="Legal Notice" href="#">Legal Notice</a></li>
+</ul>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Footer Copyright</title>
+			<identifier>footer_copyright</identifier>
+			<content><![CDATA[<p class="copyright-text">&copy; 2014 Powered by WooCommerce&trade;. All Rights Reserved.</p>
+<ul class="social-links clearfix">
+<li><a class="social-icon icon-facebook button button-custom button-custom-active" title="Facebook" href="#">facebook</a></li>
+<li><a class="social-icon icon-twitter button button-custom button-custom-active" title="Twitter" href="#">twitter</a></li>
+<li><a class="social-icon icon-rss button button-custom button-custom-active" title="Rss Feed" href="#">rss</a></li>
+<li><a class="social-icon icon-delicious button button-custom button-custom-active" title="Delicious" href="#">delisious</a></li>
+<li><a class="social-icon icon-linkedin button button-custom button-custom-active" title="Linkedin" href="#">linkedin</a></li>
+<li><a class="social-icon icon-flickr button button-custom button-custom-active" title="Flickr" href="#">flickr</a></li>
+<li><a class="social-icon icon-skype button button-custom button-custom-active" title="Skype" href="#">skype</a></li>
+<li><a class="social-icon icon-email button button-custom button-custom-active" title="Email" href="#">email</a></li>
+</ul>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Category Left Side Block</title>
+			<identifier>cat_left_block</identifier>
+			<content><![CDATA[<div class="banner hover-zoom">
+<div class="banner-content">
+<div class="adver-content a-center vertical-middle">
+<div class="adver-sub-title sub-title">New Women</div>
+<h3 class="adver-title">Collection</h3>
+<div class="adver-button"><a class="button button-custom button-custom-active" href="#">By It Now</a></div>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/cat_banner_left.jpg"}}" /></div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Category Right Side Block</title>
+			<identifier>cat_right_block</identifier>
+			<content><![CDATA[<div class="banner hover-zoom">
+<div class="banner-content">
+<div class="adver-content a-center vertical-middle">
+<div class="adver-sub-title sub-title">New Women</div>
+<h3 class="adver-title">Collection</h3>
+<div class="adver-button"><a class="button button-custom button-custom-active" href="#">By It Now</a></div>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/cat_banner_right.jpg"}}" /></div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Homepage Slider 1</title>
+			<identifier>home_slider_1</identifier>
+			<content><![CDATA[<div class="homepage-slider">
+<div id="homepage-slider-1" class="homepage-slider-1 owl-carousel owl-theme gray-dark-font">
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/homeslider_1_1.jpg"}}" /></div>
+<div class="item-content content-1">
+<div class="container">
+<div class="content upper-font content-sub-title1 sub-title">Choies trend 2014</div>
+<h2 class="content upper-font content-title1 gray-dark-font">Platform Shoes</h2>
+<div class="content content-description1 secondary-font">From day to night, you'll be able to wear these gorgeous<br /> platform pumps on any occasion.</div>
+<div class="content content-button1"><a class="button button-custom button-custom-active button-gray btn-lg" href="#">Take Look</a></div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/homeslider_1_2.jpg"}}" /></div>
+<div class="item-content content-1">
+<div class="container">
+<div class="col-lg-7">
+<div class="content upper-font content-sub-title1 sub-title">14/06/14 - 14/07/14</div>
+<h2 class="content upper-font content-title1 gray-dark-font">Mid Season Sale</h2>
+<div class="content content-description1 secondary-font">Mauris commodo nisl eu odio lutus, sed laculis orci<br /> tincldunt. Suspendisse vulputate luctus.</div>
+<div class="content content-button1"><a class="button button-custom button-custom-active button-gray btn-lg" href="#">Shop Now</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/homeslider_1_3.jpg"}}" /></div>
+<div class="item-content content-1">
+<div class="container">
+<div class="col-lg-7 f-lg-right">
+<div class="content upper-font content-sub-title1 sub-title">Styleish</div>
+<h2 class="content upper-font content-title1 gray-dark-font">Suits &amp; Coats</h2>
+<div class="content content-description1 secondary-font">Etiam interdum eu ante eget viverra. Sed consequat<br /> luctus sapien sed ultrices integer quis.</div>
+<div class="content content-button1"><a class="button button-custom button-custom-active button-gray btn-lg" href="#">Take Look</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+		jQuery('#homepage-slider-1').owlCarousel({
+			singleItem : true,
+			slideSpeed : 500,
+			pagination: true,
+			navigation: true,
+			autoPlay:true,
+			responsiveRefreshRate : 200,
+			transitionStyle : "fade"
+		});
+	});
+</script>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Homepage Slider Full</title>
+			<identifier>home_slider_full</identifier>
+			<content><![CDATA[<div class="homepage-slider full-screen-slider">
+<div id="banner-slider-demo-2" class="owl-carousel owl-theme owl-middle-narrow owl-banner-carousel">
+<div class="item" style="background: #383838;">
+<div style="width: 100%; height: 100%; background: url('{{media url="wysiwyg/homeslider_5_1.jpg"}}') center center no-repeat; background-size: cover;">&nbsp;</div>
+<div class="content white-font">
+<p class="content-sub-title sub-title white-font">styleish men</p>
+<p class="content-title title-font white-font">Suits &amp; Coats</p>
+<p class="content-desc secondary-font" style="margin-bottom: 40px;">Nulla suscipit dignissim felis, quis mollis quam elementum ut. Phasellus <br /> volutpat ultrices nibh. Duis convallis consequat</p>
+<a class="button button-custom button-custom-active button-white btn-lg" href="#">Take Look</a></div>
+</div>
+<div class="item" style="background: #f0f0f0; background-image: linear-gradient(#e8e8e8,#f0f0f0);">
+<div style="width: 100%; height: 100%; background: url('{{media url="wysiwyg/homeslider_5_2.jpg"}}') center center no-repeat; background-size: cover;">&nbsp;</div>
+<div class="content white-font">
+<p class="content-sub-title sub-title white-font">Choies trend 2014</p>
+<p class="content-title title-font white-font">Make Up &amp; Beaty</p>
+<p class="content-desc secondary-font" style="margin-bottom: 40px;">Etiam elementum purus tempus, porttitor mi a, ultricies mauris. Fusce at <br /> porta massa. Duis tortor mauris, rhoncus a suscipit.</p>
+<a class="button button-custom button-custom-active button-white btn-lg" href="#">Take Look</a></div>
+</div>
+<div class="item" style="background: #f0f0f0; background-image: linear-gradient(#e8e8e8,#f0f0f0);">
+<div style="width: 100%; height: 100%; background: url('{{media url="wysiwyg/homeslider_5_3.jpg"}}') center center no-repeat; background-size: cover;">&nbsp;</div>
+<div class="content white-font">
+<p class="content-sub-title sub-title white-font">14/07/14 - 14/08/14</p>
+<p class="content-title title-font white-font">Mid Season Sale</p>
+<p class="content-desc secondary-font" style="margin-bottom: 40px;">Aliquam erat volutpat. Aliquam erat volutpat. Vestibulum ante ipsum <br /> faucibus orci luctus et ultrices posuere cubilia curae.</p>
+<a class="button button-custom button-custom-active button-white btn-lg" href="#">Take Look</a></div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(function($){
+            $("#banner-slider-demo-2").owlCarousel({autoPlay:true,stopOnHover: true,pagination: false, autoPlay: true,navigation: true,slideSpeed : 500,paginationSpeed : 500,singleItem:true,transitionStyle : "fade"});
+        });
+</script>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Homepage Slider 6</title>
+			<identifier>home_slider_6</identifier>
+			<content><![CDATA[<div class="homepage-slider">
+<div id="homepage-slider-6" class="homepage-slider-6 owl-carousel owl-theme gray-dark-font white-btn-container">
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/homeslider_6_1.jpg"}}" /></div>
+<div class="item-content content-1">
+<div class="col-lg-7">
+<div class="content upper-font content-sub-title1 white-font sub-title">Introducing Our First</div>
+<h2 class="content upper-font content-title1 white-font">Sunwear Collection</h2>
+<div class="content content-description1 white-font secondary-font">$95 with ploarized lenses curabitur diam fels tristique et nisi,<br /> vulputate ipsum. Maecenas nec diam eleifend.</div>
+<div class="content content-button1"><a class="button button-custom button-custom-active button-white btn-lg" href="#">Take Look</a></div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/homeslider_6_2.jpg"}}" /></div>
+<div class="item-content content-1">
+<div class="col-lg-7">
+<div class="content upper-font content-sub-title1 white-font sub-title">1000+ New Arriavals</div>
+<h2 class="content upper-font content-title1 white-font">The Wait is now over</h2>
+<div class="content content-description1 white-font secondary-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a lacus<br /> Donec convallis suscipt massa id accumsan.</div>
+<div class="content content-button1"><a class="button button-custom button-custom-active button-white btn-lg" href="#">Shop Women</a></div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/homeslider_6_3.jpg"}}" /></div>
+<div class="item-content content-1">
+<div class="col-lg-7 f-lg-right">
+<div class="content upper-font content-sub-title1 sub-title">Check It Out</div>
+<h2 class="content upper-font content-title1 gray-dark-font">Summer Dreaming</h2>
+<div class="content content-description1 secondary-font">Nulla eu faucibus diam. Phasellus nec sapien malesuaa,<br /> euismod magna a, interdum nisi nunc faucibus.</div>
+<div class="content content-button1"><a class="button button-custom button-custom-active button-gray btn-lg" href="#">Shop Now</a></div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+		jQuery('#homepage-slider-6').owlCarousel({
+			singleItem : true,
+			slideSpeed : 500,
+			pagination: true,
+			navigation: true,
+			autoPlay:true,
+			responsiveRefreshRate : 200,
+			transitionStyle : "fade"
+		});
+	});
+</script>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Footer Information</title>
+			<identifier>footer_information</identifier>
+			<content><![CDATA[<h4 class="footer-title">Information</h4>
+<ul class="footer-links">
+<li><a title="New Products" href="#">New Products</a></li>
+<li><a title="Top Sellers" href="#">Top Sellers</a></li>
+<li><a title="Specials" href="#">Specials</a></li>
+<li><a title="Manufacturers" href="#">Manufacturers</a></li>
+<li><a title="Suppliers" href="#">Suppliers</a></li>
+<li><a title="Our stores" href="#">Our stores</a></li>
+</ul>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Footer Copyright</title>
+			<identifier>footer_copyright_white</identifier>
+			<content><![CDATA[<p class="copyright-text">&copy; 2014 Powered by WooCommerce&trade;. All Rights Reserved.</p>
+<ul class="social-links clearfix">
+<li><a class="social-icon icon-facebook button button-custom button-white button-custom-active" title="Facebook" href="#">facebook</a></li>
+<li><a class="social-icon icon-twitter button button-custom button-white button-custom-active" title="Twitter" href="#">twitter</a></li>
+<li><a class="social-icon icon-rss button button-custom button-white button-custom-active" title="Rss Feed" href="#">rss</a></li>
+<li><a class="social-icon icon-delicious button button-custom button-white button-custom-active" title="Delicious" href="#">delisious</a></li>
+<li><a class="social-icon icon-linkedin button button-custom button-white button-custom-active" title="Linkedin" href="#">linkedin</a></li>
+<li><a class="social-icon icon-flickr button button-custom button-white button-custom-active" title="Flickr" href="#">flickr</a></li>
+<li><a class="social-icon icon-skype button button-custom button-white button-custom-active" title="Skype" href="#">skype</a></li>
+<li><a class="social-icon icon-email button button-custom button-white button-custom-active" title="Email" href="#">email</a></li>
+</ul>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Homepage Slider 2</title>
+			<identifier>home_slider_2</identifier>
+			<content><![CDATA[<div class="homepage-slider white-buttom-container">
+<div id="homepage-slider-2" class="homepage-slider-2 owl-carousel owl-theme gray-dark-font">
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/demo3_slide2.jpg"}}" /></div>
+<div class="item-content content-1">
+<div class="container">
+<div class="col-lg-7 f-lg-right gray-dark-font">
+<div class="content content-sub-title1 secondary-font">collection</div>
+<h2 class="content upper-font sub-title content-title1 gray-dark-font">Modern Dandy</h2>
+<div class="content secondary-font content-description1">Vivamus urna quam, ultricies eget ornare ut, cursus amet augue quisque auctor, ante molestie.</div>
+<div class="content content-button1"><a class="button button-custom button-custom-active button-gray btn-lg" href="#">Get Look</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/demo3_slide1.jpg"}}" /></div>
+<div class="item-content content-1 white-font">
+<div class="container">
+<div class="col-lg-7">
+<div class="content secondary-font content-sub-title1">Ladis</div>
+<h2 class="content upper-font content-title1 sub-title white-font">Spring essential</h2>
+<div class="content secondary-font content-description1">Aliquam accumsan, nulla quis consectetur males, elit tortor scelerisque velit, nec laoreet.</div>
+<div class="content content-button1"><a class="button button-custom button-custom-active button-white btn-lg" href="#">Shop Now</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/demo3_slide3.jpg"}}" /></div>
+<div class="item-content content-1 white-font">
+<div class="container">
+<div class="content secondary-font white-font content-sub-title1">Newsletter</div>
+<h2 class="content upper-font sub-title white-font content-title1">sign up &amp; <br /> getexclusive offers</h2>
+<div class="content secondary-font content-description1">Quisque lobortis dignissim augue ut ultrices. Cras non arcu . Donec ac tellus euismod vestibulum.</div>
+<div class="content content-button1"><a class="button button-custom button-custom-active button-white btn-lg" href="#">Take Look</a></div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+		jQuery('#homepage-slider-2').owlCarousel({
+			singleItem : true,
+			slideSpeed : 500,
+			pagination: true,
+			navigation: true,
+			autoPlay:true,
+			responsiveRefreshRate : 200,
+			transitionStyle : "fade"
+		});
+	});
+</script>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Homepage Slider 3</title>
+			<identifier>home_slider_3</identifier>
+			<content><![CDATA[<div class="homepage-slider">
+<div id="homepage-slider-3" class="homepage-slider-3 owl-carousel owl-theme gray-dark-font">
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/demo4_slide1.jpg"}}" /></div>
+<div class="item-content s3-content1">
+<div class="content upper-font content-sub-title1 secondary-font">Ladies</div>
+<h2 class="content upper-font content-title1 gray-dark-font">Spring Essential</h2>
+<div class="content content-description1 secondary-font" style="margin-bottom: 40px;">Aliquam accumsan, nulla quis consectetur males, elit tortor scelerisque velit, nec laoreet.</div>
+<div class="content content-button1"><a class="button button-custom button-custom-active button-gray btn-lg" href="#">Shop Now</a></div>
+</div>
+</div>
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/demo4_slide2.jpg"}}" /></div>
+<div class="item-content s3-content2">
+<div class="content upper-font content-sub-title1 secondary-font white-font">the</div>
+<h2 class="content upper-font content-title1 white-font">Candy Bag</h2>
+<div class="content content-description1 secondary-font white-font">Pellentesque vel aliquam ante. Praesent quis facilisis risus, sit amet pulvinar justo.</div>
+<div class="content content-button1"><a class="button button-custom button-custom-active button-white btn-lg" href="#">Take Look</a></div>
+</div>
+</div>
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/demo4_slide3.jpg"}}" /></div>
+<div class="item-content s3-content3">
+<div class="f-lg-right">
+<div class="content upper-font content-sub-title1 secondary-font">shirts</div>
+<h2 class="content upper-font content-title1 gray-dark-font">For Every Day</h2>
+<div class="content content-description1 secondary-font">Quisque volutpat blandit ipsum eget pulvinar. In viverra, mi ac convallis dictum enim.</div>
+<div class="content content-button1"><a class="button button-custom button-custom-active button-gray btn-lg" href="#">Shop Now</a></div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+			jQuery('#homepage-slider-3').owlCarousel({
+				singleItem : true,
+				slideSpeed : 500,
+				pagination: true,
+				navigation: true,
+				autoPlay:true,
+				responsiveRefreshRate : 200,
+				transitionStyle : "fade"
+			});
+		});
+</script>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Contact Us Popup for Google Map</title>
+			<identifier>popup_google_map</identifier>
+			<content><![CDATA[<div class="map-info-box"><h4>Find Us now!</h4><p>Schuhzly, 200 Oxford St, London W1D <br /> 1NUZYW, United Kingdom</p></div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Contact Us Description</title>
+			<identifier>contact_desc_block</identifier>
+			<content><![CDATA[<div class="row">
+<div class="col-sm-7 padding-right-larger contact-box">
+<h3 class="secondary-font">HOW TO CONTACT US</h3>
+<p>Sed consequat, nibh ac imperdiet pharetra, tortor lectus tincidunt dolor, eget euismod diamsapien id mauris. Morbi aliquam venenatis odio in cursus. Integer mollis dui nec dui elementum, a faucibus tortor malesuada. Proin et imperdiet mi. Morbi odio erat, ultrices non lectus nec, tempor viverra nequtur.</p>
+</div>
+<div class="xs-margin visible-xs clearfix">&nbsp;</div>
+<div class="col-sm-5">
+<div class="row">
+<div class="col-md-7 contact-box">
+<h3 class="secondary-font">Contact Details</h3>
+<ul class="contact-list">
+<li><span>Phone:</span>+430 980 1479</li>
+<li><span>Email:</span>granada_shop@gmail.com</li>
+<li><span>Skype:</span>granada_shop</li>
+</ul>
+</div>
+<div class="col-md-5 contact-box">
+<h3 class="secondary-font">Contact Info</h3>
+<div class="contact-address">United Kingdom<br /> London 02587<br /> Oxford Street 48/188</div>
+</div>
+</div>
+</div>
+</div>
+<div class="xlg-margin2x hidden-xs">&nbsp;</div>
+<div class="xlg-margin visible-xs">&nbsp;</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Custom Link Sample</title>
+			<identifier>custom_link_sample_wide</identifier>
+			<content><![CDATA[<ul>
+<li class="menu-full-width"><a href="#">Custom</a>
+<div class="nav-sublist-dropdown" style="display: none;">
+<div class="container">
+<div class="mega-columns row">
+<div class="block1 col-sm-12">
+<div class="row">
+<ul>
+<li class="menu-item menu-item-has-children menu-parent-item col-sm-3 " style="list-style: none;"><a class="level1" href="#"><span>Link</span></a>
+<div class="nav-sublist level1">
+<ul>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item-has-children menu-parent-item col-sm-3 " style="list-style: none;"><a class="level1" href="#"><span>Link</span></a>
+<div class="nav-sublist level1">
+<ul>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item-has-children menu-parent-item col-sm-3 " style="list-style: none;"><a class="level1" href="#"><span>Link</span></a>
+<div class="nav-sublist level1">
+<ul>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item-has-children menu-parent-item col-sm-3 " style="list-style: none;"><a class="level1" href="#"><span>Link</span></a>
+<div class="nav-sublist level1">
+<ul>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Custom Link Sample</title>
+			<identifier>custom_link_sample_narrow</identifier>
+			<content><![CDATA[<ul>
+<li class="menu-item menu-item-has-children menu-parent-item"><a href="#">Custom</a>
+<div class="nav-sublist-dropdown" style="display: none;">
+<div class="container">
+<ul>
+<li class="menu-item menu-item-has-children menu-parent-item " style="list-style: none;"><a class="level1" href="#"><span>Link</span></a>
+<div class="nav-sublist level1">
+<ul>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item-has-children menu-parent-item " style="list-style: none;"><a class="level1" href="#"><span>Link</span></a>
+<div class="nav-sublist level1">
+<ul>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item-has-children menu-parent-item " style="list-style: none;"><a class="level1" href="#"><span>Link</span></a></li>
+</ul>
+</div>
+</div>
+</li>
+</ul>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Custom Link Sample</title>
+			<identifier>custom_link_sample_mobile</identifier>
+			<content><![CDATA[<ul>
+<li class="menu-full-width"><a href="#">Custom</a>
+<ul>
+<li class="menu-item menu-item-has-children menu-parent-item" style="list-style: none;"><a class="level1" href="#"><span>Link</span></a>
+<ul>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children menu-parent-item" style="list-style: none;"><a class="level1" href="#"><span>Link</span></a>
+<ul>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children menu-parent-item" style="list-style: none;"><a class="level1" href="#"><span>Link</span></a>
+<ul>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children menu-parent-item" style="list-style: none;"><a class="level1" href="#"><span>Link</span></a>
+<ul>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+<li class="menu-item" style="list-style: none;"><a class="level2" href="#"><span>Sub Link</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Category Banner</title>
+			<identifier>cat_banner_block_1</identifier>
+			<content><![CDATA[<div class="banner">
+<div class="banner-content">
+<div class="adver-content a-center vertical-middle">
+<div class="adver-sub-title sub-title">New Women</div>
+<h3 class="adver-title">Collection</h3>
+<div class="adver-button"><a class="button button-custom button-custom-active" href="#">By It Now</a></div>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/cat_women.jpg"}}" /></div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Category Banner</title>
+			<identifier>cat_banner_block_2</identifier>
+			<content><![CDATA[<div class="cat-banner-slider">
+<div class="banner">
+<div class="banner-content">
+<div class="adver-content a-center vertical-middle">
+<div class="adver-sub-title sub-title">New Kids</div>
+<h3 class="adver-title">Collection</h3>
+<div class="adver-button"><a class="button button-custom button-custom-active" href="#">By It Now</a></div>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/cat_women.jpg"}}" /></div>
+<div class="banner">
+<div class="banner-content">
+<div class="adver-content a-center vertical-middle">
+<div class="adver-sub-title sub-title">New Women</div>
+<h3 class="adver-title">Collection</h3>
+<div class="adver-button"><a class="button button-custom button-custom-active" href="#">By It Now</a></div>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/cat_men.jpg"}}" /></div>
+<div class="banner">
+<div class="banner-content">
+<div class="adver-content a-center vertical-middle">
+<div class="adver-sub-title sub-title">New Man</div>
+<h3 class="adver-title">Collection</h3>
+<div class="adver-button"><a class="button button-custom button-custom-active" href="#">By It Now</a></div>
+</div>
+</div>
+<img alt="" src="{{media url="wysiwyg/cat_kids.jpg"}}" /></div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+		jQuery('.cat-banner-slider').owlCarousel({
+			singleItem : true,
+			slideSpeed : 3000,
+			pagination: true,
+			navigation: true,
+			autoPlay:true,
+			responsiveRefreshRate : 200,
+			transitionStyle : "fade"
+		});
+	});
+</script>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>About Us Banner</title>
+			<identifier>about_us_banner</identifier>
+			<content><![CDATA[<div class="sw_section parallax-section about-us-banner" style="background-image: url('{{media url="wysiwyg/about_us_banner.jpg"}}');" data-parallax-speed="0.05">
+<div class="container">
+<div class="about-banner-section">
+<div id="about-banner-slider" class="owl-carousel owl-theme">
+<div class="item a-center">
+<div class="sub-title">we creating</div>
+<h1 class="about-banner-title">Unique Products</h1>
+<p class="about-banner-content secondary-font">Praesent orci est, molestie quis bibendum ac, sollicitudin eu nisl. Etiam sagittis sit amet leo sed molestie.</p>
+</div>
+<div class="item a-center">
+<div class="sub-title">we creating</div>
+<h1 class="about-banner-title">Unique Products</h1>
+<p class="about-banner-content secondary-font">Praesent orci est, molestie quis bibendum ac, sollicitudin eu nisl. Etiam sagittis sit amet leo sed molestie.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+jQuery('#about-banner-slider').owlCarousel({
+	navigation : false,
+	pagination: true,
+	slideSpeed : 400,
+	paginationSpeed : 400,
+	autoPlay: 8400,
+	singleItem:true,
+	mouseDrag: true,
+	autoHeight : false,
+	transitionStyle : "backSlide"
+});
+});
+</script>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Newsltter Block</title>
+			<identifier>newsletter_block_small</identifier>
+			<content><![CDATA[<div class="a-center parallax-section newsletter-block1 small-block" style="background-image: url('{{media url="wysiwyg/newsletter_bg_1.jpg"}}');" data-parallax-speed="0.05">
+<h3 class="newsletter-sub-title sub-title">Times A Ticking</h3>
+<h1 class="newletter-title" style="color: #5e5c58;">Don't Miss Out</h1>
+<div class="newsletter-desc secondary-font" style="color: #807b6e;">Sybscribe for the latest styles and sales, plus get 25% off your first order.</div>
+{{block type="newsletter/subscribe" template="newsletter/subscribe_home.phtml"}}</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Demo Footer Account</title>
+			<identifier>footer_demo_account_big</identifier>
+			<content><![CDATA[<h4 class="footer-title">My Account</h4>
+<ul class="footer-links">
+<li><a title="My account" href="#">My account</a></li>
+<li><a title="Personal information" href="#">Personal information</a></li>
+<li><a title="Addresses" href="#">Addresses</a></li>
+<li><a title="Discount" href="#">Discount</a></li>
+<li><a title="Orders history" href="#">Orders history</a></li>
+<li><a title="Your vouchers" href="#">Your vouchers</a></li>
+<li><a title="Safe shopping" href="#">Safe shopping</a></li>
+<li><a title="Size guides" href="#">Size guides</a></li>
+</ul>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Demo Footer Service</title>
+			<identifier>footer_demo_service_big</identifier>
+			<content><![CDATA[<h4 class="footer-title">Customer Service</h4>
+<ul class="footer-links">
+<li><a title="Help &amp; Contact" href="#">Help &amp; contact</a></li>
+<li><a title="Shipping &amp; taxes" href="#">Shipping &amp; taxes</a></li>
+<li><a title="Return policy" href="#">Return policy</a></li>
+<li><a title="Careers" href="#">Careers</a></li>
+<li><a title="Affiliates" href="#">Affiliates</a></li>
+<li><a title="Legal Notice" href="#">Legal Notice</a></li>
+<li><a title="Privacy &amp; Security" href="#">Privacy &amp; Security</a></li>
+<li><a title="Sitemap" href="#">Sitemap</a></li>
+</ul>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Youtube</title>
+			<identifier>block_youtube</identifier>
+			<content><![CDATA[<div class="block block-youtube">
+<div class="block-title"><strong>Latest Video</strong></div>
+<div class="block-content">
+<div class="embed-responsive embed-responsive-4by3"><iframe src="//www.youtube.com/embed/6vsEYCZO4Z0" height="315" width="560"></iframe></div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Home About Us</title>
+			<identifier>home_about_us_3</identifier>
+			<content><![CDATA[<div class="home-about-us-1">
+<div class="about-featured-block a-center clearfix">
+<div class="col-sm-4 about-featured">
+<div class="icon-font icon-truck">Delivery</div>
+<h3 class="about-feature-title sub-title">Free Delivery</h3>
+<div class="about-feature-desc">Cras pellentesque, nisi ac tempus pellentesque, orci sem commodo urna, amet egestas ipsum orci sit amet.</div>
+</div>
+<div class="col-sm-4 about-featured">
+<div class="icon-font icon-phone">Service</div>
+<h3 class="about-feature-title sub-title">24/h customer service</h3>
+<div class="about-feature-desc">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas praesent tempor.</div>
+</div>
+<div class="col-sm-4 about-featured">
+<div class="icon-font icon-lock">Payment</div>
+<h3 class="about-feature-title sub-title">payment secured</h3>
+<div class="about-feature-desc">Aenean porta adipiscing tortor, nec consequat nisi mollis sed. Aliquam orn are magna sed leo varius, quis.</div>
+</div>
+</div>
+<div class="home-intro-title">
+<h2 style="text-transform: initial;">Who we are?</h2>
+</div>
+<div class="intro-block">
+<div class="row">
+<div class="col-sm-4">
+<ul class="accordion-format intro-accordion">
+<li><a class="title-font" href="javascript:void(0)">What We Do</a>
+<ul class="children">
+<li>Marius maurs arcu volutpat interdum;</li>
+<li>Class astent taciti sociosqu ad litora;</li>
+<li>Um sociis natoque penatibus et mmagnis;</li>
+<li>Proin nec do or elit in lorem neqe</li>
+</ul>
+</li>
+<li><a class="title-font" href="javascript:void(0)">Companu History</a>
+<ul class="children">
+<li>Marius maurs arcu volutpat interdum;</li>
+<li>Class astent taciti sociosqu ad litora;</li>
+<li>Um sociis natoque penatibus et mmagnis;</li>
+<li>Proin nec do or elit in lorem neqe</li>
+</ul>
+</li>
+<li><a class="title-font" href="javascript:void(0)">What is our priorities</a>
+<ul class="children">
+<li>Marius maurs arcu volutpat interdum;</li>
+<li>Class astent taciti sociosqu ad litora;</li>
+<li>Um sociis natoque penatibus et mmagnis;</li>
+<li>Proin nec do or elit in lorem neqe</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="col-sm-4">
+<h3 class="title-font">Our History.</h3>
+<div style="line-height: 25px;">Phasellus iaculis enim et mauris augue euismod fermentum, at cursus augue bibendum. In vitae fringilla lorem. Proin bibendum magna ut ultricces accumsan.</div>
+<div style="line-height: 25px;">Phasellus iaculis enim et mauris augue euismod ultrices. Donec mattis urna arcu, convalis sodales augue vehicula in. Suspendisse tempus lacus augue, eu iaculis ipsum pretium. Sed mollis, eros ut hendrerit ornare, lecus sapien.</div>
+</div>
+<div class="col-sm-4"><img alt="" src="{{media url="wysiwyg/home_about_us2.jpg"}}" /></div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Our Service</title>
+			<identifier>about_our_service</identifier>
+			<content><![CDATA[<div class="about-our-service">
+<div class="service-title">
+<h1 class="secondary-font">Our Services</h1>
+</div>
+<div class="row">
+<div class="service-wrapper col-sm-6">
+<div class="service-dev-icon">&nbsp;</div>
+<div class="service-content">
+<h2>Development</h2>
+<div class="service-desc">Quisque ac quam id quam ullam. lorem corper dignissim ullamcorper ut nisi. Cras ullamcorper ullamcorper. Integer aliquam malesuada mi, eu interdum magna scelerisque eu.</div>
+</div>
+</div>
+<div class="service-wrapper col-sm-6">
+<div class="service-marketing-icon">&nbsp;</div>
+<div class="service-content">
+<h2>Marketing</h2>
+<div class="service-desc">Praesent gravida malesuada faucibus. Etiam vehicula massa eget nisl ante, posuere vel bibendum nisl elementum. Sed vel erat interdum, volutpat nisi imperdiet, mollis magna.</div>
+</div>
+</div>
+<div class="service-wrapper col-sm-6">
+<div class="service-design-icon">&nbsp;</div>
+<div class="service-content">
+<h2>Design</h2>
+<div class="service-desc">Proin eget sodales magna. Proin ac est convallis,interdum odio vel, luctus nibh. Fusce iaculis sollicitudin metus sed. Vivamus quis pharetra, sviverra nibh ut, fermentum felis.</div>
+</div>
+</div>
+<div class="service-wrapper col-sm-6">
+<div class="service-hosting-icon">&nbsp;</div>
+<div class="service-content">
+<h2>Web Hosting</h2>
+<div class="service-desc">Proin eget sodales magna. Proin ac est convallis, interdum odio vel, luctus nibh. Fusce iaculis sollicitudin metus sed. Cras vel augue eu augue fermentum sollicitudin et id nunc.</div>
+</div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Our Skills</title>
+			<identifier>about_our_skills</identifier>
+			<content><![CDATA[<div class="our-skills">
+<h2 class="secondary-font">Our Skills</h2>
+<div class="row">
+<div class="col-sm-6">
+<div class="progress-bars">
+<div class="sub-title">Wordpress</div>
+<div class="progress-bar" data-width="85">
+<div>&nbsp;</div>
+<span class="animated-counter-wrapper secondary-font"><span class="animated-counter" data-value="85">1</span>%</span></div>
+<div class="sub-title">Photoshop</div>
+<div class="progress-bar" data-width="73">
+<div>&nbsp;</div>
+<span class="animated-counter-wrapper secondary-font"><span class="animated-counter" data-value="73">1</span>%</span></div>
+<div class="sub-title">HTML/Css</div>
+<div class="progress-bar" data-width="67">
+<div>&nbsp;</div>
+<span class="animated-counter-wrapper secondary-font"><span class="animated-counter" data-value="67">1</span>%</span></div>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="progress-bars">
+<div class="sub-title">Illustrator</div>
+<div class="progress-bar" data-width="69">
+<div>&nbsp;</div>
+<span class="animated-counter-wrapper secondary-font"><span class="animated-counter" data-value="69">1</span>%</span></div>
+<div class="sub-title">Logo Design</div>
+<div class="progress-bar" data-width="87">
+<div>&nbsp;</div>
+<span class="animated-counter-wrapper secondary-font"><span class="animated-counter" data-value="87">1</span>%</span></div>
+<div class="sub-title">Ecommerce</div>
+<div class="progress-bar" data-width="92">
+<div>&nbsp;</div>
+<span class="animated-counter-wrapper secondary-font"><span class="animated-counter" data-value="92">1</span>%</span></div>
+</div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Some Fun Facts</title>
+			<identifier>about_fun_facts_block</identifier>
+			<content><![CDATA[<div class="a-center sw_section parallax-section funs-block" style="background-image: url('{{media url="wysiwyg/funs_block_bg_2.jpg"}}'); background-color: #ebe9e1;" data-parallax-speed="0.05">
+<div class="container">
+<div class="row">
+<p class="title-font funs-title" style="color: #908876;">Some Funs Facts</p>
+<p class="secondary-font funs-desc" style="color: #908876;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus est a hendreit bibendum.</p>
+<div class="ga-5 a-center " style="color: #908876;"><span class="animated-counter funs-counter" data-value="270">1</span> <span class="secondary-font upper-font funs-subdesc">Happy Client</span></div>
+<div class="ga-5 a-center" style="color: #908876;"><span class="animated-counter funs-counter" data-value="284">1</span> <span class="secondary-font upper-font funs-subdesc">Completed Projects</span></div>
+<div class="ga-5 a-center" style="color: #908876;"><span class="animated-counter funs-counter" data-value="885">1</span> <span class="secondary-font upper-font funs-subdesc">Tweets</span></div>
+<div class="ga-5 a-center" style="color: #908876;"><span class="animated-counter funs-counter" data-value="125">1</span> <span class="secondary-font upper-font funs-subdesc">Pizza Ordered</span></div>
+<div class="ga-5 a-center" style="color: #908876;"><span class="animated-counter funs-counter" data-value="250">1</span> <span class="secondary-font upper-font funs-subdesc">Coffee Cups</span></div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Meet Our Team</title>
+			<identifier>about_meet_our_team</identifier>
+			<content><![CDATA[<div class="meet-our-team">
+<h2 class="secondary-font">Meet Our Team</h2>
+<div class="meet-team-block">
+<div class="row">
+<div class="meet-team-slider">
+<div class="item">
+<div class="team-mb-wrapper">
+<div class="team-photo"><img alt="" src="{{media url="wysiwyg/team-mm-1.jpg"}}" /></div>
+<div class="team-desc">
+<div class="team-mb-name title-font" style="font-size: 25px; font-style: italic;">Courtney Bryant</div>
+<div class="team-mb-duty active-color" style="font-size: 14px;">SysAdmin</div>
+<div class="team-mb-desc" style="font-size: 14px;">Phasellus iaculis enim et mauris augue euismod fermentum, at cursus augue bibendum. In vitae fringilla lorem. Proin bibendum magna ut ltrices.</div>
+<div class="team-social-wrapper"><a class="button button-custom button-custom-active team-social-fb" href="#">facebook</a> <a class="button button-custom button-custom-active team-social-tt" href="#">twitter</a> <a class="button button-custom button-custom-active team-social-db" href="#">dribbble</a> <a class="button button-custom button-custom-active team-social-mail" href="#">mail</a></div>
+</div>
+</div>
+<div class="team-mb-wrapper">
+<div class="team-photo"><img alt="" src="{{media url="wysiwyg/team-mm-2.jpg"}}" /></div>
+<div class="team-desc">
+<div class="team-mb-name title-font" style="font-size: 25px; font-style: italic;">Walter Allen</div>
+<div class="team-mb-duty active-color" style="font-size: 14px;">Project Manager</div>
+<div class="team-mb-desc" style="font-size: 14px;">Phasellus iaculis enim et mauris augue euismod fermentum, at cursus augue bibendum. In vitae fringilla lorem. Proin bibendum magna ut ltrices.</div>
+<div class="team-social-wrapper"><a class="button button-custom button-custom-active team-social-fb" href="#">facebook</a> <a class="button button-custom button-custom-active team-social-tt" href="#">twitter</a> <a class="button button-custom button-custom-active team-social-db" href="#">dribbble</a> <a class="button button-custom button-custom-active team-social-mail" href="#">mail</a></div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="team-mb-wrapper">
+<div class="team-photo"><img alt="" src="{{media url="wysiwyg/team-mm-3.jpg"}}" /></div>
+<div class="team-desc">
+<div class="team-mb-name title-font" style="font-size: 25px; font-style: italic;">Phoebe Bryant</div>
+<div class="team-mb-duty active-color" style="font-size: 14px;">Singer</div>
+<div class="team-mb-desc" style="font-size: 14px;">Phasellus iaculis enim et mauris augue euismod fermentum, at cursus augue bibendum. In vitae fringilla lorem. Proin bibendum magna ut ltrices.</div>
+<div class="team-social-wrapper"><a class="button button-custom button-custom-active team-social-fb" href="#">facebook</a> <a class="button button-custom button-custom-active team-social-tt" href="#">twitter</a> <a class="button button-custom button-custom-active team-social-db" href="#">dribbble</a> <a class="button button-custom button-custom-active team-social-mail" href="#">mail</a></div>
+</div>
+</div>
+<div class="team-mb-wrapper">
+<div class="team-photo"><img alt="" src="{{media url="wysiwyg/team-mm-4.jpg"}}" /></div>
+<div class="team-desc">
+<div class="team-mb-name title-font" style="font-size: 25px; font-style: italic;">Chandler Allen</div>
+<div class="team-mb-duty active-color" style="font-size: 14px;">Unknown</div>
+<div class="team-mb-desc" style="font-size: 14px;">Phasellus iaculis enim et mauris augue euismod fermentum, at cursus augue bibendum. In vitae fringilla lorem. Proin bibendum magna ut ltrices.</div>
+<div class="team-social-wrapper"><a class="button button-custom button-custom-active team-social-fb" href="#">facebook</a> <a class="button button-custom button-custom-active team-social-tt" href="#">twitter</a> <a class="button button-custom button-custom-active team-social-db" href="#">dribbble</a> <a class="button button-custom button-custom-active team-social-mail" href="#">mail</a></div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="team-mb-wrapper">
+<div class="team-photo"><img alt="" src="{{media url="wysiwyg/team-mm-1.jpg"}}" /></div>
+<div class="team-desc">
+<div class="team-mb-name title-font" style="font-size: 25px; font-style: italic;">Arron Rivera</div>
+<div class="team-mb-duty active-color" style="font-size: 14px;">Sales Manager</div>
+<div class="team-mb-desc" style="font-size: 14px;">Phasellus iaculis enim et mauris augue euismod fermentum, at cursus augue bibendum. In vitae fringilla lorem. Proin bibendum magna ut ltrices.</div>
+<div class="team-social-wrapper"><a class="button button-custom button-custom-active team-social-fb" href="#">facebook</a> <a class="button button-custom button-custom-active team-social-tt" href="#">twitter</a> <a class="button button-custom button-custom-active team-social-db" href="#">dribbble</a> <a class="button button-custom button-custom-active team-social-mail" href="#">mail</a></div>
+</div>
+</div>
+<div class="team-mb-wrapper">
+<div class="team-photo"><img alt="" src="{{media url="wysiwyg/team-mm-2.jpg"}}" /></div>
+<div class="team-desc">
+<div class="team-mb-name title-font" style="font-size: 25px; font-style: italic;">Evan Brooks</div>
+<div class="team-mb-duty active-color" style="font-size: 14px;">Project Manager</div>
+<div class="team-mb-desc" style="font-size: 14px;">Phasellus iaculis enim et mauris augue euismod fermentum, at cursus augue bibendum. In vitae fringilla lorem. Proin bibendum magna ut ltrices.</div>
+<div class="team-social-wrapper"><a class="button button-custom button-custom-active team-social-fb" href="#">facebook</a> <a class="button button-custom button-custom-active team-social-tt" href="#">twitter</a> <a class="button button-custom button-custom-active team-social-db" href="#">dribbble</a> <a class="button button-custom button-custom-active team-social-mail" href="#">mail</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+				jQuery('.meet-team-slider').owlCarousel({
+					items: 2,
+					itemsDesktop: [1199, 2],
+					itemsDesktopSmall: [991, 2],
+					itemsTablet: [768, 1],
+					itemsMobile: [600, 1],
+					lazyLoad: true,
+					pagination: false,
+					navigation: true
+				});
+			});
+</script>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Arrivals Slider Block</title>
+			<identifier>arrivals_slider_block</identifier>
+			<content><![CDATA[<div class="sw_section sw_section_full gray-button-container">
+<div class="vcontainer pos-abs">
+<div class="valign-middle">
+<div class="container">
+<div class="row">
+<div class="arrival-block a-center">
+<p class="arrival-sub-title gray-font upper-font sub-title" style="text-transform: none;">Our Spring / Summer</p>
+<div class="bg-slider-arrows"><span class="no-border button-prev">preview</span> <span class="no-border button-next">next</span></div>
+<h2 class="arrival-title gray-font">New Arrivalse</h2>
+<p class="arrival-description secondary-font">Donec gravida elit sed rhoncus eleifend. Nam viverra lacus non lobortis malescuada fusce.</p>
+<a class="button button-custom button-custom-active button-gray btn-lg" href="#">show now</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="full-bg-slider-1 owl-carousel owl-theme full-screen-slider">
+<div class="item">
+<div style="width: 100%; height: 100%; background: url('{{media url="wysiwyg/full_bg_7.jpg"}}') center center no-repeat; background-size: cover;">&nbsp;</div>
+</div>
+<div class="item">
+<div style="width: 100%; height: 100%; background: url('{{media url="wysiwyg/full_bg_8.jpg"}}') center center no-repeat; background-size: cover;">&nbsp;</div>
+</div>
+<div class="item">
+<div style="width: 100%; height: 100%; background: url('{{media url="wysiwyg/full_bg_9.jpg"}}') center center no-repeat; background-size: cover;">&nbsp;</div>
+</div>
+<div class="item">
+<div style="width: 100%; height: 100%; background: url('{{media url="wysiwyg/full_bg_10.jpg"}}') center center no-repeat; background-size: cover;">&nbsp;</div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+			var fullbgslider1 = jQuery('.full-bg-slider-1').owlCarousel({
+				navigation : false,
+				pagination: false,
+				singleItem:true,
+				autoPlay:true,
+				mouseDrag: true,
+				transitionStyle : "fade"			
+			});
+			jQuery('.arrival-block .button-prev').click(function(){
+				fullbgslider1.trigger('owl.prev');
+			});
+			jQuery('.arrival-block .button-next').click(function(){
+				fullbgslider1.trigger('owl.next');
+			});
+		});
+</script>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Lookbook Slider</title>
+			<identifier>lookbook_slider</identifier>
+			<content><![CDATA[<div class="sw_section_full">
+<div class="vcontainer pos-abs">
+<div class="valign-middle">
+<div class="container">
+<div class="row">
+<div class="arrival-block a-center white-font">
+<p class="arrival-sub-title upper-font sub-title white-font">Autumn / Winter 2015</p>
+<div class="bg-slider-arrows"><span class="no-border button-prev white-button">preview</span> <span class="no-border button-next white-button">next</span></div>
+<h2 class="arrival-title white-font">Lookbook</h2>
+<p class="arrival-description secondary-font">Aenean eu vulputate tortor, quis iaclis sapien. Phasellus pharetra faucibus hendrerit nam ipsum.</p>
+<a class="button button-custom button-custom-active button-white btn-lg" href="#">Take Look</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="full-bg-slider-3 owl-carousel owl-theme full-screen-slider">
+<div class="item">
+<div style="width: 100%; height: 100%; background: url('{{media url="wysiwyg/full_bg_6.jpg"}}') center center no-repeat; background-size: cover;">&nbsp;</div>
+</div>
+<div class="item">
+<div style="width: 100%; height: 100%; background: url('{{media url="wysiwyg/full_bg_5.jpg"}}') center center no-repeat; background-size: cover;">&nbsp;</div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+			var fullbgslider3 = jQuery('.full-bg-slider-3').owlCarousel({
+				navigation : false,
+				pagination: false,
+				singleItem:true,
+				autoPlay:true,
+				mouseDrag: true,
+				transitionStyle : "fade"			
+			});
+			jQuery('.arrival-block .button-prev').click(function(){
+				fullbgslider3.trigger('owl.prev');
+			});
+			jQuery('.arrival-block .button-next').click(function(){
+				fullbgslider3.trigger('owl.next');
+			});
+		});
+		</script>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+
+		<cms_block>
+			<title>Header Custom Block</title>
+			<identifier>header_custom_block</identifier>
+			<content><![CDATA[<div class="contact-custom clearfix">
+<div class="contact-phone"><span class="contact-phone-icon active-color">&nbsp;</span>
+<div class="contact-phone-wrapper">
+<div class="contact-phone-num">+(404) 158 14 25 78</div>
+<div class="contact-phone-num">+(404) 851 21 48 15</div>
+</div>
+</div>
+<div class="contact-infor">
+<div class="contact-skype"><span class="contact-skype-icon active-color">&nbsp;</span><span class="contact-skype-name">granada_support</span></div>
+<div class="contact-mail"><span class="contact-mail-icon active-color">&nbsp;</span><span class="contact-mail-name">granada@mail.com</span></div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Home 7 Banner</title>
+			<identifier>home_7_banner</identifier>
+			<content><![CDATA[<div class="mixed-banner-container">
+<div class="row mixed-banner-row">
+<div class="col-sm-6 mixed-banner">
+<div class="homepage-slider">
+<div class="demo7-banner-slider owl-carousel">
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/homeslider_7_1.jpg"}}" /></div>
+<div class="item-content content-7-1">
+<div class="contet-sub-title secondary-font white-font">Exclusive</div>
+<h2 class="content-title white-font">Discounts &amp; Offers</h2>
+<div class="secondary-font content-description white-font">Quisque volutpat blandit ipsum eget pulvinar. In viverra, mi ac convallis dictum enim.</div>
+<div class="content-button"><a class="button button-custom button-custom-active button-white btn-lg" href="#">Shop Now</a></div>
+</div>
+</div>
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/homeslider_7_2.jpg"}}" /></div>
+<div class="item-content content-7-2">
+<div class="contet-sub-title secondary-font white-font">New Looks</div>
+<h2 class="content-title white-font">Have Landed</h2>
+<div class="secondary-font content-description white-font">Curabitur at turpis sit amet tellus egestas faucibus quis vitae tellus maecenas in vulputate.</div>
+<div class="content-button"><a class="button button-custom button-custom-active button-white btn-lg" href="#">Discover</a></div>
+</div>
+</div>
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/homeslider_7_3.jpg"}}" /></div>
+<div class="item-content content-7-1">
+<div class="contet-sub-title secondary-font white-font">Must - Have</div>
+<h2 class="content-title white-font">Florals This Spring</h2>
+<div class="secondary-font content-description white-font">Quisque volutpat blandit ipsum eget pulvinar. In viverra, mi ac convallis dictum enim.</div>
+<div class="content-button"><a class="button button-custom button-custom-active button-white btn-lg" href="#">Learn More</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 mixed-banner">
+<div class="row mixed-banner-row">
+<div class="col-sm-12 mixed-banner">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/home_7_1.jpg"}}" /></div>
+<div class="item-content mixed-item-1 vertical-middle aa-center">
+<h4 class="sub-title white-font">Our Spring / Summer</h4>
+<h2 class="mixed-banner-title white-font">New Arrivals</h2>
+<div class="content-button"><a class="button button-custom button-custom-active button-white btn-lg" href="#">Shop Now</a></div>
+</div>
+</div>
+<div class="col-sm-6 mixed-banner">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/home_7_2.jpg"}}" /></div>
+<div class="item-content mixed-item-2 vertical-middle aa-center">
+<h4 class="sub-title white-font">The</h4>
+<h2 class="mixed-banner-title white-font">Latest Trend</h2>
+<div class="content-button"><a class="button button-custom button-custom-active button-white btn-lg" href="#">Buy New</a></div>
+</div>
+</div>
+<div class="col-sm-6 mixed-banner">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/home_7_3.jpg"}}" /></div>
+<div class="item-content mixed-item-3 vertical-middle aa-center">
+<h4 class="sub-title white-font">The</h4>
+<h2 class="mixed-banner-title white-font">Candy Bag</h2>
+<div class="content-button"><a class="button button-custom button-custom-active button-white btn-lg" href="#">Take a Look</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+			jQuery('.demo7-banner-slider').owlCarousel({
+				singleItem : true,
+				slideSpeed : 500,
+				pagination: true,
+				navigation: false,
+				autoPlay:true,
+				responsiveRefreshRate : 200,
+				transitionStyle : "fade"
+			});
+		});
+</script>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Products Tab</title>
+			<identifier>products_grid_round_tab</identifier>
+			<content><![CDATA[<div class="granada-ctab product-list-tab tab-round">
+<ul class="product-list">
+<li id="tab_new" class="secondary-font active first"><a href="#">New Arrivals</a></li>
+<li id="tab_bestseller" class="secondary-font"><a href="#">Bestsellers</a></li>
+<li id="tab_featured" class="secondary-font"><a href="#">Featured</a></li>
+</ul>
+<div id="tab_new_contents" class="tab-content">{{block type="filterproducts/newproduct_home_list" product_count="10" products_column="5" template="smartwave/filterproducts/products_grid_type4.phtml"}}</div>
+<div id="tab_bestseller_contents" class="tab-content">{{block type="filterproducts/bestsellers_home_list" product_count="10" products_column="5" template="smartwave/filterproducts/products_grid_type4.phtml"}}</div>
+<div id="tab_featured_contents" class="tab-content">{{block type="filterproducts/featured_home_list" product_count="10" products_column="5" template="smartwave/filterproducts/products_grid_type4.phtml"}}</div>
+</div>
+<script type="text/javascript">
+var product_list_tabs = new Varien.Tabs('.product-list-tab > ul');
+</script>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Newsletter Block</title>
+			<identifier>newsletter_block_dark_demo7</identifier>
+			<content><![CDATA[<div class="a-center sw_section parallax-section newsletter-block_dark newsletter-block_dark_demo7" style="background-image: url('{{media url="wysiwyg/newsletter_bg_5.jpg"}}');" data-parallax-speed="0.05">
+<div class="container">
+<h3 class="newsletter-sub-title sub-title white-font">Times A Ticking</h3>
+<h1 class="newletter-title white-font">Don't Miss Out</h1>
+<div class="newsletter-desc secondary-font white-font">Sybscribe for the latest styles and sales, plus get 25% off your first order.</div>
+{{block type="newsletter/subscribe" template="newsletter/subscribe_home_dark.phtml"}}</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Homepage Slider 7</title>
+			<identifier>home_slider_7</identifier>
+			<content><![CDATA[<div class="homepage-slider">
+<div id="homepage-slider-7" class="homepage-slider-7 owl-carousel owl-theme">
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/home_8_1.jpg"}}" /></div>
+<div class="item-content content-1">
+<div class="container">
+<div class="col-lg-7">
+<div class="content upper-font content-sub-title1 sub-title">Global Style is</div>
+<h2 class="content upper-font content-title1">In your hands</h2>
+<div class="content content-description1 secondary-font">Take home the world's most electic designs. Donec scelerisque placerat massa.</div>
+<div class="content content-button1"><a class="button button-custom button-custom-active button-gray btn-lg" href="#">Shop Now</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/home_8_2.jpg"}}" /></div>
+<div class="item-content content-1">
+<div class="container">
+<div class="col-lg-7">
+<div class="content upper-font content-sub-title1 sub-title">Trending 2015 :</div>
+<h2 class="content upper-font content-title1">Geometric Love</h2>
+<div class="content content-description1 secondary-font">Indulge in a little at-home geometry. Sed efficitur euismod urna, non iaculis.</div>
+<div class="content content-button1"><a class="button button-custom button-custom-active button-gray btn-lg" href="#">Discover</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/home_8_3.jpg"}}" /></div>
+<div class="item-content content-1">
+<div class="container">
+<div class="col-lg-7">
+<div class="content upper-font content-sub-title1 sub-title">Make it pop</div>
+<h2 class="content upper-font content-title1">Splash Your Room</h2>
+<div class="content content-description1 secondary-font">With images from popular culture. In laoreet odio nulla, ac blandit tellus egestas vitae.</div>
+<div class="content content-button1"><a class="button button-custom button-custom-active button-gray btn-lg" href="#">Shop Now</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+		jQuery('#homepage-slider-7').owlCarousel({
+			singleItem : true,
+			slideSpeed : 500,
+			pagination: true,
+			navigation: true,
+			autoPlay:true,
+			responsiveRefreshRate : 200,
+			transitionStyle : "fade"
+		});
+	});
+</script>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Home 8 Banner 1</title>
+			<identifier>home_8_banner_1</identifier>
+			<content><![CDATA[<div class="demo8_adver_1 adver_block">
+<div class="row">
+<div class="col-md-5">
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/home_8_banner_1.jpg"}}" /></div>
+<div class="item-content demo8_adver_1_1 vertical-middle aa-center">
+<h4 class="adver-sub-title secondary-font none-font-style">Modern</h4>
+<h2 class="adver-title">Minimalism</h2>
+<div class="content-button"><a class="button button-custom button-custom-active button-gray btn-long" href="#">Buy it now</a></div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/home_8_banner_2.jpg"}}" /></div>
+<div class="item-content demo8_adver_1_2 vertical-middle aa-center">
+<h4 class="adver-sub-title secondary-font none-font-style">Welcome</h4>
+<h2 class="adver-title">Sunshine</h2>
+<div class="content-button"><a class="button button-custom button-custom-active button-gray btn-long" href="#">Take a look</a></div>
+</div>
+</div>
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/home_8_banner_3.jpg"}}" /></div>
+<div class="item-content demo8_adver_1_3 vertical-middle aa-center">
+<h4 class="adver-sub-title secondary-font none-font-style">Mid - Century</h4>
+<h2 class="adver-title">Mordern Chairs</h2>
+<div class="content-button"><a class="button button-custom button-custom-active button-gray btn-long" href="#">Shop Now</a></div>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/home_8_banner_4.jpg"}}" /></div>
+<div class="item-content demo8_adver_1_4 vertical-middle aa-center">
+<h4 class="adver-sub-title secondary-font none-font-style">Living Room</h4>
+<h2 class="adver-title">In Bloom</h2>
+<div class="content-button"><a class="button button-custom button-custom-active button-gray btn-long" href="#">Shop Now</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Home 8 Banner 2</title>
+			<identifier>home_8_banner_2</identifier>
+			<content><![CDATA[<div class="demo8_adver_2 adver_block">
+<div class="row">
+<div class="col-md-7">
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/home_8_banner_5.jpg"}}" /></div>
+<div class="item-content demo8_adver_2_1 vertical-middle aa-center">
+<h4 class="adver-sub-title secondary-font none-font-style white-font">The Great</h4>
+<h2 class="adver-title white-font">Organic Modern</h2>
+<div class="content-button"><a class="button button-custom button-custom-active button-white btn-long" href="#">Read More</a></div>
+</div>
+</div>
+</div>
+<div class="col-md-5">
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/home_8_banner_6.jpg"}}" /></div>
+<div class="item-content demo8_adver_2_2 vertical-middle aa-center">
+<h4 class="adver-sub-title secondary-font none-font-style white-font">Add Luxe to Your</h4>
+<h2 class="adver-title white-font">Living Space</h2>
+<div class="content-button"><a class="button button-custom button-custom-active button-white btn-long" href="#">Shop Now</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Category CMS Block 3</title>
+			<identifier>cat_cms_block_3</identifier>
+			<content><![CDATA[<div class="adver_block">
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/cat_adver_1.jpg"}}" /></div>
+<div class="item-content cat-adver-1 vertical-middle aa-center">
+<h4 class="adver-sub-title secondary-font none-font-style white-font">The Loft</h4>
+<h2 class="adver-title white-font">Lifestyle</h2>
+<div class="content-button"><a class="button button-custom button-custom-active button-white btn-long" href="#">Shop Style</a></div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Category CMS Block 4</title>
+			<identifier>cat_cms_block_4</identifier>
+			<content><![CDATA[<div class="adver_block">
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/cat_adver_2.jpg"}}" /></div>
+<div class="item-content cat-adver-1 vertical-middle aa-center">
+<h4 class="adver-sub-title secondary-font none-font-style white-font">Art Deco</h4>
+<h2 class="adver-title white-font">Design</h2>
+<div class="content-button"><a class="button button-custom button-custom-active button-white btn-long" href="#">Learn More</a></div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Category CMS Block 5</title>
+			<identifier>cat_cms_block_5</identifier>
+			<content><![CDATA[<div class="adver_block">
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/cat_adver_3.jpg"}}" /></div>
+<div class="item-content cat-adver-1 vertical-middle aa-center">
+<h4 class="adver-sub-title secondary-font none-font-style white-font">Soft</h4>
+<h2 class="adver-title white-font">Industrial</h2>
+<div class="content-button"><a class="button button-custom button-custom-active button-white btn-long" href="#">Take a Look</a></div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Category CMS Block 6</title>
+			<identifier>cat_cms_block_6</identifier>
+			<content><![CDATA[<div class="adver_block">
+<div class="item">
+<div class="item-bg"><img alt="" src="{{media url="wysiwyg/cat_adver_1.jpg"}}" /></div>
+<div class="item-content cat-adver-1 vertical-middle aa-center">
+<h4 class="adver-sub-title secondary-font none-font-style white-font">Upgrade Your</h4>
+<h2 class="adver-title white-font">Kitchen</h2>
+<div class="content-button"><a class="button button-custom button-custom-active button-white btn-long" href="#">Shop Now</a></div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Brand Slider</title>
+			<identifier>brands_slider_block_demo8</identifier>
+			<content><![CDATA[<div class="brands-slider-block titled-block">
+<div class="list-title">
+<div class="cat-list-name sub-title cat-list-e003" style="border-top: 2px solid #c114e6; color: #c114e6;">Brands</div>
+</div>
+<div class="row">
+<div class="brnads-slider">
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+<div class="brand-item"><img alt="brand" src="{{media url="wysiwyg/brand_logo.jpg"}}" /></div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+					jQuery('.brnads-slider').owlCarousel({
+						items: 6,
+						itemsDesktop: [1199, 5],
+						itemsDesktopSmall: [991, 4],
+						itemsTablet: [768, 3],
+						itemsMobile: [600, 2],
+						lazyLoad: true,
+						pagination: false,
+						navigation: true
+					});
+				});
+</script>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Theme Features</title>
+			<identifier>footer_theme_features</identifier>
+			<content><![CDATA[<div class="footer-theme-features">
+<div class="container">
+<div class="row">
+<div class="functions col-md-4">
+<div class="function-icon icon-truck" style="background: none; border: 1px solid #e61446; color: #e61446; border-radius: 2px;">Delivery</div>
+<div class="function-description">
+<div class="function-title sub-title" style="color: #64615c; font-size: 20px;">Free Delivery</div>
+<div class="function-desc-content" style="color: #8d897f;">Cras pellentesque, nisi ac tempus pellentesque, orci sem commodo urna, amet egestas ipsum orci sit amet.</div>
+</div>
+</div>
+<div class="functions col-md-4">
+<div class="function-icon icon-phone" style="background: none; border: 1px solid #1694d6; color: #1694d6; border-radius: 2px;">Service</div>
+<div class="function-description">
+<div class="function-title sub-title" style="color: #64615c; font-size: 20px;">24/h customer service</div>
+<div class="function-desc-content" style="color: #8d897f;">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas praesent tempor.</div>
+</div>
+</div>
+<div class="functions col-md-4">
+<div class="function-icon icon-lock" style="background: none; border: 1px solid #cd42e9; color: #cd42e9; border-radius: 2px;">Payment</div>
+<div class="function-description">
+<div class="function-title sub-title" style="color: #64615c; font-size: 20px;">payment secured</div>
+<div class="function-desc-content" style="color: #8d897f;">Aenean porta adipiscing tortor, nec consequat nisi mollis sed. Aliquam orn are magna sed leo varius, quis.</div>
+</div>
+</div>
+</div>
+</div>
+</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Custom Tab</title>
+			<identifier>granada_custom_tab</identifier>
+			<content><![CDATA[<p>This is custom tab. You can add custom tab as an attribute for entire products, or for each categories. You can add CMS content such as sizing guide or videos to enhance product detail.</p>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+		<cms_block>
+			<title>Footer Google Map</title>
+			<identifier>custom_google_map</identifier>
+			<content><![CDATA[<div class="sw_section_footer">{{block type="core/template" template="page/html/googlemap.phtml" }}</div>]]></content>
+			<is_active>1</is_active>
+	        <stores><item>0</item></stores>
+		</cms_block>
+	</blocks>
+</root>

@@ -1,0 +1,292 @@
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     default_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+// =============================================
+// Compass Defaults
+// =============================================
+
+// Border Radius
+
+$default-border-radius: 5px;
+
+// Transition
+
+$default-transition-property: all;
+$default-transition-duration: 200ms;
+$default-transition-function: linear;
+$default-transition-delay: 0;
+
+// =============================================
+// Primary Break Points
+// =============================================
+
+// These should be used with the bp (max-width, xx) mixin
+// where a min-width is used, remember to +1 to break correctly.
+// If these are changed, they must also be updated in app.js
+
+$bp-xsmall: 480px;
+$bp-small: 600px;
+$bp-medium: 767px;
+$bp-large: 991px;
+$bp-xlarge: 1199px;
+
+// =============================================
+// Base Values
+// =============================================
+
+// Spacing
+
+$gap: 10px;
+
+$trim: 30px;
+// This will get applied on viewports smaller than 480px
+$trim-small: 15px;
+
+// Padding that will get applied to content areas
+$box-spacing-large: 30px;
+
+// Standard padding around box elements such as banner messages, etc
+$box-spacing: 10px;
+
+// Standard spacing between elements within a box, such as "Add to cart", "Price box", etc
+$element-spacing: 7px;
+
+// Dimensions
+
+$max-content-width: 1200px;
+$max-container-width: $trim + $max-content-width + $trim;
+$max-std-formatted-width: 50em;
+
+// =============================================
+// Brand Colors
+// =============================================
+
+// Usually not used directly in Sass partials.
+// Only used to define context-based color vars in this file.
+
+$c-blue: #3399CC;
+$c-green: #11B400;
+$c-pink: #D85378;
+$c-orange: #F3793B;
+$c-red: #CF5050;
+$c-yellow: #FFDD15;
+$c-black: #000000;
+
+//granada colors
+$c-gray: #7e786b;
+$c-active: #e61446;
+$c-active-filled: #fff;
+
+// =============================================
+// Base Colors
+// =============================================
+
+// Text
+
+$c-text: #9b968b;
+$c-text-gray: $c-gray;
+$c-text-white: #E6E6E6;
+$c-text-custom: #949188;
+// Primary font color for headings and other non-link text
+$c-text-primary: #908876;
+
+// Interaction
+$c-action: $c-active;
+$c-stimulus: darken($c-blue, 15%);
+$c-subtle: #A0A0A0;
+
+// Notifications
+
+$c-danger: #e61446;
+$c-success: $c-green;
+$c-warn: #E26703;
+$c-dark: #676157;
+
+// Global Elements
+
+$c-divider-border: #e6dfd1;
+$c-divider-border-secondary: #efe7d9;
+
+//  Price Color
+$c-price: #e61446;
+// =============================================
+// Element Colors
+// =============================================
+// Buttons
+$c-button-border: #cbc6b5;
+$c-button: #cbc6b2;
+$c-button-hover: $c-active;
+$c-button-active: $c-active;
+$c-button-txt: #FFFFFF;
+
+// Secondary Buttons
+
+$c-button-secondary: #cbc6b2;
+$c-button-secondary-hover: $c-active;
+$c-button-secondary-active: $c-active;
+
+$c-button-subtle: #ECECEC;
+
+//Add To Cart Button
+$c-add-to-cart: #AEA995;
+$c-add-to-cart-active: #1694D6;
+
+//Other Buttons for Product List
+$c-add-link: #cbc6b2;
+$c-add-link-active: #1694D6;
+// Forms
+
+$c-input-border: #d7d5cb;
+$c-input-border-focus: $c-blue;
+
+$c-input-placeholder: #b6b4a2;
+$c-input-text: $c-text;
+
+$c-fieldset-border: #CCCCCC;
+$c-fieldset-border-light: #EDEDED;
+
+// Headings
+
+$c-h1: #908876;
+$c-h2: #908876;
+$c-h3: #908876;
+$c-h4: #908876;
+$c-h5: #908876;
+$c-h6: #908876;
+
+// Link
+$c-link: $c-gray;
+$c-link-hover: $c-active;
+$c-link-focus: $c-active;
+$c-link-active: $c-active;
+
+// Module (generic)
+
+$c-module-background: #F4F4F4;
+// This should be applied whenever the border is surrounding a white element and/or is directly showing on white.
+$c-module-border: #CCCCCC;
+// This should be applied whenever the border is wrapping an element with $c-module-background
+$c-module-border-light: #EDEDED;
+$c-module-border-highlight: $c-blue;
+
+// Blog
+
+$c-blog-bookmark: #bdbcb2;
+$c-blog-bookmark-active: #fff;
+$c-blog-tag-border: #d7d2c0;
+
+// Table
+
+$c-table-background: #E7E2D1;
+$c-table-border: #E7E2D1;
+$t-td-color: #858073;
+
+$c-table-zebra-odd: #F8F7F5;
+$c-table-zebra-even: #EEEDED;
+
+// Tabs
+
+$c-tabs-background: #F8F4EE;
+$c-tabs-border: #E7E2D1;
+
+// Checkout
+
+$c-checkout-step-edit-border: #AEA995;
+
+// =============================================
+// Typography
+// =============================================
+
+// Google Web Font stylesheet is included via layout XML
+
+// Font Stacks
+
+$f-stack-sans: 'Helvetica Neue', Verdana, Arial, sans-serif;
+$f-stack-serif: Georgia, Times, 'Times New Roman', serif;
+$f-stack-special: 'Raleway', 'Helvetica Neue', Verdana, Arial, sans-serif;
+$f-stack-opensans: 'Open Sans', Arial, Helvetica, sans-serif;
+$f-stack-judson: Judson;
+$f-stack-sourcecodepro: 'SourceCodePro', Arial, Helvetica, sans-serif;
+$f-stack-verdana: Verdana, Arial, Helvetica, sans-serif;
+$f-stack-default: $f-stack-sans;
+
+// Font Sizes
+
+$f-size-xxl: 18px;
+$f-size-xl: 16px;
+$f-size-l: 15px;
+
+$f-size: 14px;
+
+$f-size-s: 13px;
+$f-size-xs: 12px;
+$f-size-xxs: 11px;
+
+// Base Measures
+
+$b-line-height: 1.5;
+$b-margin-bottom: 1.5em;
+
+$body-bg-color: #fbfaf4;
+
+/*header styles variable*/
+$c-header-bg: #f3f3f0;
+$topbar-bg-color: #f4f3e9;
+$bopbar-bd-color: #ecebe1;
+$c-topbar-hover: #ede9dd;
+$c-topbar-a: #7e786b;
+$dropdown-background-color: #fbfaf4;
+$dropdown-border-color: #e6dfd1;
+$dropdown-active-color: #e6dfd1;
+$dropdown-hover-color: #F3F0EA;
+$p-header-icon: 5px;
+
+/*product label variables*/
+$c-new-color: #1694d6;
+$c-sale-color: #e61446;
+$c-outofstack-color: #9a988a;
+
+$c-block-content-item: #a39d94;
+$c-block-content-item-active: #88837a;
+$c-block-content-item-secondary: #b6b1a8;
+
+/*footer*/
+$c-footer-pre-bg: #eeede6;
+$c-footer-pre-txt: #7d786e;
+$c-footer-top-bg: #f3f3f0;
+$c-footer-top-tt: #847e71;
+$c-footer-top-txt: #7d786e;
+$c-footer-top-active: #e61446;
+$c-footer-top-bd: #979389;
+$c-footer-bottom-bg: #898477;
+$c-footer-bottom-tt: #ffffff;
+$c-footer-bottom-txt: #edeae3;
+$c-footer-bottom-bd: #979389;
+$c-footer-bottom-active: #e61446;
+$c-footer-copy-bg: #898477;
+$c-footer-copy-tt: #edeae3;
+$c-footer-copy-txt: #edeae3;
+$c-footer-copy-bd: #979389;
+$c-footer-copy-active: #e61446;
