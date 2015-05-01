@@ -24,12 +24,8 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<footer id="footer">
-  <div class="footer-container">
-    <div class="footer">
-        <?php echo $this->getChildHtml() ?>
-        <address><?php echo $this->getCopyright() ?></address>
-    </div>
-  </div>
-</footer>
-<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+
+<?php $_product = Mage::registry('product'); ?>
+<div class="buttons-set">
+    <p class="back-link"><a href="<?php echo $_product->getProductUrl() ?>"><small>&laquo; </small><?php echo $this->__('Back to Main Product Info') ?></a></p>
+</div>
