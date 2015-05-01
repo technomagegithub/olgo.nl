@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAiCI,8BAAgB;EACZ,OAAO,EAAE,KAAK;ECfpB,uFACQ;IACN,OAAO,EAAE,GAAG;IACZ,OAAO,EAAE,KAAK;EAEhB,0CAAQ;IACN,KAAK,EAAE,IAAI;ADgBX,sBAAQ;EACJ,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;ECxBhB,uEACQ;IACN,OAAO,EAAE,GAAG;IACZ,OAAO,EAAE,KAAK;EAEhB,kCAAQ;IACN,KAAK,EAAE,IAAI;ADwBX;;;uBAGS;EACL,aAAa,EAAE,GAAG;EClCxB;;;;;;qCACQ;IACN,OAAO,EAAE,GAAG;IACZ,OAAO,EAAE,KAAK;EAEhB;;;qCAAQ;IACN,KAAK,EAAE,IAAI;ADkCX,gCAAkB;EACd,KAAK,EAAE,IAAI;EACX,KAAK,EAAE,KAAK;EACZ,OAAO,EAAE,WAAW;AAGxB;;;;;;;+BAOiB;EACb,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,IAAI;AAGnB,yBAAW;EACP,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,KAAK;AAGpB,2BAAa;EACT,WAAW,EAAE,GAAG;;AE5ChB,yCAAwC;EFoDxC,gCAAkB;IACd,KAAK,EAAE,IAAI;IACX,KAAK,EAAE,IAAI;IACX,OAAO,EAAE,CAAC;EAGd,yBAAW;IACP,KAAK,EAAE,IAAI;IACX,SAAS,EAAE,IAAI;EAEnB,kCAAoB;IAChB,KAAK,EAAE,IAAI;IACX,KAAK,EAAE,IAAI;IACX,OAAO,EAAE,MAAM;IACf,KAAK,EAAE,IAAI;EAEf,yCAA2B;IACvB,KAAK,EAAE,IAAI",
-"sources": ["scaffold-forms.scss","mixin/_mixin.scss","mixin/_breakpoint.scss"],
-"names": [],
-"file": "scaffold-forms.css"
-}

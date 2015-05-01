@@ -1,6 +1,0 @@
-<?php $_helper = $this->helper('catalog/product_compare'); ?>
-<?php $compareClass= 'hidden-button'; ?>
-<?php if ($_helper->getItemCount() > 0) :?>
-    <?php $compareClass = 'show-button'; ?>
-<?php endif; ?>
-<button type="button" title="<?php echo $this->__('Compare') ?>" class="button button-custom btn-compare pull-right <?php echo $compareClass; ?>" onclick="popWin('<?php echo $_helper->getListUrl() ?>','compare','top:0,left:0,width=820,height=600,resizable=yes,scrollbars=yes')"><span><span><?php echo $this->__('Compare') ?></span></span></button>
