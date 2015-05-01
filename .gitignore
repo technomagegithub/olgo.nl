@@ -1,0 +1,16 @@
+# Magento Connect 2 cache directories and files
+downloader/pearlib/cache/
+downloader/*.cfg
+ 
+# Magento runtime media files
+media/catalog/product/cache/
+media/tmp/
+media/js/
+media/css/
+media/.thumbs/
+ 
+# Magento runtime directories and files
+var/*
+!var/.htaccess
+
+
