@@ -12,5 +12,5 @@ html/media/.thumbs/
 # Magento runtime directories and files
 html/var/*
 !html/var/.htaccess
-
+*.swp
 
