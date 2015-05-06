@@ -4966,10 +4966,10 @@ p.product-name a:hover {
 .product-view .product-shop .product-name .h1,
 .product-view .product-img-box .product-name h1 {
   color: #222;
-  color: #ef8200;
   margin-bottom: 10px;
   border: 0;
-  font-weight: bold;
+  font-weight: 200;
+  font-size: 26px;
 }
 .product-view .product-shop {
   width: 40%;
