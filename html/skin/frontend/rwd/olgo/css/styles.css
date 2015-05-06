@@ -661,8 +661,8 @@ h6, .h6 {
 
 .block-title {
   position: relative;
-  padding: 10px 0 0;
-  margin-bottom: 5px;
+  padding: 15px 0 0;
+  margin-bottom: 10px;
   border-top: 1px solid #cccccc;
 }
 .block-title h2,
@@ -5399,13 +5399,13 @@ p.product-name a:hover {
     display: block;
     width: 100%;
     position: relative;
-    border: 1px solid #cccccc;
-    background-color: #f4f4f4;
+    /*border: 1px solid #cccccc;*/
+    /*background-color: #f4f4f4;*/
   }
   .product-collateral .toggle-tabs li {
     float: left;
     border-right: 1px solid transparent;
-    border-left: 1px solid transparent;
+    border-left: 1px solid transparent;a
   }
   .product-collateral .toggle-tabs li > span {
     -moz-user-select: none;
@@ -5424,11 +5424,14 @@ p.product-name a:hover {
     bottom: -1px;
   }
   .product-collateral .toggle-tabs li.current {
+    /*
     border-right: 1px solid #cccccc;
     border-left: 1px solid #cccccc;
+    */
   }
   .product-collateral .toggle-tabs li.current > span {
     background-color: #FFFFFF;
+    background-color: #f4f4f4;
     z-index: 5;
   }
   .product-collateral .toggle-tabs li.current span,
@@ -5436,7 +5439,7 @@ p.product-name a:hover {
     color: #3399cc;
   }
   .product-collateral .toggle-tabs li:first-child {
-    border-left: none;
+    border: none;
   }
   .product-collateral .toggle-tabs:after {
     content: '';
@@ -5453,7 +5456,7 @@ p.product-name a:hover {
     width: 100%;
     display: none;
     padding: 15px;
-    border: 1px solid #cccccc;
+    /*border: 1px solid #cccccc;*/
     border-top: 0;
   }
   .product-collateral > dl > dd.current {
