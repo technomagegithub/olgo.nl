@@ -3166,9 +3166,19 @@ body {
 
 .wrapper {
   min-width: 320px;
-  min-height: 100%;
   margin: 0 auto;
   background: #FFFFFF;
+  height: auto !important;
+}
+@media only screen and (min-width: 771px) {
+  .wrapper {
+     margin-bottom: -267px;
+     min-height: 100%;
+  }
+  #spacer {
+    display: block !important;
+    height: 267px; /* hoogte footer */
+  }
 }
 
 .wrapper:after {
@@ -4272,7 +4282,7 @@ p.product-name a:hover {
 .products-list .product-name {
   text-transform: uppercase;
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 .products-grid .product-name a,
@@ -4296,7 +4306,7 @@ p.product-name a:hover {
 .products-grid > li {
   position: relative;
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
 }
 .products-grid > li:after {
   content: '';
@@ -4318,8 +4328,8 @@ p.product-name a:hover {
 }
 
 .widget-new-products .products-grid .product-image {
-  margin-bottom: 15px;
-  margin-left: 10%;
+  margin-bottom: 10px;
+  margin-left: 0%;
 }
 
 .products-grid .product-info {
@@ -4347,6 +4357,7 @@ p.product-name a:hover {
   color: #a0a0a0;
   font-size: 13px;
   margin: 0 0 5px;
+  /*text-align: left;*/
 }
 
 .products-grid .add-to-links {
@@ -4510,6 +4521,7 @@ p.product-name a:hover {
 
   .products-grid--max-6-col > li {
     width: 14.81481%;
+    width: 21.81481%;
     margin-right: 2.22222%;
   }
 
@@ -4676,8 +4688,8 @@ p.product-name a:hover {
  * Catalog - List
  * ============================================ */
 .category-image {
-  border: 1px solid #cccccc;
-  padding: 10px;
+  border: 0px solid #cccccc;
+  padding: 0px;
 }
 .category-image img {
   width: 100%;
@@ -5334,6 +5346,7 @@ p.product-name a:hover {
 .product-view .alert-price,
 .product-view .alert-stock {
   clear: both;
+  margin-bottom: 5px;
 }
 
 @media only screen and (max-width: 479px) {
@@ -10453,6 +10466,7 @@ body.customer-account .my-account .title-buttons.recurring-profiles-title-button
   }
   .col1-layout .col-main .widget .products-grid--max-5-col-widget > li {
     width: 18.22222%;
+    width: 22.22222%;
     margin-right: 2.22222%;
   }
   .col1-layout .col-main .widget .products-grid--max-5-col-widget > li:nth-child(5n+1) {
