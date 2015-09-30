@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Olgo_Recentproducts>
+      <active>true</active>
+      <codePool>local</codePool>
+    </Olgo_Recentproducts>
+  </modules>
+</config>

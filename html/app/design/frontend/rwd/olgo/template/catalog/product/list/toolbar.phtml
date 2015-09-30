@@ -34,6 +34,7 @@
 <?php if($this->getCollection()->getSize()): ?>
 <div class="toolbar">
     <?php if( $this->isExpanded() ): ?>
+        <?php if (!$this->getHideSorter()) : ?>
         <div class="sorter">
             <?php if( $this->isEnabledViewSwitcher() ): ?>
                 <p class="view-mode">
@@ -67,7 +68,9 @@
                 <?php endif; ?>
             </div>
         </div>
+       <?php endif; ?>
     <?php endif; ?>
+    <?php if (!$this->getHidePager()) : ?>
     <div class="pager">
         <div class="count-container">
             <?php if($this->getLastPageNum()>1): ?>
@@ -92,8 +95,11 @@
             </div>
         </div>
 
-        <?php echo $this->getPagerHtml() ?>
 
     </div>
+    <?php endif; ?>
+    <?php if (!$this->getHidePagination()) : ?>
+      <?php echo $this->getPagerHtml() ?>
+    <?php endif; ?>
 </div>
 <?php endif ?>

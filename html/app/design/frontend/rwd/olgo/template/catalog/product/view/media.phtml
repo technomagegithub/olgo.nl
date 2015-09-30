@@ -49,7 +49,8 @@
             <img id="image-<?php echo $i; ?>"
                  class="gallery-image"
                  src="<?php echo $this->getGalleryImageUrl($_image); ?>"
-                 data-zoom-image="<?php echo  $this->getGalleryImageUrl($_image); ?>" />
+                 data-zoom-image="<?php echo  $this->getGalleryImageUrl($_image); ?>" 
+                 alt="<?php echo $this->escapeHtml($_image->getLabel()) ?>" />
             <?php endif; ?>
         <?php $i++; endforeach; ?>
     </div>
