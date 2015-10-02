@@ -2,9 +2,11 @@
 $products = $this->getRecentProducts();
 ?>
 <div class="product_list_item">
-  <?php if (is_array($products) && count($products)) { ?>
-   <?php foreach($products as $product) { ?>
-       <a href="<?php echo $product['url'] ?>"><img src="<?php echo $product['thumbnailUrl'] ?>" alt="<?php echo $product['name'] ?> kopen"></a>
+  <?php if (is_array($products) && count($products)) { 
+        $i=0;
+        foreach($products as $product) { 
+         $i++; ?>
+         <div class="recent_product imgage<?php echo $i ?>"><span class="price"><?php echo $product['price'] ?></span><a href="<?php echo $product['url'] ?>"><img src="<?php echo $product['thumbnailUrl'] ?>" alt="<?php echo $product['name'] ?> kopen"></a></div>
    <?php } ?>
   <?php } ?>
 </div>
