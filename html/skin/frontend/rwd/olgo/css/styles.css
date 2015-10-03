@@ -7482,13 +7482,17 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 /* ============================================ *
  * Checkout - Success
  * ============================================ */
+.checkout-onepage-success .col-main h1 {
+   color: #0654ba;
+   font-weight: 700;
+}
 .checkout-onepage-success .col-main {
   padding: 0;
-  text-align: center;
+  text-align: left;
 }
 .checkout-onepage-success .buttons-set {
   margin: 10px 0;
-  text-align: center;
+  text-align: left;
 }
 .checkout-onepage-success .buttons-set button {
   float: none;
@@ -9708,7 +9712,9 @@ div.paypal-logo span > img {
   color: #0090e3;
 }
 .cms-page-view .std h2,
-.cms-no-route .std h2 {
+.cms-no-route .std h2,
+.box h2,
+.box2 h2{
   color: #0090e3;
 }
 .cms-page-view .std li,
