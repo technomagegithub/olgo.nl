@@ -53,9 +53,9 @@
 
 <?php echo $this->getMessagesBlock()->toHtml() ?>
 
-<? $_filters = Mage::getSingleton('catalog/layer')->getState()->getFilters();?>
+<?php $_filters = Mage::getSingleton('catalog/layer')->getState()->getFilters();?>
 
-<?
+<?php
 /* 
 foreach ($_filters as $_filter) {
   if($this->stripTags($_filter->getLabel()) == "Exclusief") { } 
