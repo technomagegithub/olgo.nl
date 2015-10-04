@@ -6201,7 +6201,7 @@ p.product-name a:hover {
 .cart-forms .discount,
 .cart-forms .giftcard,
 .cart-forms .shipping {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .checkout-cart-index #postcode {
@@ -11019,6 +11019,11 @@ ul.products-grid li {
   padding: 10px;
   margin-right: 1%;
   width: 49%;
-
 }
-
+.veilig-betalen {
+  width:100%; 
+  height:100%
+}
+.veilig-betalen img {
+  display: block; margin: auto auto;width:100%;max-width:871px;height:auto;
+}
