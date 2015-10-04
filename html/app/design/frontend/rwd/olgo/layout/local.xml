@@ -6,7 +6,11 @@
         <action method="removeItem"><type>skin_js</type><name>js/lib/jquery.cycle2.swipe.min.js</name></action>
         <action method="removeItem"><type>skin_css</type><name>css/madisonisland.css</name></action>
         <action method="removeItem"><type>skin_css</type><name>css/madisonisland-ie8.css</name></action>
-        <action method="removeItem"><type>link_rel</type><name>//fonts.googleapis.com/css?family=Raleway:300,400,500,700,600</name></action>
+        <action method="removeItem"><type>js</type><script>iwd/all/iwd-jquery-2.1.3.min.js</script></action>
+        <action method="removeItem"><type>js</type><script>iwd/all/modal.js</script></action>
+        <action method="removeItem"><type>js</type><script>lib/ccard.js</script></action>
+        <action method="removeItem"><type>skin_css</type><name>css/mirasvit/seositemap/sitemap.css</name></action>
+        <action method="removeItem"><type>skin_css</type><name>css/mirasvit/seo/mirasvit_seo.css</name></action>
     </reference>
     <reference name="right">
         <remove name="sale.reorder.sidebar"/>

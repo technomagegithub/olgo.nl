@@ -37,6 +37,7 @@
             <block type="page/html_head" name="head" as="head">
                 <action method="addJs"><script>prototype/prototype.js</script></action>
                 <action method="addJs"><script>lib/jquery/jquery-1.10.2.min.js</script></action>
+                <action method="addJs"><script>lib/jquery/jquery-1.10.2.min.js</script></action>
                 <action method="addJs"><script>lib/jquery/noconflict.js</script></action>
                 <action method="addJs"><script>lib/ccard.js</script></action>
                 <action method="addJs"><script>prototype/validation.js</script></action>
@@ -66,7 +67,6 @@
                 <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.swipe.min.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/slideshow.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
-                <action method="addLinkRel"><rel>stylesheet</rel><href>//fonts.googleapis.com/css?family=Raleway:300,400,500,700,600</href></action>
                 <action method="addItem"><type>skin_js</type><name>js/minicart.js</name></action>
 
                 <!-- Add stylesheets with no media queries for use in IE 8 and below -->
@@ -76,6 +76,7 @@
                 <!-- Add stylesheets with media queries for use by modern browsers -->
                 <action method="addItem"><type>skin_css</type><name>css/styles.css</name><params/><if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-->]]></if></action>
                 <action method="addItem"><type>skin_css</type><name>css/madisonisland.css</name><params/><if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-->]]></if></action>
+                <action method="addLinkRel"><rel>stylesheet</rel><href>//fonts.googleapis.com/css?family=Lato:400,400italic,300,700,900</href></action>
 
                 <!-- Sets viewport meta tag using text block -->
                 <block type="core/text" name="head.viewport">
