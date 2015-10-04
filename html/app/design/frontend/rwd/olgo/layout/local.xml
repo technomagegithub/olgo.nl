@@ -16,6 +16,7 @@
         <remove name="sale.reorder.sidebar"/>
         <remove name="left.reports.product.viewed"/>
         <remove name="right.reports.product.viewed"/>
+        <action method="unsetChild"><name>catalog.compare.sidebar</name></action>
     </reference>
     <reference name="footer">
         <remove name="footer_links2"/>
