@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<widgets>
+    <bubble_cms_page_children type="bubble_cmstree/widget_page_children" translate="name description" module="bubble_cmstree">
+        <name>CMS Page Children</name>
+        <description>List of current CMS page children.</description>
+        <parameters>
+            <title translate="label description">
+                <label>Title</label>
+                <description>Title to display before children list.</description>
+                <type>text</type>
+                <visible>1</visible>
+            </title>
+            <page_id type="complex" translate="label description">
+                <visible>1</visible>
+                <label>CMS Page</label>
+                <description>Current CMS page will be used in frontend if you don't specify any CMS page here.</description>
+                <type>label</type>
+                <helper_block>
+                    <type>adminhtml/cms_page_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Page...</open>
+                        </button>
+                    </data>
+                </helper_block>
+            </page_id>
+            <show_top_page translate="label description">
+                <visible>1</visible>
+                <label>Show Top Page</label>
+                <type>select</type>
+                <source_model>adminhtml/system_config_source_yesno</source_model>
+                <value>1</value>
+                <description>Will show top level page name (specified page above or current CMS page).</description>
+            </show_top_page>
+            <levels translate="label description">
+                <label>Number of Levels</label>
+                <description>Number of levels to display (empty means unlimited).</description>
+                <type>text</type>
+                <visible>1</visible>
+            </levels>
+            <css_class translate="label description">
+                <label>CSS Class</label>
+                <description>Will be added to the list container element.</description>
+                <type>text</type>
+                <visible>1</visible>
+            </css_class>
+        </parameters>
+    </bubble_cms_page_children>
+</widgets>

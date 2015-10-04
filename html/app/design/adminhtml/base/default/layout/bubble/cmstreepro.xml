@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <cmstreepro>
+        <reference name="head">
+            <action method="addItem">
+                <type>js</type><name>bubble/cmstreepro.js</name>
+            </action>
+        </reference>
+    </cmstreepro>
+    <adminhtml_cms_page_index>
+        <update handle="cmstreepro"/>
+    </adminhtml_cms_page_index>
+    <adminhtml_cms_page_edit>
+        <reference name="cms_page_edit_tabs">
+            <block type="bubble_cmstreepro/adminhtml_cms_page_edit_tab_versions" name="cms_page_edit_tab_versions" />
+            <action method="addTab"><name>versions_section</name><block>cms_page_edit_tab_versions</block></action>
+        </reference>
+    </adminhtml_cms_page_edit>
+</layout>

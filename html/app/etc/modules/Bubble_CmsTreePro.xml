@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Bubble_CmsTreePro>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Bubble_CmsTree/>
+            </depends>
+        </Bubble_CmsTreePro>
+    </modules>
+</config>
