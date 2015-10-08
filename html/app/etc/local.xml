@@ -42,7 +42,7 @@
                 <connection>
                     <host><![CDATA[localhost]]></host>
                     <username><![CDATA[webshop]]></username>
-                    <password><![CDATA[123456]]></password>
+                    <password><![CDATA[xGAT3yjtz4psUiK]]></password>
                     <dbname><![CDATA[olgoshop]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
