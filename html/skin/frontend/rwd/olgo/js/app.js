@@ -1196,53 +1196,61 @@ var ProductMediaManager = {
     },
 
     swapImage: function(targetImage) {
-        targetImage = $j(targetImage);
+	var targetImage = $j(targetImage);
+        var imageGallery = $j('.product-image-gallery');
+        var $curr = $j('.product-image-gallery img:visible');
+        // HIDE MAIN IMAGE
+        $j('#image-main').hide().css('z-index',0);
+
         targetImage.addClass('gallery-image');
 
-        ProductMediaManager.destroyZoom();
-
-        var imageGallery = $j('.product-image-gallery');
-
         if(targetImage[0].complete) { //image already loaded -- swap immediately
-
-            imageGallery.find('.gallery-image').removeClass('visible');
-
+            $curr.hide().css('z-index',0);
             //move target image to correct place, in case it's necessary
-            imageGallery.append(targetImage);
-
-            //reveal new image
-            targetImage.addClass('visible');
-
-            //wire zoom on new image
-            ProductMediaManager.createZoom(targetImage);
-
+            //imageGallery.append(targetImage);
+	    targetImage.css('z-index',2).fadeIn(50, function() {
+               targetImage.css('z-index',1);
+            });
         } else { //need to wait for image to load
-
             //add spinner
             imageGallery.addClass('loading');
-
             //move target image to correct place, in case it's necessary
-            imageGallery.append(targetImage);
-
+            //imageGallery.append(targetImage);
             //wait until image is loaded
             imagesLoaded(targetImage, function() {
-                //remove spinner
-                imageGallery.removeClass('loading');
-
-                //hide old image
-                imageGallery.find('.gallery-image').removeClass('visible');
-
-                //reveal new image
-                targetImage.addClass('visible');
-
-                //wire zoom on new image
-                ProductMediaManager.createZoom(targetImage);
+              //remove spinner
+              imageGallery.removeClass('loading');
+              $curr.hide().css('z-index',0);
+  
+              targetImage.css('z-index',2).fadeIn(50, function() {
+                 targetImage.css('z-index',1);
+              });
             });
 
         }
     },
 
     wireThumbnails: function() {
+        $j(".nextImage").click(function() {
+             $j('#image-main').hide().css('z-index',0);
+             var $curr = $j('.product-image-gallery img:visible');
+             var $next = ($curr.next().length) ? $curr.next() : $j('.product-image-gallery img').first();
+             if($j('#thumb-link-' + $next.data('image-index')).next().attr('class') == "iwd-pv-fake-thumb-block") {
+	       $j('#thumb-link-' + $next.data('image-index')).next().trigger('click');
+	     }
+             $j('#thumb-link-' + $next.data('image-index')).trigger('click');;
+        });
+
+        $j(".prevImage").click(function() {
+             $j('#image-main').hide().css('z-index',0);
+             var $curr = $j('.product-image-gallery img:visible');
+             var $prev = ($curr.prev().length) ? $curr.prev() : $j('.product-image-gallery img').last();
+             if($j('#thumb-link-' + $prev.data('image-index')).next().attr('class') == "iwd-pv-fake-thumb-block") {
+               $j('#thumb-link-' + $prev.data('image-index')).next().trigger('click');
+             }
+             $j('#thumb-link-' + $prev.data('image-index')).trigger('click');;
+        });
+           
         //trigger image change event on thumbnail click
         $j('.product-image-thumbs .thumb-link').click(function(e) {
             e.preventDefault();

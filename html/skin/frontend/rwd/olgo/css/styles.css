@@ -11052,3 +11052,33 @@ ul.products-grid li {
   padding-bottom: 20px;
   display: block;
 }
+
+.nextImage, .prevImage {
+    width: 15%;
+    height: 35%;
+    max-height: 500px;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    transition: opacity .2s;
+    color: #ef8200;
+    font-size: 300%;
+    text-align: center;
+    line-height: 200px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+.nextImage { right: 0; }
+.nextImage:hover, .prevImage:hover {
+    opacity: 0.5;
+}
+@media only screen and (max-width: 768px) {
+ .nextImage, .prevImage {
+    opacity: 0.2;
+ }
+}
+
+
+
