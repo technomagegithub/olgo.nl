@@ -11054,30 +11054,35 @@ ul.products-grid li {
 }
 
 .nextImage, .prevImage {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    text-align: center;
     width: 15%;
-    height: 35%;
+    height: 100%;
     max-height: 500px;
     position: absolute;
     opacity: 0;
-    z-index: 9;
+    z-index: 2000;
     cursor: pointer;
     transition: opacity .2s;
     color: #ef8200;
-    font-size: 300%;
-    text-align: center;
-    line-height: 200px;
-    font-family: "Varela Round", sans-serif;
-    background-color: rgba(255, 255, 255, .3);
+    font-size: 380%;
+    background-color: rgba(255, 255, 255, .1);
     text-shadow: 0px 0px 15px rgb(119, 119, 119);
 }
 .nextImage { right: 0; }
 .nextImage:hover, .prevImage:hover {
-    opacity: 0.5;
+    opacity: 0.9;
 }
 @media only screen and (max-width: 768px) {
  .nextImage, .prevImage {
-    opacity: 0.2;
+    opacity: 0.4;
+    background-color: rgba(255, 255, 255, .0);
  }
+ .nextImage:hover, .prevImage:hover {
+    opacity: 0.4;
+}
 }
 
 

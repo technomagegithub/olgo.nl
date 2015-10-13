@@ -37,28 +37,21 @@
     $_helper    = $this->helper('catalog/output');
     $_mainImage = $this->helper('catalog/image')->init($_product, 'image'); 
 ?>
-<div class="slideButtons">
-  <span class="prevImage"><</span>
-  <span class="nextImage">></span>
-</div>
 <div class="product-image product-image-zoom">
-        <img property="image" id="image-main" class="gallery-image visible" src="<?php echo $_mainImage  ?>"
-             alt="<?php echo $this->escapeHtml($this->getImageLabel()) ?>"
-             title="<?php echo $this->escapeHtml($this->getImageLabel()); ?>" />
-        
-    <div class="product-image-gallery">
-        <?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
-            <?php if ($this->isGalleryImageVisible($_image)) : ?>
-            <img id="image-<?php echo $i; ?>"
-                 class="gallery-image"
-                 src="<?php echo $this->getGalleryImageUrl($_image); ?>"
-                 data-zoom-image="<?php echo  $this->getGalleryImageUrl($_image); ?>" 
-                 data-image-index="<?php echo $i; ?>"
-                 alt="<?php echo $this->escapeHtml($_image->getLabel()) ?>" />
-            <?php endif; ?>
-        <?php $i++; endforeach; ?>
-    </div>
-
+  <div class="slideButtons">
+    <span class="prevImage">&#60;</span>
+    <span class="nextImage">&#62;</span>
+  </div>
+  
+  <img property="image" id="image-main" class="gallery-image visible" src="<?php echo $_mainImage; ?>" alt="<?php echo $this->escapeHtml($this->getImageLabel()) ?>" title="<?php echo $this->escapeHtml($this->getImageLabel()); ?>" />
+  
+  <div class="product-image-gallery">
+  <?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
+    <?php if ($this->isGalleryImageVisible($_image)) : ?>
+    <img id="image-<?php echo $i; ?>" class="gallery-image" src="<?php echo $this->getGalleryImageUrl($_image); ?>" data-zoom-image="<?php echo  $this->getGalleryImageUrl($_image); ?>" data-image-index="<?php echo $i; ?>" alt="<?php echo $this->escapeHtml($_image->getLabel()) ?>" />
+    <?php endif; ?>
+  <?php $i++; endforeach; ?>
+  </div>
 </div>
 
 <?php if (count($this->getGalleryImages()) > 0): ?>
