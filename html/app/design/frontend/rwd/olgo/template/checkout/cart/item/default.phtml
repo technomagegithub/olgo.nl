@@ -34,7 +34,7 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
         <?php if ($this->hasProductUrl()):?>
             <a href="<?php echo $this->getProductUrl() ?>" title="<?php echo $this->escapeHtml($this->getProductName()) ?>" class="product-image">
         <?php endif;?>
-            <img src="<?php echo $this->getProductThumbnail()->resize(180); ?>" alt="<?php echo $this->escapeHtml($this->getProductName()) ?>" />
+            <img src="<?php echo $this->getProductThumbnail()->resize(120); ?>" alt="<?php echo $this->escapeHtml($this->getProductName()) ?>" />
         <?php if ($this->hasProductUrl()):?>
             </a>
         <?php endif;?>

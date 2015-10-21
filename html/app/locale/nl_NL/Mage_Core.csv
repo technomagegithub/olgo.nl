@@ -392,3 +392,5 @@
 "You will have to log in after you save your custom admin path.","U zult moeten inloggen nadat u uw standaard admin pad heeft bewaard."
 "Your design change for the specified store intersects with another one, please specify another date range.","Uw ontwerp verandering voor de gespecificeerde store komt in conflict met een andere, specificeer a.u.b. een andere datumrange."
 "database ""%s""","Database ""%s"""
+"Item in your order","Product"
+"Items in your order'","Product"

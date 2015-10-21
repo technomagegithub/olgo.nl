@@ -31,6 +31,7 @@
 <meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
 <link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
 <link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link rel="alternate" hreflang="nl-NL" href="http://www.olgo.nl">
 <!--[if lt IE 7]>
 <script type="text/javascript">
 //<![CDATA[
@@ -39,6 +40,32 @@
 //]]>
 </script>
 <![endif]-->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "http://www.olgo.nl",
+  "name": "Olgo",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "http://www.olgo.nl/catalogsearch/result/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "olgo.nl",
+  "url" : "http://www.olgo.nl",
+  "logo": "http://www.olgo.nl/skin/frontend/rwd/olgo/images/logo.png",
+  "sameAs" : [ "https://www.facebook.com/olgonl",
+    "https://twitter.com/Olgonl",
+    "https://nl.pinterest.com/olgolego/"] 
+}
+</script>
+
+
 <?php echo $this->getCssJsHtml() ?>
 <?php echo $this->getChildHtml() ?>
 <?php #echo $this->helper('core/js')->getTranslatorScript() ?>

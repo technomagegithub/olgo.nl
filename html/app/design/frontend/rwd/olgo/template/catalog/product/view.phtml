@@ -37,7 +37,7 @@
     var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
 </script>
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
-<div class="product-view">
+<div class="product-view" vocab="http://schema.org/" typeof="Product">
     <div class="product-essential">
         <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
             <?php echo $this->getBlockHtml('formkey') ?>
@@ -48,7 +48,7 @@
 
             <div class="product-img-box">
                 <div class="product-name">
-                    <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+                    <h1 property="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
                 </div>
                 <?php echo $this->getChildHtml('media') ?>
             </div>
@@ -58,22 +58,23 @@
                     <span class="h1"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></span>
                 </div>
 
-                <div class="price-info">
+                <div class="price-info" property="offers" typeof="Offer">
+                    <meta property="priceCurrency" content="<?php echo $currency_code = Mage::app()->getStore()->getCurrentCurrencyCode(); ?>"/>
                     <?php echo $this->getPriceHtml($_product); ?>
                     <?php echo $this->getChildHtml('bundle_prices') ?>
                     <?php echo $this->getTierPriceHtml() ?>
+                    <div class="extra-info">
+                        <?php echo $this->getReviewsSummaryHtml($_product, 'default', false)?>
+                        <?php echo $this->getChildHtml('product_type_availability'); ?>
+                    </div>
                 </div>
 
-                <div class="extra-info">
-                    <?php echo $this->getReviewsSummaryHtml($_product, 'default', false)?>
-                    <?php echo $this->getChildHtml('product_type_availability'); ?>
-                </div>
 
                 <?php echo $this->getChildHtml('alert_urls') ?>
 
                 <?php if ($_product->getShortDescription()):?>
                     <div class="short-description">
-                        <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+                        <div class="std" property="description"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                     </div>
                 <?php endif;?>
 

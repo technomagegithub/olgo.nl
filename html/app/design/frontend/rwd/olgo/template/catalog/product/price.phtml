@@ -1,7 +1,5 @@
-<?php
-/**
- * Magento
- *
+<?php 
+/*
  * NOTICE OF LICENSE
  *
  * This source file is subject to the Academic Free License (AFL 3.0)
@@ -10,17 +8,17 @@
  * http://opensource.org/licenses/afl-3.0.php
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@magento.com so we can send you a copy immediately.
+ * to license@magentocommerce.com so we can send you a copy immediately.
  *
  * DISCLAIMER
  *
  * Do not edit or add to this file if you wish to upgrade Magento to newer
  * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magento.com for more information.
+ * needs please refer to http://www.magentocommerce.com for more information.
  *
  * @category    design
- * @package     rwd_default
- * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @package     base_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
@@ -51,6 +49,9 @@ $_minimalPriceValue = $_store->roundPrice($_store->convertPrice($_minimalPriceVa
 $_minimalPrice = $_taxHelper->getPrice($_product, $_minimalPriceValue, $_simplePricesTax);
 $_convertedFinalPrice = $_store->roundPrice($_store->convertPrice($_product->getFinalPrice()));
 $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStoreLabel();
+
+    $idSuffix = $this->getIdSuffix();
+    $idSuffixArray = array( '-upsell', '-related', '_clone' );
 ?>
 
 <?php if (!$_product->isGrouped()): ?>
@@ -75,7 +76,7 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
             <?php if ($_weeeTaxAmount && $_weeeHelper->typeOfDisplay($_product, 0)): // including ?>
                 <span class="price-excluding-tax">
                     <span class="label"><?php echo $this->helper('tax')->__('Excl. Tax:') ?></span>
-                    <span class="price" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                    <span class="price"<?php if(!in_array($idSuffix, $idSuffixArray)): ?> property="price"<?php endif; ?> content="<?php echo ($_price + $_weeeTaxAmount); ?>" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                         <?php echo $_coreHelper->formatPrice($_price + $_weeeTaxAmount, false) ?>
                     </span>
                 </span>
@@ -88,7 +89,7 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
             <?php elseif ($_weeeTaxAmount && $_weeeHelper->typeOfDisplay($_product, 1)): // incl. + weee ?>
                 <span class="price-excluding-tax">
                     <span class="label"><?php echo $this->helper('tax')->__('Excl. Tax:') ?></span>
-                    <span class="price" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                    <span class="price"<?php if(!in_array($idSuffix, $idSuffixArray)): ?> property="price"<?php endif; ?> content="<?php echo ($_price + $_weeeTaxAmount); ?>" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                         <?php echo $_coreHelper->formatPrice($_price + $_weeeTaxAmount, false) ?>
                     </span>
                 </span>
@@ -108,7 +109,7 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
             <?php elseif ($_weeeTaxAmount && $_weeeHelper->typeOfDisplay($_product, 4)): // incl. + weee ?>
                 <span class="price-excluding-tax">
                     <span class="label"><?php echo $this->helper('tax')->__('Excl. Tax:') ?></span>
-                    <span class="price" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                    <span class="price"<?php if(!in_array($idSuffix, $idSuffixArray)): ?> property="price"<?php endif; ?> content="<?php echo ($_price + $_weeeTaxAmount); ?>" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                         <?php echo $_coreHelper->formatPrice($_price + $_weeeTaxAmount, false) ?>
                     </span>
                 </span>
@@ -128,7 +129,7 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
             <?php elseif ($_weeeTaxAmount && $_weeeHelper->typeOfDisplay($_product, 2)): // excl. + weee + final ?>
                 <span class="price-excluding-tax">
                     <span class="label"><?php echo $this->helper('tax')->__('Excl. Tax:') ?></span>
-                    <span class="price" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                    <span class="price"<?php if(!in_array($idSuffix, $idSuffixArray)): ?> property="price"<?php endif; ?> content="<?php echo $_price; ?>" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                         <?php echo $_coreHelper->formatPrice($_price, false) ?>
                     </span>
                 </span>
@@ -147,7 +148,7 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
             <?php else: ?>
                 <span class="price-excluding-tax">
                     <span class="label"><?php echo $this->helper('tax')->__('Excl. Tax:') ?></span>
-                    <span class="price" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                    <span class="price"<?php if(!in_array($idSuffix, $idSuffixArray)): ?> property="price"<?php endif; ?> content="<?php if ($_finalPrice == $_price): ?><?php echo $_price; ?><?php else: ?><?php echo $_finalPrice; ?><?php endif; ?>" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                         <?php if ($_finalPrice == $_price): ?>
                             <?php echo $_coreHelper->formatPrice($_price, false) ?>
                         <?php else: ?>
@@ -166,7 +167,11 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
             <?php if ($_weeeTaxAmount && $_weeeHelper->typeOfDisplay($_product, array(0, 1))): // including ?>
                 <?php $weeeAmountToDisplay = $_taxHelper->displayPriceIncludingTax() ? $_weeeTaxAmountInclTaxes : $_weeeTaxAmount ?>
                 <span class="regular-price" id="product-price-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
-                     <?php echo $_coreHelper->currency($_price + $weeeAmountToDisplay, true, true) ?>
+                    <?php if(!in_array($idSuffix, $idSuffixArray)): ?>
+                        <?php echo str_replace('class="price"', 'class="price" property="price" content="' . ($_price + $weeeAmountToDisplay) . '"', $_coreHelper->currency($_price + $weeeAmountToDisplay, true, true)); ?>
+                    <?php else: ?>
+                        <?php echo $_coreHelper->currency($_price + $weeeAmountToDisplay, true, true) ?>
+                    <?php endif; ?>
                 </span>
 
                 <?php if ($_weeeTaxAmount && $_weeeHelper->typeOfDisplay($_product, 1)): // show description ?>
@@ -181,7 +186,11 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
                 <?php endif; ?>
             <?php elseif ($_weeeTaxAmount && $_weeeHelper->typeOfDisplay($_product, 4)): // incl. + weee ?>
                 <span class="regular-price" id="product-price-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
-                    <?php echo $_coreHelper->formatPrice($_price + $_weeeTaxAmount, true) ?>
+                    <?php if(!in_array($idSuffix, $idSuffixArray)): ?>
+                        <?php echo str_replace('class="price"', 'class="price" property="price" content="' . ($_price + $_weeeTaxAmount) . '"', $_coreHelper->formatPrice($_price + $_weeeTaxAmount, true)); ?>
+                    <?php else: ?>
+                        <?php echo $_coreHelper->formatPrice($_price + $_weeeTaxAmount, true); ?>
+                    <?php endif; ?>
                 </span>
                 <span class="weee">(
                     <?php foreach ($_weeeTaxAttributes as $_weeeTaxAttribute): ?>
@@ -199,15 +208,24 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
                         : <?php echo $_coreHelper->currency($_weeeTaxAttribute->getAmount() + ($_taxHelper->displayPriceIncludingTax() ? $_weeeTaxAttribute->getTaxAmount() : 0), true, true); ?>
                     </span>
                 <?php endforeach; ?>
-                <span class="regular-price" id="product-price-weee-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                <span class="regular-price"
+                      id="product-price-weee-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                     <?php echo $_coreHelper->currency($_price + $weeeAmountToDisplay, true, true) ?>
                 </span>
             <?php else: ?>
                 <span class="regular-price" id="product-price-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                     <?php if ($_finalPrice == $_price): ?>
-                        <?php echo $_coreHelper->formatPrice($_price, true) ?>
+                        <?php if(!in_array($idSuffix, $idSuffixArray)): ?>
+                            <?php echo str_replace('class="price"', 'class="price" property="price" content="' . $_price . '"', $_coreHelper->formatPrice($_price, true)); ?>
+                        <?php else: ?>
+                            <?php echo $_coreHelper->formatPrice($_price, true) ?>
+                        <?php endif; ?>
                     <?php else: ?>
-                        <?php echo $_coreHelper->formatPrice($_finalPrice, true) ?>
+                        <?php if(!in_array($idSuffix, $idSuffixArray)): ?>
+                            <?php echo str_replace('class="price"', 'class="price" property="price" content="' . $_finalPrice . '"', $_coreHelper->formatPrice($_finalPrice, true)); ?>
+                        <?php else: ?>
+                            <?php echo $_coreHelper->formatPrice($_finalPrice, true); ?>
+                        <?php endif; ?>
                     <?php endif; ?>
                 </span>
             <?php endif; ?>
@@ -229,7 +247,8 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
                     <span class="price-label"><?php echo $_specialPriceStoreLabel ?></span>
                     <span class="price-excluding-tax">
                         <span class="label"><?php echo $this->helper('tax')->__('Excl. Tax:') ?></span>
-                        <span class="price" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                        <span class="price"<?php if(!in_array($idSuffix, $idSuffixArray)): ?> property="price"<?php endif; ?>
+                              content="<?php echo ($_finalPrice + $_weeeTaxAmount); ?>" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                             <?php echo $_coreHelper->formatPrice($_finalPrice + $_weeeTaxAmount, false) ?>
                         </span>
                     </span>
@@ -243,7 +262,7 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
             <?php else: ?>
                 <p class="special-price">
                     <span class="price-label"><?php echo $_specialPriceStoreLabel ?></span>
-                <span class="price" id="product-price-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                <span class="price"<?php if(!in_array($idSuffix, $idSuffixArray)): ?> property="price"<?php endif; ?> content="<?php echo ($_finalPrice + $_weeeTaxAmountInclTaxes); ?>" id="product-price-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                     <?php echo $_coreHelper->formatPrice($_finalPrice + $_weeeTaxAmountInclTaxes, false) ?>
                 </span>
                 </p>
@@ -262,7 +281,7 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
                 <span class="price-label"><?php echo $_specialPriceStoreLabel ?></span>
                 <span class="price-excluding-tax">
                     <span class="label"><?php echo $this->helper('tax')->__('Excl. Tax:') ?></span>
-                    <span class="price" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                    <span class="price"<?php if(!in_array($idSuffix, $idSuffixArray)): ?> property="price"<?php endif; ?> content="<?php echo ($_finalPrice + $_weeeTaxAmount); ?>" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                       <?php echo $_coreHelper->formatPrice($_finalPrice + $_weeeTaxAmount, false) ?>
                     </span>
                 </span>
@@ -281,10 +300,12 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
                 </span>
                 </span>
             <?php else: ?>
-                <span class="price-label"><?php echo $this->__('Special Price:') ?></span>
-                <span class="price" id="product-price-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                <p class="special-price">
+                    <span class="price-label"><?php echo $this->__('Special Price:') ?></span>
+                <span class="price"<?php if(!in_array($idSuffix, $idSuffixArray)): ?> property="price"<?php endif; ?> content="<?php echo ($_finalPrice + $_weeeTaxAmountInclTaxes); ?>" id="product-price-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                     <?php echo $_coreHelper->formatPrice($_finalPrice + $_weeeTaxAmountInclTaxes, false) ?>
                 </span>
+                </p>
                 <span class="weee">(
                     <?php foreach ($_weeeTaxAttributes as $_weeeTaxAttribute): ?>
                         <?php echo $_weeeSeparator; ?>
@@ -307,7 +328,7 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
                 <span class="price-label"><?php echo $_specialPriceStoreLabel ?></span>
                 <span class="price-excluding-tax">
                     <span class="label"><?php echo $this->helper('tax')->__('Excl. Tax:') ?></span>
-                    <span class="price" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                    <span class="price"<?php if(!in_array($idSuffix, $idSuffixArray)): ?> property="price"<?php endif; ?> content="<?php echo ($_finalPrice + $_weeeTaxAmount); ?>" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                         <?php echo $_coreHelper->formatPrice($_finalPrice + $_weeeTaxAmount, false) ?>
                     </span>
                 </span>
@@ -337,7 +358,7 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
                 <span class="price-label"><?php echo $_specialPriceStoreLabel ?></span>
                 <span class="price-excluding-tax">
                     <span class="label"><?php echo $this->helper('tax')->__('Excl. Tax:') ?></span>
-                    <span class="price" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                    <span class="price"<?php if(!in_array($idSuffix, $idSuffixArray)): ?> property="price"<?php endif; ?> content="<?php echo $_finalPrice; ?>" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                         <?php echo $_coreHelper->formatPrice($_finalPrice, false) ?>
                     </span>
                 </span>
@@ -367,13 +388,14 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
                     <span class="price-label"><?php echo $_specialPriceStoreLabel ?></span>
                     <span class="price-excluding-tax">
                         <span class="label"><?php echo $this->helper('tax')->__('Excl. Tax:') ?></span>
-                        <span class="price" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                        <span class="price"<?php if(!in_array($idSuffix, $idSuffixArray)): ?> property="price"<?php endif; ?> content="<?php echo $_finalPrice; ?>" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                             <?php echo $_coreHelper->formatPrice($_finalPrice, false) ?>
                         </span>
                     </span>
                     <span class="price-including-tax">
                         <span class="label"><?php echo $this->helper('tax')->__('Incl. Tax:') ?></span>
-                        <span class="price" id="price-including-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                        <span class="price"
+                              id="price-including-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                             <?php echo $_coreHelper->formatPrice($_finalPriceInclTax, false) ?>
                         </span>
                     </span>
@@ -381,7 +403,7 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
             <?php else: ?>
                 <p class="special-price">
                     <span class="price-label"><?php echo $_specialPriceStoreLabel ?></span>
-                <span class="price" id="product-price-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                <span class="price"<?php if(!in_array($idSuffix, $idSuffixArray)): ?> property="price"<?php endif; ?> content="<?php echo $_finalPrice; ?>" id="product-price-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                     <?php echo $_coreHelper->formatPrice($_finalPrice, false) ?>
                 </span>
                 </p>
@@ -436,13 +458,15 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
                 <?php if ($_taxHelper->displayBothPrices()): ?>
                     <span class="price-excluding-tax">
                         <span class="label"><?php echo $this->helper('tax')->__('Excl. Tax:') ?></span>
-                        <span class="price" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                        <span class="price"
+                              id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                             <?php echo $_coreHelper->formatPrice($_exclTax, false) ?>
                         </span>
                     </span>
                     <span class="price-including-tax">
                         <span class="label"><?php echo $this->helper('tax')->__('Incl. Tax:') ?></span>
-                        <span class="price" id="price-including-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                        <span class="price"
+                              id="price-including-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
                             <?php echo $_coreHelper->formatPrice($_inclTax, false) ?>
                         </span>
                     </span>
