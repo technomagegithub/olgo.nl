@@ -25,6 +25,18 @@
  */
 ?>
 <?php if($crumbs && is_array($crumbs)): ?>
+<?
+// Add Exclusive filter name add the end of the breadcrumb 
+$_filters = Mage::getSingleton('catalog/layer')->getState()->getFilters();
+  foreach ($_filters as $_filter) {
+   $labelName = $this->stripTags($_filter->getLabel());
+   if ($labelName == "Exclusief") { 
+      $_labelsTxt = $_labelsTxt .  $labelName  . " ";
+   }
+} 
+?>
+
+
 <div class="breadcrumbs">
     <ul vocab="http://schema.org/" typeof="BreadcrumbList">
         <script type="text/javascript">if (history.length >= 1) {document.write('<li><a href="#" onclick="history.back(-1)" class="back-link" >Terug</a></li><span> | </span>');}</script>
@@ -34,7 +46,7 @@
                 <a property="item" typeof="WebPage" href="<?php echo $_crumbInfo['link'] ?>" title="<?php echo $this->escapeHtml($_crumbInfo['title']) ?>"><span property="name"><?php echo $this->escapeHtml($_crumbInfo['label']) ?></span></a>
                 <meta property="position" content="<?php $i++;echo $i ?>">
             <?php elseif($_crumbInfo['last']): ?>
-                <strong><?php echo $this->escapeHtml($_crumbInfo['label']) ?></strong>
+                <strong><?php echo $this->escapeHtml($_crumbInfo['label']) ?> <? echo " " .$_labelsTxt ?></strong>
             <?php else: ?>
                 <?php echo $this->escapeHtml($_crumbInfo['label']) ?>
             <?php endif; ?>

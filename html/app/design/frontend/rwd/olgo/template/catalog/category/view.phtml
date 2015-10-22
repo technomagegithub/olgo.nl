@@ -53,24 +53,33 @@
 
 <?php echo $this->getMessagesBlock()->toHtml() ?>
 
+<? $_filters = Mage::getSingleton('catalog/layer')->getState()->getFilters();?>
 
-<div style="position: relative;">
-<?php if(!Mage::getSingleton('catalog/layer')->getState()->getFilters()): ?>
-<?php if($_imgUrl): ?>
-    <?php  if($_imgUrl) { echo $_imgHtml; } ?>
-<?php endif; ?>
+<?
+/* 
+foreach ($_filters as $_filter) {
+  if($this->stripTags($_filter->getLabel()) == "Exclusief") { } 
+}
+*/ 
+?>
 
-<?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
-    <?php if($_imgUrl): ?>
-    <div class="category-description std catImageDec">
-    <?php else: ?>
-    <div class="category-description std">
-    <?php endif; ?>
-        <?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
-    </div>
+<?php if(!$_filters): ?>
+  <div style="position: relative;">
+  <?php if($_imgUrl): ?>
+      <?php  if($_imgUrl) { echo $_imgHtml; } ?>
+  <?php endif; ?>
+
+  <?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
+      <?php if($_imgUrl): ?>
+      <div class="category-description std catImageDec">
+      <?php else: ?>
+      <div class="category-description std">
+      <?php endif; ?>
+          <?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
+      </div>
+  <?php endif; ?>
+  </div>
 <?php endif; ?>
-<?php endif; ?>
-</div>
 
 <?php if($this->isContentMode()): ?>
     <?php echo $this->getCmsBlockHtml() ?>

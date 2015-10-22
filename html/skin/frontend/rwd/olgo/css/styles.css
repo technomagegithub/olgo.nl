@@ -9685,9 +9685,6 @@ div.paypal-logo span > img {
 }
 .cms-page-view .std p,
 .cms-no-route .std p {
-  font-size: 14px;
-  font-style: italic;
-  line-height: 24px;
 }
 .cms-page-view .std h1,
 .cms-no-route .std h1 {
@@ -10721,7 +10718,6 @@ div.calendar table td.button {
 .heros-simple {
   max-width: 1200px;
   width:100%;
-  max-height: 470px;
   overflow: hidden;
   display: inline-block;
   margin-bottom: 20px;
@@ -10754,12 +10750,45 @@ div.calendar table td.button {
  font-size:100%;
 }
 
+.gemak a {
+  padding-left: 15px;
+
+}
+
 @media only screen and (max-width: 768px) {
   .hero-simple .recent_product .price {
      font-size: 60%;
      padding: 3px 10px;
      bottom: 2px;
   }
+  .bigscreen {
+    display: none;
+  }
+  .gemak {
+    font-size: 60%;
+  }
+  .gemak a {
+    padding-left: 5px;
+  }
+}
+
+/**
+ *
+*/
+.product-logo {
+  max-width: 100px;
+  width: 100%;
+  margin: 5px 0px 5px;
+/*  position: absolute;
+  top: 4px;
+  right: 20px;
+*/
+}
+.product-logo img {
+  width: 100%;
+}
+.product-img-box {
+  position: relative;
 }
 /*
  *
@@ -10770,6 +10799,8 @@ div.calendar table td.button {
   margin-right:0.5%;
   border: 1px solid #dddddd;
   max-width:234px;
+  margin-bottom: 1%;
+  background-color: #FFFFFF;
 }
 .hero-theme img{
   width:100%;
@@ -10836,11 +10867,27 @@ div.calendar table td.button {
   border: 1px solid #eeeeee;
   padding: 20px;
   display: block;
+  max-width: 1200px;
 }
 
 .box2 {
   background-color: #eeeeee;
 }
+
+.hardtofindtag {
+  color: #FFFFFF;
+  display: block;
+  position: absolute;
+  background: #ef8200;
+  top: 0px;
+  padding: 2px 2px;
+  font-size: 60%;
+  text-transform: uppercase;
+  line-height: 1.5em;
+}
+/*
+
+*/
 
 .data-table td.status em {
   font-weight: 700;
@@ -10890,4 +10937,15 @@ div.calendar table td.button {
 }
 #checkout-step-payment .buckaroo-method label.required {
  font-weight: 700;
+}
+/* FIX SOME STD LAYOUD WHEN USING GRID IN A CMS PAGE */
+ul.products-grid li {
+  list-style: none;
+  margin-left: 0px;
+}
+/**
+ *
+ */
+.widget {
+  max-width: 1200px;
 }
