@@ -2784,15 +2784,19 @@ p.required,
 .product-options ul.options-list input.checkbox {
   float: left;
   margin-right: -40px;
-  margin-top: 10px;
+  margin-top: 12px;
   margin-left: 15px;
 }
+
+
+.form-list .control input[type="radio"]:checked+label{  background-color: #e5f6ff; } 
+
 .form-list .control label,
 .sp-methods dt label,
 #checkout-shipping-method-load .sp-methods dd label,
 #co-shipping-method-form .sp-methods dd label,
 .product-options ul.options-list label {
-  background-color: #eeeeee;
+  background-color: #efefef;
   padding: 5px 10px;
   display: inline-block;
   width: auto;
@@ -2801,6 +2805,7 @@ p.required,
   float: none;
   padding: 6px 10px 6px 40px;
 }
+
 .form-list .control label:hover,
 .sp-methods dt label:hover,
 #checkout-shipping-method-load .sp-methods dd label:hover,
@@ -2829,6 +2834,7 @@ p.required,
   min-width: inherit;
   width: 335px;
   max-width: 100%;
+  font-weight: 700;
 }
 
 .form-list .control.remember-me-box label {
@@ -10634,7 +10640,7 @@ div.calendar table td.button {
  display: block;
  position: absolute;
  background: #ef8200;
- bottom: 2px;
+ top: 1px;
  padding: 2px 5px;
  font-size: 60%
 
@@ -10728,7 +10734,6 @@ div.calendar table td.button {
 }
 
 .hero-simple .recent_product {
-  border: solid 1px #dddddd;
   float: left;
   margin-right: 1%;
   width: 32%;
@@ -10736,22 +10741,49 @@ div.calendar table td.button {
   width: auto\9; /* ie8 */
   position: relative;
 }
+
+.col3 .recent_product{
+  width: 32%;
+}
+
+.col4 .recent_product{
+  width: 24%;
+  margin-bottom: 20px;
+}
+
 .hero-simple .recent_product img{
+  border: solid 1px #dddddd;
   width: 100%;
   height: auto;
 }
+
+.hero-simple .recent_product img:hover{
+  border: solid 1px #0090e3;
+}
+
 .hero-simple .recent_product .price {
  color: #FFFFFF;
  display: block;
  position: absolute;
  background: #ef8200;
- bottom: 20px;
+ top: 20px;
  padding: 5px 15px;
  font-size:100%;
 }
 
+.hero-simple .recent_product .title a{
+  font-weight: 500;
+  color: #292929;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  font-size: 90%
+}
+
 .gemak a {
   padding-left: 15px;
+  margin-bottom: 10px;
+  display: inline-block;
 
 }
 
@@ -10759,7 +10791,7 @@ div.calendar table td.button {
   .hero-simple .recent_product .price {
      font-size: 60%;
      padding: 3px 10px;
-     bottom: 2px;
+     top: 1px;
   }
   .bigscreen {
     display: none;
@@ -10769,6 +10801,15 @@ div.calendar table td.button {
   }
   .gemak a {
     padding-left: 5px;
+  }
+  .hero-simple .recent_product .title a{
+    font-size: 80%;
+  }
+  .col4 .recent_product{
+    width: 49%;
+  }
+  .col4 .imgage3    {
+       clear: left;
   }
 }
 
@@ -10949,3 +10990,18 @@ ul.products-grid li {
 .widget {
   max-width: 1200px;
 }
+
+#checkout-step-login {
+  margin-top: 20px;
+}
+
+#checkout-step-login .col-1, #checkout-step-login .col-2 {
+  min-height: 350px;
+  background: #FFFFFF;
+  border: 1px solid #eeeeee;
+  padding: 10px;
+  margin-right: 1%;
+  width: 49%;
+
+}
+
