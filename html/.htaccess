@@ -77,25 +77,19 @@
 ## enable apache served files compression
 ## http://developer.yahoo.com/performance/rules.html#gzip
 
-    # Insert filter on all content
-    ###SetOutputFilter DEFLATE
-    # Insert filter on selected content types only
-    #AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+    AddOutputFilterByType DEFLATE application/xml application/xhtml+xml application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+    #AddOutputFilterByType DEFLATE application/x-httpd-php
 
-    # Netscape 4.x has some problems...
-    #BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
 
-    # Netscape 4.06-4.08 have some more problems
-    #BrowserMatch ^Mozilla/4\.0[678] no-gzip
-
-    # MSIE masquerades as Netscape, but it is fine
-    #BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
-
-    # Don't compress images
-    #SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
-
-    # Make sure proxies don't deliver the wrong content
-    #Header append Vary User-Agent env=!dont-vary
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.(?:pdf|doc)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.(?:avi|mov|mp3|mp4|rm)$ no-gzip dont-vary
 
 </IfModule>
 
@@ -184,7 +178,30 @@
 ## Add default Expires header
 ## http://developer.yahoo.com/performance/rules.html#expires
 
-    ExpiresDefault "access plus 1 year"
+    #ExpiresDefault "access plus 1 year"
+    ExpiresActive On
+ExpiresDefault A0 
+# Set up caching on media files for 1 year (forever?)
+<filesMatch "\.(flv|ico|pdf|avi|mov|ppt|doc|mp3|wmv|wav)$">
+  ExpiresDefault A29030400
+  Header append Cache-Control "public"
+</filesMatch> 
+# Set up caching on media files for 1 week
+<filesMatch "\.(gif|jpg|jpeg|png|swf|js|css)$">
+  ExpiresDefault A604800
+  Header append Cache-Control "public"
+</filesMatch>
+# Set up 24 Hour caching on commonly updated files
+<filesMatch "\.(xml|txt|html)$">
+  ExpiresDefault A7200
+  Header append Cache-Control "proxy-revalidate"
+</filesMatch> 
+# Force no caching for dynamic files
+<filesMatch "\.(php|cgi|pl|htm)$">
+  ExpiresActive Off
+  Header set Cache-Control "private, no-cache, no-store, proxy-revalidate, no-transform"
+  Header set Pragma "no-cache"
+</filesMatch>
 
 </IfModule>
 
