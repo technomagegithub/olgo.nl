@@ -91,8 +91,13 @@ if(empty($_cartQty)) {
                 <ul class="checkout-types minicart">
                     <?php echo $this->getChildHtml('extra_actions') ?>
                     <li>
+                        <!--   
                         <a title="<?php echo $this->__('Checkout') ?>" class="button checkout-button" href="<?php echo $this->getCheckoutUrl() ?>">
                             <?php echo $this->__('Checkout') ?>
+                        </a>
+                        -->
+                        <a title="<?php echo $this->__('Checkout') ?>" class="button checkout-button" href="<?php echo $this->getUrl('checkout/cart'); ?>">
+                           <?php echo $this->__('Checkout') ?>
                         </a>
                     </li>
                 </ul>

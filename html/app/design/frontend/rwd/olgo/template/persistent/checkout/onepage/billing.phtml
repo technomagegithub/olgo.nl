@@ -111,6 +111,8 @@
                             <input type="text" title="<?php echo $this->quoteEscape($this->__('Zip/Postal Code')) ?>" name="billing[postcode]" id="billing:postcode" value="<?php echo $this->escapeHtml($this->getAddress()->getPostcode()) ?>" class="input-text validate-zip-international <?php echo $this->helper('customer/address')->getAttributeValidationClass('postcode') ?>" />
                         </div>
                     </div>
+                </li>
+                <li class="fields">
                     <div class="field">
                         <label for="billing:country_id" class="required"><em>*</em><?php echo $this->__('Country') ?></label>
                         <div class="input-box">

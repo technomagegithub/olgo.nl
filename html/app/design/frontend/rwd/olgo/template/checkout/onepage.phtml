@@ -57,17 +57,18 @@
         saveMethod: '<?php echo $this->getUrl('checkout/onepage/saveMethod') ?>',
         failure: '<?php echo $this->getUrl('checkout/cart') ?>'}
     );
+//]]>
+</script>
+<script type="text/javascript">
+  Checkout.prototype.gotoSection = Checkout.prototype.gotoSection.wrap(function(parentMethod, section, reloadProgressBlock) {
+    // Call parent method.
+    parentMethod(section, reloadProgressBlock);
+    var _gaq = _gaq || [];
     try {
-      Checkout.prototype.gotoSection = Checkout.prototype.gotoSection.wrap(function(parentMethod, section, reloadProgressBlock) {
-        // Call parent method.
-        parentMethod(section, reloadProgressBlock);
-        var _gaq = _gaq || [];
-        // push current checkout section to google analytics if available.
-        _gaq.push(['_trackPageview', '<?php echo $this->getUrl('checkout/onepage'); ?>' + section + '/']);
-      });
-    }
-    catch(err) {
+      // push current checkout section to google analytics if available.
+      ga('send', {'hitType': 'pageview','page': '<?php echo $this->getUrl('checkout/onepage'); ?>' + section + '/'});
+    } catch(err) {
       // silent fail.
     }
-//]]>
+  });
 </script>

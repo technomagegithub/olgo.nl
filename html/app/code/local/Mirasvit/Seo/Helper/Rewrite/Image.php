@@ -149,4 +149,13 @@ class Mirasvit_Seo_Helper_Rewrite_Image extends Mirasvit_Seo_Helper_Rewrite_Imag
         }
     }
 
+    public function resize($width, $height = null)
+    {
+        $this->_getModel()->setWidth($width)->setHeight($height);
+        $this->_scheduleResize = true;
+        if(strpos($this->getImageFile(), 'iwd_video') !== false)
+            return $this->getImageFile();
+        return $this;
+    }
+
 }

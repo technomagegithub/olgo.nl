@@ -130,7 +130,7 @@
                          src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($_imgSize); ?>"
                          alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
                 </a>
-                    <?php if ($_product->getAttributeText('hardtofind') == "Ja"):  ?>
+                    <?php if ($_product->getAttributeText('hardtofind') == "Hard to find"):  ?>
                        <div class="hardtofindtag">Hard to find</div>
                     <?php endif; ?>
                 <div class="product-info">
