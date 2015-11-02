@@ -1461,6 +1461,12 @@ footer {
   .col2-set .col-2 {
     padding: 10px;
   }
+  #checkout-step-login .col-1, #checkout-step-login .col-2 {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 1% !important;
+  }
 }
 .col2-set .col-1 {
   float: left;
@@ -1480,6 +1486,12 @@ footer {
     padding-left: 4px;
     margin-top: 20px;
     border: 1px solid #ececec;
+  }
+  #checkout-step-login .col-1, #checkout-step-login .col-2 {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 1% !important;
   }
 }
 .col2-set .narrow {
@@ -6781,15 +6793,14 @@ p.product-name a:hover {
   border-bottom: 1px solid #E6E6E6;
 }
 .cart .cart-totals table tfoot td {
-  font-size: 24px;
-  padding: 2px 5px;
+  padding: 2px 0px;
   vertical-align: top;
 }
 .cart .cart-totals table tfoot strong span,
 .cart .cart-totals table tfoot span.price {
 }
 .cart .cart-totals table tfoot strong {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 600px) {

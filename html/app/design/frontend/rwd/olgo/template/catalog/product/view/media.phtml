@@ -40,7 +40,7 @@
     <div class="product-image-gallery">
         <img property="image" id="image-main"
              class="gallery-image visible"
-             src="<?php echo $this->helper('catalog/image')->init($_product, 'image') ?>"
+             src="<?php echo $this->helper('catalog/image')->init($_product, 'image');  ?>"
              alt="<?php echo $this->escapeHtml($this->getImageLabel()) ?>"
              title="<?php echo $this->escapeHtml($this->getImageLabel()); ?>" />
 
