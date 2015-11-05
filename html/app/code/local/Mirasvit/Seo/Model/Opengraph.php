@@ -79,6 +79,7 @@ class Mirasvit_Seo_Model_Opengraph extends Mage_Core_Model_Abstract
                     $tags[] = $this->createMetaTag('description', $product->getShortDescription());
                 }
                 $tags[] = $this->createMetaTag('type', 'og:product');
+                $tags[] = $this->createMetaTag('type', 'product'); //Pinterest
                 $tags[] = $this->createMetaTag('url', $product->getProductUrl());
 
                 if ($product->getImage()!='no_selection') {
@@ -95,7 +96,18 @@ class Mirasvit_Seo_Model_Opengraph extends Mage_Core_Model_Abstract
                     $currencyCode = Mage::app()->getStore()->getCurrentCurrencyCode();
                     $tags[]       = $this->createMetaTag('product:price:amount', $productFinalPrice);
                     $tags[]       = $this->createMetaTag('product:price:currency', $currencyCode);
+                    $tags[]       = $this->createMetaTag('price:amount', $productFinalPrice);
+                    $tags[]       = $this->createMetaTag('price:currency', $currencyCode);
                 }
+		
+                if ($product->isAvailable()) {
+                    $tags[] = $this->createMetaTag('availability', 'instock');
+                    $tags[] = $this->createMetaTag('product:availability', 'instock');
+                } else {
+                    $tags[] = $this->createMetaTag('availability', 'oos');
+                    $tags[] = $this->createMetaTag('product:availability', 'oos');
+                }
+
 
                 $tags[] = "<!-- mirasvit open graph end -->";
                 $tags = array_unique($tags);
