@@ -26,6 +26,7 @@ class Olgo_Recentproducts_Model_Recentproducts extends Mage_Core_Model_Abstract 
                   0 => array('date' => true, 'from' => $dateTomorrow),
                   1 => array('is' => new Zend_Db_Expr('null')))
                 ), 'left')
+            ->setOrder('position', 'ASC')
             ->setOrder('entity_id', 'DESC')
             ->setPageSize($products_count);
 
@@ -38,6 +39,7 @@ class Olgo_Recentproducts_Model_Recentproducts extends Mage_Core_Model_Abstract 
             ->joinField('qty','cataloginventory/stock_item','qty','product_id=entity_id','{{table}}.stock_id=1','left')
             ->addAttributeToFilter('qty', array("gt" => 0))
             ->addAttributeToFilter('status',1) // Don't load disabled products
+            ->setOrder('position', 'ASC')
             ->setOrder('entity_id', 'DESC')
             ->setPageSize($products_count);
     }

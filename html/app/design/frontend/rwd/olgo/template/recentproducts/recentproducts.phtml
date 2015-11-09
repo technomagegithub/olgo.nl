@@ -7,9 +7,9 @@ $products = $this->getRecentProducts();
         foreach($products as $product) { 
          $i++; ?>
          <div class="recent_product imgage<?php echo $i ?>">
-            <span class="price"><?php echo $product['price'] ?></span>
             <a href="<?php echo $product['url'] ?>"><img src="<?php echo $product['thumbnailUrl'] ?>" alt="<?php echo $product['name'] ?> kopen"></a>
             <?php if ($product['showTitle'] == true): ?><div class="title"><a href="<?php echo $product['url'] ?>"><?php echo $product['name']?></a></div><?php endif; ?>
+            <span class="price"><?php echo $product['price'] ?></span>
          </div>
    <?php } ?>
   <?php } ?>

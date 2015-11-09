@@ -10660,8 +10660,8 @@ div.calendar table td.button {
  top: 1px;
  padding: 2px 5px;
  font-size: 60%
-
 }
+
 @media only screen and (max-width: 770px) {
   .bigger-hero {
      border: solid 1px #eeeeee;
@@ -10778,11 +10778,18 @@ div.calendar table td.button {
   border: solid 1px #0090e3;
 }
 
+#populair .price {
+  top:0px;
+  padding:0;
+  font-size: 105%;
+  position: relative; 
+  color: #0654ba;
+  font-weight: 700;
+  background:0;
+  
+}
+
 .hero-simple .recent_product .price {
- color: #FFFFFF;
- display: block;
- position: absolute;
- background: #ef8200;
  top: 20px;
  padding: 5px 15px;
  font-size:100%;
@@ -10803,6 +10810,11 @@ div.calendar table td.button {
   display: inline-block;
 
 }
+  .col4 .imgage5,
+  .col4 .imgage9,
+  .col4 .imgage13 {
+    clear: left;
+  }
 
 @media only screen and (max-width: 768px) {
   .hero-simple .recent_product .price {
@@ -10825,8 +10837,11 @@ div.calendar table td.button {
   .col4 .recent_product{
     width: 49%;
   }
-  .col4 .imgage3    {
-       clear: left;
+  .col4 .imgage3,
+  .col4 .imgage5,
+  .col4 .imgage7,
+  .col4 .imgage9 {
+    clear: left;
   }
 }
 
@@ -11026,4 +11041,10 @@ ul.products-grid li {
 }
 .veilig-betalen img {
   display: block; margin: auto auto;width:100%;max-width:871px;height:auto;
+}
+
+.homelink {
+  font-size: 120%;
+  padding-bottom: 20px;
+  display: block;
 }
