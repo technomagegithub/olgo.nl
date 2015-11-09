@@ -17,6 +17,8 @@ class Olgo_Recentproducts_Model_Recentproducts extends Mage_Core_Model_Abstract 
             ->load($category_id)
             ->getProductCollection()
             ->addAttributeToSelect('*')
+            ->joinField('qty','cataloginventory/stock_item','qty','product_id=entity_id','{{table}}.stock_id=1','left')
+            ->addAttributeToFilter('qty', array("gt" => 0))
             ->addAttributeToFilter('status',1) // Don't load disabled products
             ->addAttributeToFilter('special_price', array('gt' => 0))
             ->addAttributeToFilter('special_from_date', array('date' => true, 'to' => $dateToday))
@@ -26,12 +28,15 @@ class Olgo_Recentproducts_Model_Recentproducts extends Mage_Core_Model_Abstract 
                 ), 'left')
             ->setOrder('entity_id', 'DESC')
             ->setPageSize($products_count);
+
     } else {
       // RECENT PRODUCTS
       $products = Mage::getModel('catalog/category')
             ->load($category_id)
             ->getProductCollection()
             ->addAttributeToSelect('*')
+            ->joinField('qty','cataloginventory/stock_item','qty','product_id=entity_id','{{table}}.stock_id=1','left')
+            ->addAttributeToFilter('qty', array("gt" => 0))
             ->addAttributeToFilter('status',1) // Don't load disabled products
             ->setOrder('entity_id', 'DESC')
             ->setPageSize($products_count);
