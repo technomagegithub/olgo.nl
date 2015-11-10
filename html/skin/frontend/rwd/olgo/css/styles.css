@@ -2801,14 +2801,15 @@ p.required,
 }
 
 
-.form-list .control input[type="radio"]:checked+label{  background-color: #e5f6ff; } 
+.form-list .control input[type="radio"]:checked+label{  background-color: #e5f6ff;} 
+.form-list .control input[type="radio"]:checked+label{  background-color: #e5f6ff;} 
 
 .form-list .control label,
 .sp-methods dt label,
 #checkout-shipping-method-load .sp-methods dd label,
 #co-shipping-method-form .sp-methods dd label,
 .product-options ul.options-list label {
-  background-color: #efefef;
+  background-color: #fafafa;
   padding: 5px 10px;
   display: inline-block;
   width: auto;
@@ -2846,7 +2847,7 @@ p.required,
   min-width: inherit;
   width: 335px;
   max-width: 100%;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .form-list .control.remember-me-box label {

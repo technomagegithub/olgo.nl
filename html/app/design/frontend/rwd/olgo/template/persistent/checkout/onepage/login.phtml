@@ -74,7 +74,7 @@
         <div class="buttons-set">
             <p class="required">&nbsp;</p>
             <?php if ($this->getQuote()->isAllowedGuestCheckout()): ?>
-                <button id="onepage-guest-register-button" type="button" class="button" onclick="checkout.setMethod();"><span><span><?php echo $this->__('Continue') ?></span></span></button>
+                <button id="onepage-guest-register-button" type="button" class="button" onclick="checkout.setMethod();"><span><span><?php echo $this->__('Ga verder als nieuwe klant') ?></span></span></button>
             <?php elseif ($this->helper('checkout')->isCustomerMustBeLogged()): ?>
                 <button id="onepage-guest-register-button" type="button" class="button" onclick="window.location='<?php echo $this->helper('checkout/url')->getRegistrationUrl();?>'"><span><span><?php echo $this->__('Register') ?></span></span></button>
             <?php else: ?>
@@ -120,6 +120,9 @@
         </div>
     </div>
 </div>
+    <div class="veilig-betalen" style="padding-top:20px;padding-bottom:10px;">
+       <img src="/media/wysiwyg/website/veilig-betalen.png" alt="veilig betalen met iDeal en PayPal" />
+    </div>
 
 <script type="text/javascript">
 //<![CDATA[

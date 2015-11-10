@@ -70,3 +70,35 @@
 <div class="buttons-set">
     <button type="button" class="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Continue Shopping')) ?>" onclick="window.location='<?php echo $this->getUrl() ?>'"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
 </div>
+
+<!-- addshoppers.com-->
+<?php
+$order = Mage::getModel('sales/order')->loadByIncrementId(Mage::getSingleton('checkout/session')->getLastRealOrderId());
+$amount = number_format($order->subtotal,2);
+?>
+<script type="text/javascript">
+AddShoppersConversion = {
+        order_id: '<?php echo $this->getOrderId(); ?>',
+        value: '<?php echo $amount; ?>'
+};
+var js = document.createElement('script'); js.type = 'text/javascript'; js.async = true; js.id = 'AddShoppers';
+js.src = ('https:' == document.location.protocol ? 'https://shop.pe/widget/' : 'http://cdn.shop.pe/widget/') + 'widget_async.js#56423fd4a3876447a4d4e88b';
+document.getElementsByTagName("head")[0].appendChild(js);
+</script>
+
+<!-- Facebook Conversion Code for Order Succes -->
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', '6031174583033', {'value':'<?php echo $amount; ?>','currency':'EUR'}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6031174583033&amp;cd[value]=<?php echo $amount; ?>&amp;cd[currency]=EUR&amp;noscript=1" /></noscript>
