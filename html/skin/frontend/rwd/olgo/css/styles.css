@@ -902,13 +902,13 @@ body:not(.customer-account) .block:first-child .block-title {
 #co-shipping-method-form .buttons-set .button,
 .footer .button {
   background: #ef8200;
+  box-shadow: inset 0 -2px 0 0 #d67400;
   display: inline-block;
   padding: 7px 15px;
   border: 0;
   color: #FFFFFF;
   font-size: 16px;
-  font-weight: normal;
-  line-height: 19px;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
