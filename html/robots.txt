@@ -2,3 +2,6 @@ Sitemap: http://www.olgo.nl/sitemaps/sitemap.xml
 User-agent: *
 Disallow: /customer/
 Disallow: /checkout/
+Disallow: /sendfriend/
+Disallow: /productalert/
+Disallow: /catalogsearch/
