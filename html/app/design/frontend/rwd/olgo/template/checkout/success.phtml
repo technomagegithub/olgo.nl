@@ -76,15 +76,6 @@
 $order = Mage::getModel('sales/order')->loadByIncrementId(Mage::getSingleton('checkout/session')->getLastRealOrderId());
 $amount = number_format($order->subtotal,2);
 ?>
-<script type="text/javascript">
-AddShoppersConversion = {
-        order_id: '<?php echo $this->getOrderId(); ?>',
-        value: '<?php echo $amount; ?>'
-};
-var js = document.createElement('script'); js.type = 'text/javascript'; js.async = true; js.id = 'AddShoppers';
-js.src = ('https:' == document.location.protocol ? 'https://shop.pe/widget/' : 'http://cdn.shop.pe/widget/') + 'widget_async.js#56423fd4a3876447a4d4e88b';
-document.getElementsByTagName("head")[0].appendChild(js);
-</script>
 
 <!-- Facebook Conversion Code for Order Succes -->
 <script>(function() {
