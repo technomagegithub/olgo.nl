@@ -120,7 +120,7 @@
 ## uncomment next line to enable light API calls processing
 
 #    RewriteRule ^api/([a-z][0-9a-z_]+)/?$ api.php?type=$1 [QSA,L]
-
+RewriteCond %{REQUEST_URI}  !(iredadmin) [NC]
 ############################################
 ## rewrite API2 calls to api.php (by now it is REST only)
 
@@ -159,7 +159,6 @@
 
 ############################################
 ## rewrite everything else to index.php
-
     RewriteRule .* index.php [L]
 
 </IfModule>

@@ -1152,8 +1152,9 @@ a.button:hover {
 }
 
 @media only screen and (max-width: 770px) {
-  .breadcrumbs {
+  .breadcrumbs strong {
     display: none;
+    font-size: 100%;
   }
 }
 /* -------------------------------------------- *
@@ -10841,7 +10842,9 @@ div.calendar table td.button {
   .col4 .imgage3,
   .col4 .imgage5,
   .col4 .imgage7,
-  .col4 .imgage9 {
+  .col4 .imgage9,
+  .col4 .imgage11,
+  .col4 .imgage13 {
     clear: left;
   }
 }
