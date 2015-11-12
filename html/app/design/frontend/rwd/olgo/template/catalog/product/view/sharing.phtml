@@ -43,14 +43,6 @@
     <?php $_productName = urlencode(trim($_helper->productAttribute($_product, $_product->getName(), 'name')))?>
     <?php $_productImageUrl = urlencode(trim($this->helper('catalog/image')->init($_product, 'image')))?>
     <?php $_productUrl = urlencode(trim($_product->getProductUrl()))?>
-<!--
-    <li>
-        <?php $_u = 'p[url]=' . $_productUrl . '&p[images][0]=' . $_productImageUrl . '&p[title]=' . $_productName . '&p[summary]=' . urlencode(trim($_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description'))); ?>
-        <a href="<?php echo 'http://www.facebook.com/sharer.php?s=100&' . $_u; ?>" target="_blank" title="<?php echo $this->__('Share on Facebook') ?>" class="link-facebook">
-            <?php echo $this->__('Share Facebook') ?>
-        </a>
-    </li>
--->
     <li>
         <div class="fb-like" data-href="<?php echo $_product->getProductUrl(); ?>" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
     </li>
