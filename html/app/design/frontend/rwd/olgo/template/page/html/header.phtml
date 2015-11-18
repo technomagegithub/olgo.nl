@@ -27,30 +27,43 @@
  * @var Mage_Page_Block_Html_Header $this
  */
 ?>
-<div class="header-language-background">
-   <div class="header-language-container">
-       <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
-       <div class="store-language-container"><?php echo $this->getChildHtml('store_language') ?></div>
-       <?php echo $this->getChildHtml('currency_switcher') ?>
-   </div>
-</div>
+
+<?php 
+  $currentUrl   = Mage::helper('core/url')->getCurrentUrl();
+  $url          = Mage::getSingleton('core/url')->parseUrl($currentUrl);
+  $path         = $url->getPath();
+  $_hideContent = false;
+  $_showKassa   = false;
+
+  if ($path == "/checkout/onepage/") {$_hideContent = true;$_showKassa = true;}
+?>
+<?php
+/*
+//<div class="header-language-background">
+//   <div class="header-language-container">
+//       <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
+//       <div class="store-language-container"><?php echo $this->getChildHtml('store_language') ?></div>
+//       <?php echo $this->getChildHtml('currency_switcher') ?>
+//   </div>
+//</div>
+*/
+?>
 <header id="header" class="page-header">
     <div class="page-header-container">
         <a class="logo" href="<?php echo $this->getUrl('') ?>">
             <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />
         </a>
-
-        <?php // In order for the language switcher to display next to logo on smaller viewports, it will be moved here.
+        <?php 
+         /*
+         // In order for the language switcher to display next to logo on smaller viewports, it will be moved here.
               // See app.js for details ?>
         <!--<div class="store-language-container"></div>-->
-
+        */ ?>
         <!-- Skip Links -->
-
         <div class="skip-links">
             <span class="skip-link skip-logo" onclick="window.location = '<?php echo $this->getUrl('') ?>';">
                <img src="<?php echo $this->getLogoSrc(); ?>" alt="<?php echo $this->getLogoAlt() ?>" class="logosmall" />
             </span>
-
            <a href="#header-nav" class="skip-link skip-nav">
                 <span class="icon"></span>
                 <!--<span class="label"><?php echo $this->__('Menu'); ?></span>--> 
@@ -62,7 +75,7 @@
             <div class="account-cart-wrapper">
                 <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>" data-target-element="#header-account" class="skip-link skip-account">
                     <span class="icon"></span>
-                    <span class="label"><?php echo $this->__('Account'); ?></span>
+                    <!--<span class="label"><?php echo $this->__('Account'); ?></span> -->
                 </a>
                 <!-- Cart -->
                 <div class="header-minicart">
@@ -70,22 +83,25 @@
                 </div>
             </div>
         </div>
-        <!-- Search -->
-        <div id="header-search" class="skip-content">
-            <?php echo $this->getChildHtml('topSearch') ?>
-        </div>
 
         <!-- Navigation -->
-
-        <div id="header-nav" class="skip-content">
+        <div id="header-nav" class="skip-content<?php if ($_hideContent == true) echo " kassa-hide"; ?>">
             <?php echo $this->getChildHtml('topMenu') ?>
         </div>
-
+        <!-- Search -->
+        <div id="header-search" class="skip-content<?php if ($_hideContent == true) echo " kassa-hide"; ?>">
+            <?php echo $this->getChildHtml('topSearch') ?>
+        </div>
         <!-- Account -->
-
-        <div id="header-account" class="skip-content">
+        <div id="header-account" class="skip-content<?php if ($_hideContent == true) echo " kassa-hide"; ?>">
             <?php echo $this->getChildHtml('topLinks') ?>
         </div>
+
+        <?php if ($_showKassa == true) : ?>
+        <div class="kassa">
+           <span class="kassa1">olgo</span><span class="kassa2">kassa</span>
+        </div> 
+        <?php endif; ?>
     </div>
 </header>
 

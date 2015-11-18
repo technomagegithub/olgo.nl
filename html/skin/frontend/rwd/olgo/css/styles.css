@@ -1101,7 +1101,7 @@ a.button:hover {
  * Icons
  */
 .icon-sprite, .btn-remove2, .ratings .rating-box, .ratings .rating-box .rating, .sorter > .sort-by .sort-by-switcher, .sorter > .view-mode .grid,
-.sorter > .view-mode .list, .skip-nav .icon, .skip-search .icon, #search_mini_form .search-button:before, .skip-account .icon, .skip-cart .icon, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating {
+.sorter > .view-mode .list, .skip-nav .icon, .skip-search .icon, #search_mini_form .search-button:before,#search_form .search-button:before, .skip-account .icon, .skip-cart .icon, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating {
   background-image: url(../images/icon_sprite.png);
   background-repeat: no-repeat;
   text-indent: -9999px;
@@ -1109,7 +1109,7 @@ a.button:hover {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 4 / 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .icon-sprite, .btn-remove2, .ratings .rating-box, .ratings .rating-box .rating, .sorter > .sort-by .sort-by-switcher, .sorter > .view-mode .grid,
-  .sorter > .view-mode .list, .skip-nav .icon, .skip-search .icon, #search_mini_form .search-button:before, .skip-account .icon, .skip-cart .icon, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating {
+  .sorter > .view-mode .list, .skip-nav .icon, .skip-search .icon, #search_mini_form .search-button:before,#search_form .search-button:before, .skip-account .icon, .skip-cart .icon, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating {
     background-image: url(../images/icon_sprite@2x.png);
     background-size: 100px 1000px;
   }
@@ -3389,7 +3389,7 @@ a.skip-link {
   display: none;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
   .skip-link .label {
     display: inline;
   }
@@ -3431,7 +3431,7 @@ a.skip-link {
 }
 .account-cart-wrapper {
   position: absolute;
-  top: 0px;
+  top: 15px;
   right: 0px;
 }
 @media only screen and (max-width: 770px) {
@@ -3484,8 +3484,8 @@ a.skip-link {
     display: block;
     /* Force visibility */
     /*border-bottom: 1px solid #ededed;*/
-    margin-left: 70px;
-    padding-top: 12px;
+    margin-left: 90px;
+    padding-top: 20px;
   }
 }
 /* ============================================ *
@@ -3537,7 +3537,7 @@ a.skip-link {
     display: none;
   }
   .nav-primary li.level0 li {
-    padding: 0 0 0 25px;
+    padding: 0 0 0 15px;
   }
   .nav-primary li.level1 a {
     padding: 0 15px 0 25px;
@@ -3590,7 +3590,7 @@ a.skip-link {
     /* Level 1+ */
   }
   .nav-primary a.level0 {
-    padding: 0 25px;
+    padding: 0 15px;
   }
   .nav-primary li.level0,
   .nav-primary a.level0 {
@@ -3679,12 +3679,27 @@ a.skip-link {
 #header-search {
   padding: 20px;
 }
+#content-search {
+  width:100%;
+  max-width:1200px;
+}
+#content-search input{
+  width: 100%;
+  height: 38px;
+}
+#content-search button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 38px;
+}
 
 @media only screen and (min-width: 771px) {
   #header-search {
-    display: block;
-/*    position: absolute; */
-    top: 0px;
+    display: none;
+    position: absolute; 
+    top: 35px;
+    right: 10px;
     width: 30%;
     margin-left: 94px;
     height: 30px;
@@ -3695,7 +3710,7 @@ a.skip-link {
 /* ============================================ *
  * Search Input
  * ============================================ */
-#search_mini_form .input-box {
+#search_mini_form .input-box, #search_form .input-box {
   position: relative;
   padding-top: 0; 
 }
@@ -3833,6 +3848,7 @@ a.skip-link {
     top: 40px;
     right: 0;
     background: white;
+    min-width: 320px;
   }
 }
 /* -------------------------------------------- *
@@ -3996,7 +4012,7 @@ a.skip-link {
  /* font-weight: 600;*/
 }
 .footer .block-title,
-.footer address {
+.footer address, .footer address a {
   color: #FFFFFF;
   border-top: none;
 }
@@ -9448,6 +9464,7 @@ div.paypal-logo span > img {
   text-align: center;
 }
 .header-minicart .minicart-actions .checkout-button {
+  width: 100%;
   min-width: 145px;
 }
 .header-minicart .minicart-actions .cart-link {
@@ -9491,6 +9508,7 @@ div.paypal-logo span > img {
     z-index: 1;
   }
 }
+
 @media only screen and (max-width: 770px) {
   .header-minicart .subtotal .label {
   }
@@ -11096,5 +11114,29 @@ ul.products-grid li {
   font-size: 80%;
 }
 
+@media only screen and (min-width: 770px) {
+  .kassa-hide {
+    display:none !important;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .kassa {
+    display:none !important;
+  }
+}
+.kassa {
+  padding-left: 100px;
+  padding-top: 20px;
+}
+.kassa1, .kassa2 {
+  font-weight: 900;
+  font-size: 160%;
+  color: #ef8200;
+}
+.kassa2 {
+  font-weight: 400;
+  color:#0654ba;  
+}
 
+.checkout-onepage-index .page-title, .checkout-onepage-index .footer .block-subscribe, .checkout-onepage-index .footer .links { display: none; }
 
