@@ -8,6 +8,7 @@ html/media/tmp/
 html/media/js/
 html/media/css/
 html/media/.thumbs/
+html/media/cache/
  
 # Magento runtime directories and files
 html/var/*
