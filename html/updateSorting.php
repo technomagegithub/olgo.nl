@@ -21,6 +21,7 @@ $products->getSelect()->limit( 500 );
 Mage::app()->setCurrentStore(Mage::getModel('core/store')->load(Mage_Core_Model_App::ADMIN_STORE_ID));
 
 $categoryId = 2; //replace with your category id
+$categoryId = 25; //replace with your category id
 
 $newPosition = 5;
 

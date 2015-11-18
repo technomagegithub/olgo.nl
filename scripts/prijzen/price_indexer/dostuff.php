@@ -1,4 +1,5 @@
 <?php
+require __DIR__ . '/vendor/autoload.php';
 require_once 'goutte.phar';
 
 error_reporting(E_ERROR | E_PARSE);

@@ -39,7 +39,7 @@ $_filters = Mage::getSingleton('catalog/layer')->getState()->getFilters();
 
 <div class="breadcrumbs">
     <ul vocab="http://schema.org/" typeof="BreadcrumbList">
-        <script type="text/javascript">if (history.length >= 1) {document.write('<li><a href="#" onclick="history.back(-1)" class="back-link" >Terug</a></li><span> | </span>');}</script>
+        <script type="text/javascript">if (history.length >= 1) {document.write('<li><a href="#" onclick="window.history.back(-1);return false;" class="back-link" >Terug</a></li><span> | </span>');}</script>
         <?php $i=0; foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
             <li class="<?php echo $_crumbName ?>" property="itemListElement" typeof="ListItem">
             <?php if($_crumbInfo['link']): ?>

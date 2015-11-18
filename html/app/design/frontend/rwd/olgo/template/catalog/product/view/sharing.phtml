@@ -35,9 +35,6 @@
 
 
 <ul class="sharing-links">
-    <?php if ($this->canEmailToFriend()): ?>
-        <li><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>" class="link-email-friend" title="<?php echo $this->__('Email to a Friend') ?>"><?php echo $this->__('Email to a Friend') ?></a></li>
-    <?php endif; ?>
 
     <?php $_helper = $this->helper('catalog/output'); ?>
     <?php $_productName = urlencode(trim($_helper->productAttribute($_product, $_product->getName(), 'name')))?>
@@ -47,7 +44,18 @@
         <div class="fb-like" data-href="<?php echo $_product->getProductUrl(); ?>" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
     </li>
     <li>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <div class="g-plus" data-action="share" data-annotation="none"></div>
+    </li>
+    <li>
+       <a data-pin-do="buttonBookmark" href="https://www.pinterest.com/pin/create/button/"></a>
+       <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+    </li>
+    <li>
         <a href="<?php echo 'http://twitter.com/home?status=' . $_productName . '+' . $_productUrl; ?>" target="_blank" title="<?php echo $this->__('Share on Twitter') ?>" class="link-twitter"><?php echo $this->__('Share on Twitter') ?></a>
     </li>
+    <?php if ($this->canEmailToFriend()): ?>
+        <li><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>" class="link-email-friend" title="<?php echo $this->__('Email to a Friend') ?>"><?php echo $this->__('Email to a Friend') ?></a></li>
+    <?php endif; ?>
 </ul>
 
