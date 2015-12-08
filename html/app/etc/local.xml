@@ -29,7 +29,7 @@
     <global>
         <rewrite>
             <some_unique_identifier>
-                <from><![CDATA[#/s/(.*)/?$#]]></from>
+                <from><![CDATA[#/s/lego/(.*)/?$#]]></from>
                 <to><![CDATA[/catalogsearch/result/index/q/$1/]]></to>
                 <complete />
             </some_unique_identifier>

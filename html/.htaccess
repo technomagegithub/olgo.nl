@@ -132,6 +132,18 @@ RewriteCond %{REQUEST_URI}  !(iredadmin) [NC]
 
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
+## CATALOG SEARCH
+#RewriteCond %{QUERY_STRING}     ^$              [OR]
+#RewriteCond %{QUERY_STRING}     ^query=(.*)$    [NC]
+#RewriteRule ^/old-search$       /search/%1      [NC,L,R=301]
+
+#RewriteCond %{THE_REQUEST} \ /+catalogsearch/result/\?q=([^&\ ]+)
+#RewriteRule ^ /q/%1? [L,NE,R=301]
+#RewriteRule ^q/(.*)$ /catalogsearch/result/?q=$1 [NE,QSA]
+#RewriteRule ^q/(.*)$ /index.php/catalogsearch/result/?q=$1 [L,NE,QSA] 
+#RewriteRule ^zoeken/(.*)$ /catalogsearch/result/?q=$1 [QSA,Pt]
+
+
 ############################################
 ## TRACE and TRACK HTTP methods disabled to prevent XSS attacks
 
@@ -156,6 +168,8 @@ RewriteCond %{REQUEST_URI}  !(iredadmin) [NC]
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-l
+
+
 
 ############################################
 ## rewrite everything else to index.php
