@@ -4,4 +4,5 @@ Disallow: /customer/
 Disallow: /checkout/
 Disallow: /sendfriend/
 Disallow: /productalert/
-Disallow: /catalogsearch/
+Disallow: /catalogsearch/result/
+

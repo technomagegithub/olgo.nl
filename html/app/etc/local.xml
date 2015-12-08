@@ -27,6 +27,13 @@
 -->
 <config>
     <global>
+        <rewrite>
+            <some_unique_identifier>
+                <from><![CDATA[#/s/(.*)/?$#]]></from>
+                <to><![CDATA[/catalogsearch/result/index/q/$1/]]></to>
+                <complete />
+            </some_unique_identifier>
+        </rewrite>
         <install>
             <date><![CDATA[Sun, 26 Apr 2015 15:08:03 +0000]]></date>
         </install>

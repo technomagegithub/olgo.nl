@@ -3,12 +3,19 @@
 require_once 'app/Mage.php';
 Mage::app();
 
+
+$today = time();
+$last = $today - (60*60*24*2);
+ 
+$from = date("Y-m-d", $last);
+$to = date("Y-m-d", $today);
+
 $storeId = Mage::app()->getStore()->getId();
 $products = Mage::getResourceModel('reports/product_collection')
             ->addAttributeToSelect('*')
             ->setStoreId($storeId)
             ->addStoreFilter($storeId)        
-            ->addViewsCount() // Could set a from and to date
+   	    ->addViewsCount($from, $to)
             ->joinField('inventory_in_stock', 'cataloginventory/stock_item','is_in_stock', 'product_id=entity_id', '{{table}}.is_in_stock=1');
 
 Mage::getSingleton('catalog/product_status')->addVisibleFilterToCollection($products);
@@ -21,7 +28,7 @@ $products->getSelect()->limit( 500 );
 Mage::app()->setCurrentStore(Mage::getModel('core/store')->load(Mage_Core_Model_App::ADMIN_STORE_ID));
 
 $categoryId = 2; //replace with your category id
-$categoryId = 25; //replace with your category id
+$categoryId = 3; //replace with your category id
 
 $newPosition = 5;
 

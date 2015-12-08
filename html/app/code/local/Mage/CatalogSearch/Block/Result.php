@@ -75,8 +75,8 @@ class Mage_CatalogSearch_Block_Result extends Mage_Core_Block_Template
 
         // modify page title
         //$title = $this->__("Search results for: '%s'", $this->helper('catalogsearch')->getEscapedQueryText());
-        $title = $this->__("Vind %s op Olgo.nl - LEGO en DUPLO kopen", $this->helper('catalogsearch')->getEscapedQueryText());
-        $description = $this->__("%s op Olgo.nl - breed koop aanbod van LEGO en DUPLO", $this->helper('catalogsearch')->getEscapedQueryText());
+        $title = $this->__("%s - Olgo.nl LEGO webwinkel", $this->helper('catalogsearch')->getEscapedQueryText());
+        $description = $this->__("LEGO %s Exclusief aanbod en snel in huis.", $this->helper('catalogsearch')->getEscapedQueryText());
         $this->getLayout()->getBlock('head')->setTitle($title);
         $this->getLayout()->getBlock('head')->setDescription($description);
 

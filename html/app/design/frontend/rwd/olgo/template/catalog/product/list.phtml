@@ -64,7 +64,9 @@
             <div class="product-shop">
                 <div class="f-fix">
                     <div class="product-primary">
-                        <?php $_productNameStripped = $this->stripTags($_product->getName(), null, true); ?>
+                        <?php 
+                            $_productNameStripped = $this->stripTags($_product->getName(), null, true); 
+                         ?>
                         <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped; ?>"><?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?></a></h2>
                         <?php if($_product->getRatingSummary()): ?>
                         <?php echo $this->getReviewsSummaryHtml($_product) ?>
@@ -133,8 +135,16 @@
                     <?php if ($_product->getAttributeText('hardtofind') == "Hard to find"):  ?>
                        <div class="hardtofindtag">Hard to find</div>
                     <?php endif; ?>
+                <?php
+                   $_productNameStripped = $this->stripTags($_product->getName(), null, true);
+                   // echo $_helper->productAttribute($_product, $_product->getName(), 'name')
+                   // FOR SEO OPTIMIZATION
+                   $_productNameStripped = str_replace("LEGO City - ", "", $_productNameStripped); 
+                   $_productNameStripped = str_replace("LEGO CITY - ", "", $_productNameStripped);
+                   
+                ?>
                 <div class="product-info">
-                    <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
+                    <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped; ?> kopen bij olgo"><?php echo $_productNameStripped; ?></a></h2>
                     <?php
                     // Provides extra blocks on which to hang some features for products in the list
                     // Features providing UI elements targeting this block will display directly below the product name

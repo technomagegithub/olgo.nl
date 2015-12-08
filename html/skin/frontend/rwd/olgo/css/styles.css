@@ -4035,7 +4035,7 @@ a.skip-link {
 }
 .footer .block-subscribe {
   float: right;
-  width: 40%;
+  width: 48.4%;
   margin-bottom: 30px;
 }
 .footer .form-subscribe-header label {
@@ -4095,7 +4095,7 @@ a.skip-link {
 }
 .footer .block-subscribe .input-box {
   float: left;
-  width: 60.625%;
+  width: 58%;
   padding-top: 0;
 }
 .footer .block-subscribe .input-text {
@@ -5178,7 +5178,7 @@ p.product-name a:hover {
 @media only screen and (max-width: 479px) {
   .product-img-box .product-image {
     margin-bottom: 5px;
-    min-height: 250px;
+    min-height: 320px;
   }
   .product-img-box .product-image img {
     max-height: 450px;
@@ -5187,7 +5187,13 @@ p.product-name a:hover {
     float: none;
     width: 100%;
   } 
-
+  .breadcrumbs {
+    font-size: 90%;
+  }
+  .product-view .product-shop .product-name .h1, .product-view .product-img-box .product-name h1 {
+    font-size: 150%;
+  }
+ 
 }
 .product-image-gallery {
   position: relative;
@@ -9603,6 +9609,7 @@ div.paypal-logo span > img {
   cursor: pointer;
   padding: 4px 6px;
   text-align: left;
+  list-style: none;
 }
 .search-autocomplete ul li:hover {
   color: #2e8ab8;

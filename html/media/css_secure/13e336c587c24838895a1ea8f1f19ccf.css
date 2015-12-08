@@ -27,7 +27,7 @@
    HTML5 display definitions
    ========================================================================== */
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,300,700,900);
+/*@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,300,700,900);*/
 
 html, body {
   height: 100%; 
@@ -902,13 +902,13 @@ body:not(.customer-account) .block:first-child .block-title {
 #co-shipping-method-form .buttons-set .button,
 .footer .button {
   background: #ef8200;
+  box-shadow: inset 0 -2px 0 0 #d67400;
   display: inline-block;
   padding: 7px 15px;
   border: 0;
   color: #FFFFFF;
   font-size: 16px;
-  font-weight: normal;
-  line-height: 19px;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
@@ -1101,7 +1101,7 @@ a.button:hover {
  * Icons
  */
 .icon-sprite, .btn-remove2, .ratings .rating-box, .ratings .rating-box .rating, .sorter > .sort-by .sort-by-switcher, .sorter > .view-mode .grid,
-.sorter > .view-mode .list, .skip-nav .icon, .skip-search .icon, #search_mini_form .search-button:before, .skip-account .icon, .skip-cart .icon, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating {
+.sorter > .view-mode .list, .skip-nav .icon, .skip-search .icon, #search_mini_form .search-button:before,#search_form .search-button:before, .skip-account .icon, .skip-cart .icon, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating {
   background-image: url(https://www.olgo.nl/skin/frontend/rwd/olgo/images/icon_sprite.png);
   background-repeat: no-repeat;
   text-indent: -9999px;
@@ -1109,7 +1109,7 @@ a.button:hover {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 4 / 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .icon-sprite, .btn-remove2, .ratings .rating-box, .ratings .rating-box .rating, .sorter > .sort-by .sort-by-switcher, .sorter > .view-mode .grid,
-  .sorter > .view-mode .list, .skip-nav .icon, .skip-search .icon, #search_mini_form .search-button:before, .skip-account .icon, .skip-cart .icon, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating {
+  .sorter > .view-mode .list, .skip-nav .icon, .skip-search .icon, #search_mini_form .search-button:before,#search_form .search-button:before, .skip-account .icon, .skip-cart .icon, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating {
     background-image: url(https://www.olgo.nl/skin/frontend/rwd/olgo/images/icon_sprite@2x.png);
     background-size: 100px 1000px;
   }
@@ -1152,8 +1152,9 @@ a.button:hover {
 }
 
 @media only screen and (max-width: 770px) {
-  .breadcrumbs {
+  .breadcrumbs strong {
     display: none;
+    font-size: 100%;
   }
 }
 /* -------------------------------------------- *
@@ -1344,7 +1345,7 @@ footer {
 
 .col-right {
   float: right;
-  width: 25%;
+  width: 18%;
   padding-right: 0;
   /* Remove the 15px padding */
 }
@@ -1461,6 +1462,13 @@ footer {
   .col2-set .col-2 {
     padding: 10px;
   }
+  #checkout-step-login .col-1, #checkout-step-login .col-2 {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 1% !important;
+    margin-bottom: 30px;
+  }
 }
 .col2-set .col-1 {
   float: left;
@@ -1480,6 +1488,12 @@ footer {
     padding-left: 4px;
     margin-top: 20px;
     border: 1px solid #ececec;
+  }
+  #checkout-step-login .col-1, #checkout-step-login .col-2 {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 1% !important;
   }
 }
 .col2-set .narrow {
@@ -1991,6 +2005,7 @@ span.weee {
   position: relative;
   display: block;
   border: 1px solid #dddddd;
+  background: #FFFFFF;
 }
 
 @media only screen and (max-width: 770px) {
@@ -2037,7 +2052,7 @@ span.weee {
  * Standard Formatted Text Block
  */
 .std p {
-  margin: 0 0 1.5em;
+  margin: 0 0 1.2em;
 }
 
 .std ol {
@@ -2789,14 +2804,15 @@ p.required,
 }
 
 
-.form-list .control input[type="radio"]:checked+label{  background-color: #e5f6ff; } 
+.form-list .control input[type="radio"]:checked+label{  background-color: #e5f6ff;} 
+.form-list .control input[type="radio"]:checked+label{  background-color: #e5f6ff;} 
 
 .form-list .control label,
 .sp-methods dt label,
 #checkout-shipping-method-load .sp-methods dd label,
 #co-shipping-method-form .sp-methods dd label,
 .product-options ul.options-list label {
-  background-color: #efefef;
+  background-color: #fafafa;
   padding: 5px 10px;
   display: inline-block;
   width: auto;
@@ -2834,7 +2850,7 @@ p.required,
   min-width: inherit;
   width: 335px;
   max-width: 100%;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .form-list .control.remember-me-box label {
@@ -3373,7 +3389,7 @@ a.skip-link {
   display: none;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
   .skip-link .label {
     display: inline;
   }
@@ -3415,7 +3431,7 @@ a.skip-link {
 }
 .account-cart-wrapper {
   position: absolute;
-  top: 0px;
+  top: 15px;
   right: 0px;
 }
 @media only screen and (max-width: 770px) {
@@ -3468,8 +3484,8 @@ a.skip-link {
     display: block;
     /* Force visibility */
     /*border-bottom: 1px solid #ededed;*/
-    margin-left: 70px;
-    padding-top: 12px;
+    margin-left: 90px;
+    padding-top: 20px;
   }
 }
 /* ============================================ *
@@ -3521,7 +3537,7 @@ a.skip-link {
     display: none;
   }
   .nav-primary li.level0 li {
-    padding: 0 0 0 25px;
+    padding: 0 0 0 15px;
   }
   .nav-primary li.level1 a {
     padding: 0 15px 0 25px;
@@ -3574,7 +3590,7 @@ a.skip-link {
     /* Level 1+ */
   }
   .nav-primary a.level0 {
-    padding: 0 25px;
+    padding: 0 15px;
   }
   .nav-primary li.level0,
   .nav-primary a.level0 {
@@ -3663,12 +3679,27 @@ a.skip-link {
 #header-search {
   padding: 20px;
 }
+#content-search {
+  width:100%;
+  max-width:1200px;
+}
+#content-search input{
+  width: 100%;
+  height: 38px;
+}
+#content-search button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 38px;
+}
 
 @media only screen and (min-width: 771px) {
   #header-search {
-    display: block;
-/*    position: absolute; */
-    top: 0px;
+    display: none;
+    position: absolute; 
+    top: 35px;
+    right: 10px;
     width: 30%;
     margin-left: 94px;
     height: 30px;
@@ -3679,7 +3710,7 @@ a.skip-link {
 /* ============================================ *
  * Search Input
  * ============================================ */
-#search_mini_form .input-box {
+#search_mini_form .input-box, #search_form .input-box {
   position: relative;
   padding-top: 0; 
 }
@@ -3817,6 +3848,7 @@ a.skip-link {
     top: 40px;
     right: 0;
     background: white;
+    min-width: 320px;
   }
 }
 /* -------------------------------------------- *
@@ -3980,7 +4012,7 @@ a.skip-link {
  /* font-weight: 600;*/
 }
 .footer .block-title,
-.footer address {
+.footer address, .footer address a {
   color: #FFFFFF;
   border-top: none;
 }
@@ -4003,7 +4035,7 @@ a.skip-link {
 }
 .footer .block-subscribe {
   float: right;
-  width: 40%;
+  width: 48.4%;
   margin-bottom: 30px;
 }
 .footer .form-subscribe-header label {
@@ -4063,7 +4095,7 @@ a.skip-link {
 }
 .footer .block-subscribe .input-box {
   float: left;
-  width: 60.625%;
+  width: 58%;
   padding-top: 0;
 }
 .footer .block-subscribe .input-text {
@@ -5146,7 +5178,7 @@ p.product-name a:hover {
 @media only screen and (max-width: 479px) {
   .product-img-box .product-image {
     margin-bottom: 5px;
-    min-height: 250px;
+    min-height: 320px;
   }
   .product-img-box .product-image img {
     max-height: 450px;
@@ -5155,7 +5187,13 @@ p.product-name a:hover {
     float: none;
     width: 100%;
   } 
-
+  .breadcrumbs {
+    font-size: 90%;
+  }
+  .product-view .product-shop .product-name .h1, .product-view .product-img-box .product-name h1 {
+    font-size: 150%;
+  }
+ 
 }
 .product-image-gallery {
   position: relative;
@@ -5371,6 +5409,7 @@ p.product-name a:hover {
 .product-view .sharing-links li {
   float: left;
   padding: 0px 7px 7px;
+  line-height: 1;
 }
 .product-view .sharing-links a {
   text-indent: -9999px;
@@ -6189,7 +6228,7 @@ p.product-name a:hover {
 .cart-forms .discount,
 .cart-forms .giftcard,
 .cart-forms .shipping {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .checkout-cart-index #postcode {
@@ -6781,15 +6820,14 @@ p.product-name a:hover {
   border-bottom: 1px solid #E6E6E6;
 }
 .cart .cart-totals table tfoot td {
-  font-size: 24px;
-  padding: 2px 5px;
+  padding: 2px 0px;
   vertical-align: top;
 }
 .cart .cart-totals table tfoot strong span,
 .cart .cart-totals table tfoot span.price {
 }
 .cart .cart-totals table tfoot strong {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 600px) {
@@ -7471,13 +7509,17 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 /* ============================================ *
  * Checkout - Success
  * ============================================ */
+.checkout-onepage-success .col-main h1 {
+   color: #0654ba;
+   font-weight: 700;
+}
 .checkout-onepage-success .col-main {
   padding: 0;
-  text-align: center;
+  text-align: left;
 }
 .checkout-onepage-success .buttons-set {
   margin: 10px 0;
-  text-align: center;
+  text-align: left;
 }
 .checkout-onepage-success .buttons-set button {
   float: none;
@@ -9428,6 +9470,7 @@ div.paypal-logo span > img {
   text-align: center;
 }
 .header-minicart .minicart-actions .checkout-button {
+  width: 100%;
   min-width: 145px;
 }
 .header-minicart .minicart-actions .cart-link {
@@ -9471,6 +9514,7 @@ div.paypal-logo span > img {
     z-index: 1;
   }
 }
+
 @media only screen and (max-width: 770px) {
   .header-minicart .subtotal .label {
   }
@@ -9565,6 +9609,7 @@ div.paypal-logo span > img {
   cursor: pointer;
   padding: 4px 6px;
   text-align: left;
+  list-style: none;
 }
 .search-autocomplete ul li:hover {
   color: #2e8ab8;
@@ -9697,7 +9742,9 @@ div.paypal-logo span > img {
   color: #0090e3;
 }
 .cms-page-view .std h2,
-.cms-no-route .std h2 {
+.cms-no-route .std h2,
+.box h2,
+.box2 h2{
   color: #0090e3;
 }
 .cms-page-view .std li,
@@ -10643,8 +10690,8 @@ div.calendar table td.button {
  top: 1px;
  padding: 2px 5px;
  font-size: 60%
-
 }
+
 @media only screen and (max-width: 770px) {
   .bigger-hero {
      border: solid 1px #eeeeee;
@@ -10761,11 +10808,18 @@ div.calendar table td.button {
   border: solid 1px #0090e3;
 }
 
+#populair .price {
+  top:0px;
+  padding:0;
+  font-size: 105%;
+  position: relative; 
+  color: #0654ba;
+  font-weight: 700;
+  background:0;
+  
+}
+
 .hero-simple .recent_product .price {
- color: #FFFFFF;
- display: block;
- position: absolute;
- background: #ef8200;
  top: 20px;
  padding: 5px 15px;
  font-size:100%;
@@ -10786,6 +10840,11 @@ div.calendar table td.button {
   display: inline-block;
 
 }
+  .col4 .imgage5,
+  .col4 .imgage9,
+  .col4 .imgage13 {
+    clear: left;
+  }
 
 @media only screen and (max-width: 768px) {
   .hero-simple .recent_product .price {
@@ -10808,8 +10867,13 @@ div.calendar table td.button {
   .col4 .recent_product{
     width: 49%;
   }
-  .col4 .imgage3    {
-       clear: left;
+  .col4 .imgage3,
+  .col4 .imgage5,
+  .col4 .imgage7,
+  .col4 .imgage9,
+  .col4 .imgage11,
+  .col4 .imgage13 {
+    clear: left;
   }
 }
 
@@ -10911,6 +10975,10 @@ div.calendar table td.button {
   max-width: 1200px;
 }
 
+.box img {
+  max-width: 100%;
+}
+
 .box2 {
   background-color: #eeeeee;
 }
@@ -11002,7 +11070,81 @@ ul.products-grid li {
   padding: 10px;
   margin-right: 1%;
   width: 49%;
-
 }
+.veilig-betalen {
+  width:100%; 
+  height:100%
+}
+.veilig-betalen img {
+  display: block; margin: auto auto;width:100%;max-width:871px;height:auto;
+}
+
+.homelink {
+  font-size: 120%;
+  padding-bottom: 20px;
+  display: block;
+}
+
+.nextImage, .prevImage {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    text-align: center;
+    width: 15%;
+    height: 100%;
+    max-height: 500px;
+    position: absolute;
+    opacity: 0;
+    z-index: 8;
+    cursor: pointer;
+    transition: opacity .2s;
+    color: #ef8200;
+    font-size: 380%;
+    background-color: rgba(255, 255, 255, .1);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+.nextImage { right: 0; }
+.nextImage:hover, .prevImage:hover {
+    opacity: 0.9;
+}
+@media only screen and (max-width: 768px) {
+ .nextImage, .prevImage {
+    opacity: 0.4;
+    background-color: rgba(255, 255, 255, .0);
+ }
+ .nextImage:hover, .prevImage:hover {
+    opacity: 0.4;
+}
+}
+
+.pcnl-info-text {
+  font-size: 80%;
+}
+
+@media only screen and (min-width: 770px) {
+  .kassa-hide {
+    display:none !important;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .kassa {
+    display:none !important;
+  }
+}
+.kassa {
+  padding-left: 100px;
+  padding-top: 20px;
+}
+.kassa1, .kassa2 {
+  font-weight: 900;
+  font-size: 160%;
+  color: #ef8200;
+}
+.kassa2 {
+  font-weight: 400;
+  color:#0654ba;  
+}
+
+.checkout-onepage-index .page-title, .checkout-onepage-index .footer .block-subscribe, .checkout-onepage-index .footer .links { display: none; }
 
 
