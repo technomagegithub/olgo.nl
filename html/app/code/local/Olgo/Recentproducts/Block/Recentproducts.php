@@ -38,6 +38,7 @@ class Olgo_Recentproducts_Block_Recentproducts extends Mage_Core_Block_Template 
         'showTitle' => $showTitle,
         'url' => $product->getProductUrl(),
         'price' => Mage::helper('core')->currency($product->getFinalPrice(),true,false),
+        'orgPrice' => Mage::helper('core')->currency($product->getPrice(),true,false),
         'thumbnailUrl' => $product->getThumbnailUrl($image_size,$image_size),
         'shortDescription' => $product->getShortDescription()
       );

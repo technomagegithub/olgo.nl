@@ -6,10 +6,32 @@ $products = $this->getRecentProducts();
         $i=0;
         foreach($products as $product) { 
          $i++; ?>
-         <div class="recent_product imgage<?php echo $i ?>">
-            <a href="<?php echo $product['url'] ?>"><img src="<?php echo $product['thumbnailUrl'] ?>" alt="<?php echo $product['name'] ?> kopen"></a>
-            <?php if ($product['showTitle'] == true): ?><div class="title"><a href="<?php echo $product['url'] ?>"><?php echo $product['name']?></a></div><?php endif; ?>
-            <span class="price"><?php echo $product['price'] ?></span>
+         <div class="recent_product imgage<?php echo $i ?>" onclick='window.location = this.getElementsByTagName("a")[0].href; return false;'>
+            <?php if ($product['showTitle'] != true): ?>
+              <a href="<?php echo $product['url'] ?>" title="<?php echo $product['name'];?>">
+            <?php endif; ?>
+            <img src="<?php echo $product['thumbnailUrl'] ?>" alt="<?php echo $product['name'] ?> kopen">
+            <?php if ($product['showTitle'] != true): ?>
+              </a>
+            <?php endif; ?>
+
+            <?php if ($product['showTitle'] == true): ?>
+              <div class="title"><a href="<?php echo $product['url'] ?>" title="<?php echo $product['name'];?>"><?php echo $product['name']?></a></div>
+              <span class="shortDescription"><?php echo $product['shortDescription'];?></span>
+            <?php endif; ?>
+            <span class="price">
+              <?php if ($product['orgPrice'] != $product['price']) : ?>
+                <span class="originalPrice"><?php echo $product['orgPrice'] ?></span>&nbsp;&nbsp;
+              <?php endif; ?>
+              <?php echo $product['price'] ?>
+            </span>
+            <?php if ($product['orgPrice'] != $product['price']) { ?>
+               <?php 
+                  $_discount = preg_replace('€&nbsp;','',$product['price']) * 100 /  preg_replace('€&nbsp;','',$product['orgPrice']);
+                  $_discount = round(100 - filter_var($product['price'], FILTER_SANITIZE_NUMBER_INT) * 100 / filter_var($product['orgPrice'], FILTER_SANITIZE_NUMBER_INT),0,PHP_ROUND_HALF_DOWN);
+               ?>
+               <div class="korting"><?php echo $_discount;?>% Korting</div>
+            <?php } ?>
          </div>
    <?php } ?>
   <?php } ?>

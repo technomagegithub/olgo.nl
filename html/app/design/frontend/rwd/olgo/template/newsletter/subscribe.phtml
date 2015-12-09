@@ -25,14 +25,18 @@
  */
 ?>
 <div class="block block-subscribe">
+    <div>
+      <h5 style="color:#FFFFFF;">Volg ons en weet als eerste over nieuwe producten en aanbiedingen!<h5>
+      <a target="_blank" href="https://www.facebook.com/olgonl"><img style="display:inline;width:40px;margin-right:4px;" src="/media/wysiwyg/icons/facebook.jpg" alt="Olgo Lego op Facebook" /></a>
+      <a target="_blank" href="https://www.pinterest.com/olgolego/"><img style="display:inline;width:40px;margin-right:4px;" src="/media/wysiwyg/icons/pinterest.jpg" alt="Olgo op Pinterest" /></a>
+      <a target="_blank" href="https://plus.google.com/+OlgoNl/"><img style="display:inline;width:40px;margin-right:4px;" src="/media/wysiwyg/icons/googleplus.jpg" alt="Olgo op Google+" /></a>
+      <a target="_blank" href="https://youtube.com/c/OlgoNl"><img style="display:inline;width:40px;margin-right:4px;" src="/media/wysiwyg/icons/youtube.jpg" alt="Olgo op youtube" /></a>
+    </div>
     <div class="block-title">
         <strong><span><?php echo $this->__('Newsletter') ?></span></strong>
     </div>
     <form action="<?php echo $this->getFormActionUrl() ?>" method="post" id="newsletter-validate-detail">
         <div class="block-content">
-            <div class="form-subscribe-header">
-                <label for="newsletter"><?php echo $this->__('Sign Up for Our Newsletter:') ?></label>
-            </div>
             <div class="input-box">
                <input type="email" autocapitalize="off" autocorrect="off" spellcheck="false" name="email" id="newsletter" title="<?php echo $this->__('Sign up for our newsletter') ?>" class="input-text required-entry validate-email" />
             </div>
@@ -46,4 +50,5 @@
         var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
     //]]>
     </script>
+   
 </div>
