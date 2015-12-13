@@ -145,6 +145,7 @@
                 ?>
                 <div class="product-info">
                     <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped; ?> kopen bij olgo"><?php echo $_productNameStripped; ?></a></h2>
+                    <span class="shortDescription"><?php echo $_product->getShortDescription();?></span>
                     <?php
                     // Provides extra blocks on which to hang some features for products in the list
                     // Features providing UI elements targeting this block will display directly below the product name
@@ -158,6 +159,16 @@
                     }
                     ?>
                     <?php echo $this->getPriceHtml($_product, true) ?>
+                    <?php 
+                       $price    = Mage::helper('core')->currency($_product->getPrice(),true,false);
+                       $orgPrice = Mage::helper('core')->currency($_product->getFinalPrice(),true,false);
+                       if ($orgPrice != $price) { 
+                          $_discount = round(100 - filter_var($price, FILTER_SANITIZE_NUMBER_INT) * 100 / filter_var($orgPrice, FILTER_SANITIZE_NUMBER_INT),0,PHP_ROUND_HALF_DOWN);
+                       ?>
+                      <div class="korting"><?php echo $_discount;?>% Korting</div>
+                    <?php } ?>
+
+
                     <?php if($_product->getRatingSummary()): ?>
                     <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
                     <?php endif; ?>

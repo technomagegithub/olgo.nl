@@ -1777,8 +1777,8 @@ footer {
 .price-box .price {
   color: #0090e3;
   color: #0654ba;
-  font-weight: 700;
-  font-size: 120%;
+  font-weight: 600;
+  font-size: 110%;
   
 }
 
@@ -1820,11 +1820,12 @@ footer {
 .price-box .old-price .price {
   color: #a0a0a0;
   text-decoration: line-through;
+  font-weight: 400;
 }
 
 .price-box .special-price {
   color: #0090e3;
-  padding-left: 1em;
+  padding-left: 5px;
 }
 .price-box .special-price .price-label {
   color: #D84D3C;
@@ -2004,7 +2005,6 @@ span.weee {
 .no-touch .product-img-box .product-image:not(.zoom-available):hover {
   position: relative;
   display: block;
-  border: 1px solid #dddddd;
   background: #FFFFFF;
 }
 
@@ -4276,8 +4276,7 @@ h3.product-name a,
 h4.product-name a,
 h5.product-name a,
 p.product-name a {
-  color: #636363;
-  color: #292929;
+  color: #0654ba;
 }
 h2.product-name a:hover,
 h3.product-name a:hover,
@@ -4291,12 +4290,17 @@ p.product-name a:hover {
 .products-grid .product-name,
 .products-list .product-name {
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  margin-top: 5px;
   font-size: 90%;
+  min-height: 38px;
+  max-height: 38px;
+  overflow: hidden;
+  display: block;
 }
 .products-grid .product-name a,
 .products-list .product-name a {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 /* ============================================ *
@@ -4316,6 +4320,9 @@ p.product-name a:hover {
   position: relative;
   margin-bottom: 20px;
   text-align: left;
+  background: #FFFFFF;
+  border: solid 1px #dddddd;
+  padding: 8px;
 }
 .products-grid > li:after {
   content: '';
@@ -4342,8 +4349,7 @@ p.product-name a:hover {
 }
 
 .products-grid .product-info {
-  position: relative;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
 }
 
 .products-grid .actions {
@@ -4375,8 +4381,8 @@ p.product-name a:hover {
 /* Config: Two columns + flexible gutter */
 .products-grid > li {
   float: left;
-  width: 47.72727%;
-  margin-right: 4.54545%;
+  width: 49%;
+  margin-right: 1%;
 }
 
 .products-grid > li:nth-child(odd) {
@@ -4453,17 +4459,17 @@ p.product-name a:hover {
 
   .products-grid--max-4-col > li:nth-child(even),
   .products-grid--max-4-col > li:nth-child(3n) {
-    margin-right: 2.22222%;
+    margin-right: 1%;
   }
 
   /* Set column config */
   .products-grid--max-4-col > li {
-    margin-right: 2.22222%;
+    margin-right: 1%;
   }
 
   .products-grid--max-4-col > li {
-    width: 23.33333%;
-    margin-right: 2.22222%;
+    width: 24.22%;
+    margin-right: 1%;
   }
 
   .products-grid--max-4-col > li:nth-child(4n+1) {
@@ -10833,7 +10839,7 @@ div.calendar table td.button {
   border: solid 1px #427fed;
 }
 
-.recent_product .shortDescription {
+.shortDescription {
   font-size: 12px;
   color: #999;
   max-height: 50.4px;
@@ -10913,7 +10919,8 @@ div.calendar table td.button {
 
 /*@media only screen and (max-width: 768px) {*/
 @media only screen and (max-width: 800px) {
-  .hero-simple .recent_product .price {
+  .hero-simple .recent_product .price,
+  .products-grid .price-box {
      font-size: 80%;
   }
   .bigscreen {
@@ -10998,8 +11005,9 @@ div.calendar table td.button {
   color: #FFFFFF;
   display: block;
   position: absolute;
-  background: #ef8200;
+  background: #0654ba;
   top: 0px;
+  right: 0px;
   padding: 2px 2px;
   font-size: 60%;
   text-transform: uppercase;
