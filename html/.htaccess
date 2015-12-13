@@ -200,8 +200,12 @@ ExpiresDefault A0
   Header append Cache-Control "public"
 </filesMatch> 
 # Set up caching on media files for 1 week
-<filesMatch "\.(gif|jpg|jpeg|png|swf|js|css)$">
+<filesMatch "\.(gif|jpg|jpeg|png|swf)$">
   ExpiresDefault A604800
+  Header append Cache-Control "public"
+</filesMatch>
+<filesMatch "\.(js|css)$">
+  ExpiresDefault A7200
   Header append Cache-Control "public"
 </filesMatch>
 # Set up 24 Hour caching on commonly updated files

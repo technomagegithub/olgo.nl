@@ -2,6 +2,9 @@
 
 require_once 'app/Mage.php';
 Mage::app();
+$today = time();
+$last = $today - (60*60*24*2);
+$from = date("Y-m-d", $last);
 
 
 $todayDate  = Mage::app()->getLocale()->date()->toString(Varien_Date::DATETIME_INTERNAL_FORMAT);
@@ -18,6 +21,9 @@ foreach ($collection as $product) {
         if ($price == $special_price) {
           echo "\n".$price." - ".$special_price." are the same, resetting values";
           $product->setSpecialPrice('')->setSpecialFromDate('')->setSpecialToDate('')->save();
+        } else {
+          $product->setSpecialFromDate($from)->save();
+
         }
 }
 
