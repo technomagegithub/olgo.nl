@@ -55,7 +55,7 @@
             <p class="description"><?php echo $this->__('Register with us for future convenience:') ?></p>
         <?php endif ?>
         <?php if( $this->getQuote()->isAllowedGuestCheckout() ): ?>
-            <ul class="form-list">
+            <ul class="form-list form-list-register">
                 <?php if( $this->getQuote()->isAllowedGuestCheckout() ): ?>
                 <li class="control">
                     <input type="radio" name="checkout_method" id="login:guest" value="guest"<?php if($this->getQuote()->getCheckoutMethod()!=Mage_Checkout_Model_Type_Onepage::METHOD_REGISTER): ?> checked="checked"<?php endif; ?> class="radio" /><label for="login:guest"><?php echo $this->__('Checkout as Guest') ?></label>
@@ -91,7 +91,7 @@
         <div class="fieldset">
             <?php echo $this->getBlockHtml('formkey'); ?>
             <p class="description"><?php echo $this->__('Sign in to speed up your checkout process') ?></p>
-            <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+            <!--<p class="required"><?php echo $this->__('* Required Fields') ?></p>-->
             <ul class="form-list">
                 <li>
                     <label for="login-email" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>

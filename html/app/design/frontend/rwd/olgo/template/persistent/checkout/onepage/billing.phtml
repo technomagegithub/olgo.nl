@@ -158,6 +158,7 @@
                 <li><?php echo $this->getTaxvatHtml() ?></li>
             <?php endif; ?>
 
+                <li class="fields"><br /><div><input type="checkbox" id="changeGuest" onchange="changeRegister();"><label for="changeGuest"><b style="color: #0654ba;font-size:95%;">&nbsp;<?php echo $this->__('Register and Checkout') ?></b></label></div><br /></li>
                 <li class="fields" id="register-customer-password">
                     <div class="field">
                         <label for="billing:customer_password" class="required"><em>*</em><?php echo $this->__('Password') ?></label>
@@ -225,6 +226,17 @@
                 }
             }
         });
+    }
+    function changeRegister() {
+      if ($('login:register').checked) {
+        $('login:guest').checked = true;
+        $('login:register').checked = false;
+        checkout.setMethod();
+      } else {
+        $('login:guest').checked = false;
+        $('login:register').checked = true;
+        checkout.setMethod();
+      }
     }
 //]]>
 </script>

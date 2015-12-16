@@ -46,6 +46,7 @@
         <?php endif; ?>
     </div>
     <?php echo $this->getMessagesBlock()->toHtml() ?>
+  <div class="pageCartLeft">
     <?php echo $this->getChildHtml('form_before') ?>
     <form action="<?php echo $this->getUrl('checkout/cart/updatePost') ?>" method="post">
         <?php echo $this->getBlockHtml('formkey'); ?>
@@ -62,6 +63,7 @@
             <?php endif; ?>
 
         <?php $mergedCells = ($this->helper('tax')->displayCartBothPrices() ? 2 : 1); ?>
+        <?php /* NO HEADERS
             <thead>
                 <tr>
                     <th rowspan="<?php echo $mergedCells; ?>"><span class="nobr"><?php echo $this->__('Product') ?></span></th>
@@ -79,7 +81,7 @@
 
                         <?php /*if ($this->helper('wishlist')->isAllowInCart()) : ?>
                             <span class="nobr"><?php echo $this->__('Move to Wishlist') ?></span>
-                        <?php endif*/ ?>
+                        <?php endif ?>
 
                     </th>
 
@@ -101,6 +103,8 @@
                 </tr>
                 <?php endif; ?>
             </thead>
+*/ ?>
+<?php /*
             <tfoot>
                 <tr>
                     <td colspan="50" class="a-right cart-footer-actions">
@@ -116,9 +120,6 @@
                         <span class="or">-<?php echo $this->__('or'); ?>-</span>
                         -->
 
-                        <?php if($this->getContinueShoppingUrl()): ?>
-                            <button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="button2 btn-continue" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
-                        <?php endif; ?>
                         <!--[if lt IE 8]>
                         <input type="hidden" id="update_cart_action_container" />
                         <script type="text/javascript">
@@ -144,6 +145,7 @@
                     </td>
                 </tr>
             </tfoot>
+*/ ?>
             <tbody>
             <?php foreach($this->getItems() as $_item): ?>
                 <?php echo $this->getItemHtml($_item) ?>
@@ -157,27 +159,52 @@
     <div class="cart-forms">
         <?php /* Extensions placeholder */ ?>
         <?php echo $this->getChildHtml('checkout_cart_widget') ?>
-        <?php echo $this->getChildHtml('coupon') ?>
         <?php echo $this->getChildHtml('checkout.cart.extra') ?>
         <?php if (!$this->getIsVirtual()): echo $this->getChildHtml('shipping'); endif; ?>
     </div>
     <div class="cart-totals-wrapper">
         <div class="cart-totals">
             <?php echo $this->getChildHtml('totals'); ?>
-            <?php if(!$this->hasError()): ?>
-            <ul class="checkout-types bottom">
-            <?php foreach ($this->getMethods('methods') as $method): ?>
+            <div class="cart-actions">
+              <?php if($this->getContinueShoppingUrl()): ?>
+                <button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="button2 btn-continue" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
+              <?php endif; ?>
+              <?php if(!$this->hasError()): ?>
+              <ul class="checkout-types bottom">
+              <?php foreach ($this->getMethods('methods') as $method): ?>
                 <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
                 <li class="method-<?php echo preg_replace("/[^_a-zA-Z0-9-]/", '-', $method); ?>"><?php echo $methodHtml; ?></li>
                 <?php endif; ?>
-            <?php endforeach; ?>
-            </ul>
-            <?php endif; ?>
+              <?php endforeach; ?>
+              </ul>
+              <?php endif; ?>
+            </div>
         </div>
     </div>
+  </div>
+  <div class="pageCartRight">
+    <div class="box">
+      <span style="font-weight: 600; color: #0654ba; font-size:120%"><strong style="font-weight: 900; color: #ef8200">Veilig</strong> betalen met</span><br />
+      <img src="/media/wysiwyg/website/veiligbetalenmet.png" alt="veilig betalen met ideal, paypal, afterpay" />
+    </div>
+    <div class="box">
+     <ul>
+       <li><strong>gratis</strong> verzending boven de € 100</li>
+       <!--<li><strong>gratis</strong> retourneren</li>-->
+       <li><strong>14 dagen</strong> bedenktijd</li>
+       <li>winkelmand wordt 30 dagen bewaard</li>
+     </ul>
+    </div>
+    <div class="box">
+      <?php echo $this->getChildHtml('coupon') ?>
+    </div>
+  </div>
+ 
+
     <?php echo $this->getChildHtml('crosssell') ?>
 </div>
-
+<!--
 <div class="veilig-betalen">
   <img src="/media/wysiwyg/website/veilig-betalen.png" alt="veilig betalen met iDeal en PayPal" />
 </div>
+-->
