@@ -2932,7 +2932,7 @@ form .form-instructions {
 
 
 .data-table tfoot tr {
-  background: #f4f4f4;
+ /* background: #f4f4f4; */
 }
 
 .data-table tbody td .item-options {
@@ -3059,11 +3059,11 @@ form .form-instructions {
   }
   .linearize-table tfoot td:nth-child(odd) {
     clear: left;
-    width: 60%;
+    width: 70%;
   }
   .linearize-table tfoot td:nth-child(even) {
-    text-align: left;
-    width: 40%;
+    text-align: right;
+    width: 30%;
   }
   .linearize-table .linearize-hide {
     display: none;
@@ -7094,9 +7094,11 @@ p.product-name a:hover {
 .opc .section .step-title h2 {
   font-weight: 400;
   line-height: 40px;
+  font-size: 140%;
   height: 40px;
   float: left;
   margin: 0px 4px 0px 45px;
+ 
 }
 
 .opc .section .step {
@@ -7323,12 +7325,11 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 .block-progress dt.complete {
 }
 .block-progress dd {
-  padding-left: 15px;
+  padding-left: 0px;
   margin-bottom: 10px;
   font-style: italic;
 }
 .block-progress dd address {
-  font-style: italic;
 }
 .block-progress #payment-progress-opcheckout .subtitle {
   margin-bottom: 3px;
@@ -11178,6 +11179,8 @@ div.calendar table td.button {
 
 .voorwaarden {
   padding-bottom: 20px;
+  font-size: 70%;
+  color: #999;
 }
 
 .sp-methods dt input.radio {
@@ -11190,7 +11193,8 @@ div.calendar table td.button {
 #checkout-payment-method-load dt label {
   background-color: #e5f6ff;
   width: 100%;
-  border: 1px solid #eeeeee;
+  border: 1px solid #8dc8ea;
+  font-weight: 800;
 }
 .sp-methods .form-list {
   border: 1px solid #eeeeee;
@@ -11331,8 +11335,8 @@ ul.products-grid li {
   margin-bottom: 15px;
 }
 
-.pageCartRight ul { list-style-type: none; padding-left: 15px;}
-.pageCartRight ul li:before { 
+.pageCartRight ul.service-items { list-style-type: none; padding-left: 15px;}
+.pageCartRight ul.service-items li:before { 
   content:">"; 
   position: relative; 
   left:-5px;
@@ -11348,7 +11352,7 @@ ul.products-grid li {
   display: inline-block;
   padding-left: 14px
 }
-.pageCartRight ul li { 
+.pageCartRight ul.service-items li { 
   text-indent:-8px; 
   margin-bottom: 10px;
 }
@@ -11376,6 +11380,9 @@ ul.products-grid li {
     height: 25px;
     font-size: 80%;
   }
+  .opc .section .step-title h2 {font-size: 120%;}
+  #shipping_method-progress-opcheckout {display: none;}
+  #payment-progress-opcheckout {display: none;}
 }
 
 #checkout-step-login ul.form-list-register {
@@ -11383,5 +11390,53 @@ ul.products-grid li {
 }
 
 #checkout-step-login button { width: 100%; }
+
+ul.trust-items {
+  margin-top: 5px;
+  width:100%;
+}
+ul.trust-items .trust-items-description {
+  display:none;
+}
+li.trust-items {
+  margin: 0 .3rem .5rem;
+  margin-bottom: 0;
+  display: inline-block;
+  background: url(/media/wysiwyg/website/veiligbetalenmet.png) no-repeat;
+  height: 30px;
+}
+.trust-items-ideal {
+  background-position: -0px 0 !important;
+  width: 36px;
+}
+.trust-items-paypal {
+  background-position: -36px 0 !important;
+  width: 109px;
+}
+.trust-items-sofort {
+  background-position: -150px 0 !important;
+  width: 94px;
+}
+
+#checkout-review-table th { font-weight: bold; }
+#checkout-review-table h3 { font-weight: 600; color: #0654ba; }
+#checkout-review-table td:nth-child(4) {text-align: right; font-weight: 700; }
+#checkout-review-table thead th:nth-child(2) {text-align: left;}
+#checkout-review-table thead th:nth-child(4) {text-align: right;}
+#checkout-review-table thead th:nth-child(4) {text-align: right;}
+#checkout-review-table tfoot tr:nth-child(2) .price {color: #0654ba;font-size:110%}
+#checkout-review-table tfoot tr:nth-child(2) td {font-size:110%}
+@media only screen and (max-width: 800px) {
+  #checkout-review-table th { font-size: 90%; }
+  #checkout-review-table h3 { font-weight: 600; color: #0654ba; font-size: 90%;}
+  #checkout-review-table tbody td:nth-child(2) {font-size: 70%; }
+  #checkout-review-table tbody td:nth-child(3) {font-size: 70%; }
+  #checkout-review-table tbody td:nth-child(4) {font-size: 80%; }
+
+
+}
+
+
+
 
 

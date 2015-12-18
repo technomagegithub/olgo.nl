@@ -84,7 +84,7 @@ store name = $_order->getStore()->getGroup()->getName()
         <?php endif; ?>
         <?php if ($_order->getShippingAmount() || $_order->getShippingDescription()): ?>
             <tr>
-                <td colspan="2" align="right" style="padding:3px 9px"><?php echo $this->__('Shipping &amp; Handling') ?></td>
+                <td colspan="2" align="right" style="padding:3px 9px">aaaaa<?php echo $this->__('Shipping &amp; Handling') ?></td>
                 <td align="right" style="padding:3px 9px"><?php echo $_order->formatPrice($_order->getShippingAmount()) ?></td>
             </tr>
         <?php endif; ?>
