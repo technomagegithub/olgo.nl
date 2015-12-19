@@ -47,10 +47,19 @@
     </td>
 </tr>
 <?php else:?>
+  <?php  
+    $roleId = Mage::getSingleton('customer/session')->getCustomerGroupId();
+    $role = Mage::getSingleton('customer/group')->load($roleId)->getData('customer_group_code');
+    $role = strtolower($role);
+  ?>
 <tr>
     <td style="<?php echo $this->getStyle() ?>" class="a-right" colspan="<?php echo $this->getColspan(); ?>">
         <strong><?php echo $this->getTotal()->getTitle() ?></strong>
+        <?php if ($role == 'b2b'): ?>
+        <div class="taxMessage"><?php echo $this->__('excluding taxes');?></div>
+        <?php else: ?>
         <div class="taxMessage"><?php echo $this->__('including taxes');?></div>
+        <?php endif; ?>
     </td>
     <td style="<?php echo $this->getStyle() ?>" class="a-right">
         <strong><?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValue()) ?></strong>

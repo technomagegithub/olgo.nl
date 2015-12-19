@@ -2744,6 +2744,13 @@ input:-moz-placeholder {
   font-weight: normal;
   vertical-align: top;
 }
+.radio-inline {
+  padding-left: 20px;
+  cursor: pointer;
+}
+.radio-inline input[type="radio"] {
+  margin-right: 5px;
+}
 
 /* -------------------------------------------- *
  * Validation
@@ -11456,4 +11463,8 @@ li.trust-items {
 
 .product-info .preorder-item {
   font-size: 80%;
+}
+.businessLabel {
+  float: left;
+  padding-bottom: 5px;
 }
