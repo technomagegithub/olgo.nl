@@ -5,7 +5,7 @@ Mage::app();
 
 
 $today = time();
-$last = $today - (60*60*24*6);
+$last = $today - (60*60*24*10);
  
 $from = date("Y-m-d", $last);
 $to = date("Y-m-d", $today);

@@ -67,11 +67,19 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
             <?php echo $this->escapeHtml($this->getProductName()) ?>
         <?php endif; ?>
         </h2>
-	<!--
+        
+        <?php
+        $_product = Mage::getModel('catalog/product')->load($_item->getProduct()->getId());
+        if($_product->getPreorder()){
+          echo '<div class="preorder-item" style="margin-bottom: 5px;"><span>Pre Order</span>'.$_product->getPreordernote().'</div>';
+        } ?>
+
+        <?php /*
         <div class="product-cart-sku">
             <span class="label"><?php echo $this->__('SKU'); ?>:</span> <?php echo $this->escapeHtml($_item->getSku()); ?>
         </div>
-        -->
+        */ ?>
+
         <?php if ($_options = $this->getOptionList()):?>
         <dl class="item-options">
             <?php foreach ($_options as $_option) : ?>

@@ -98,14 +98,13 @@
                         <div class="std" property="description"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                     </div>
                 <?php endif;?>
-
-                <span class="forward-link" style="color:#000;font-size:90%;font-weight: 700;">14 dagen bedenktijd</span>
-                <?php if ($_product->getFinalPrice() >= 99.99): ?>
-                <br /><span class="forward-link" style="color:#000;font-size:90%;font-weight: 700;">gratis verzending</span>
+                
+                <?php if(!$_product->getPreorder()) : ?>
+                  <span class="forward-link" style="color:#000;font-size:90%;font-weight: 700;">14 dagen bedenktijd</span>
+                  <?php if ($_product->getFinalPrice() >= 99.99): ?>
+                  <br /><span class="forward-link" style="color:#000;font-size:90%;font-weight: 700;">gratis verzending</span>
+                  <?php endif;?>
                 <?php endif;?>
-
-
-
 
                 <?php echo $this->getChildHtml('other');?>
 
@@ -127,7 +126,7 @@
                                 <span class="or"><?php echo $this->__('OR') ?></span>
                             <?php endif; ?>
                         <?php endif; ?>
-                        <?php echo $this->getChildHtml('addto') ?>
+                          <?php echo $this->getChildHtml('addto') ?>
                     </div>
                     <?php echo $this->getChildHtml('extra_buttons') ?>
                 <?php elseif (!$_product->isSaleable()): ?>
@@ -136,8 +135,6 @@
                     </div>
                 <?php endif; ?>
 
-                <?php ?>
-	        
 	        <?php echo $this->getChildHtml('sharing') ?>
             </div>
             

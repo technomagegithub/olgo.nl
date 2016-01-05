@@ -30,6 +30,21 @@
     <tr>
         <td class="cell-content product-info">
         <p class="product-name"><?php echo $this->escapeHtml($_item->getName()) ?></p>
+        <?php
+         $_product = Mage::getModel('catalog/product')->load($_item->getProduct()->getId());
+         if($_product->getPreorder()){
+	 echo '<div style="margin-bottom: 5px;"><span style="float: left;
+               padding-left: 5px;
+               padding-right: 5px;
+               background-color: #71A3D2;
+               -webkit-border-radius: 5px;
+               -moz-border-radius: 5px;
+               border-radius: 5px;
+               color: #FFF;
+               margin-right: 5px;">Pre Order</span>'
+              .$_product->getPreordernote()
+              .'</div>';
+        } ?>
         <p class="sku"><?php echo $this->__('SKU'); ?>: <?php echo $this->escapeHtml($this->getSku($_item)) ?></p>
             <?php if ($this->getItemOptions()): ?>
                 <dl style="margin:0; padding:0;">

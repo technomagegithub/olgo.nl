@@ -27,6 +27,11 @@
 <?php $_item = $this->getItem()?>
 <tr>
     <td><h3 class="product-name"><?php echo $this->escapeHtml($this->getProductName()) ?></h3>
+        <?php
+        $_product = Mage::getModel('catalog/product')->load($_item->getProduct()->getId());
+        if($_product->getPreorder()){
+	  echo '<div class="preorder-item" style="margin-bottom: 5px;"><span>Pre Order</span>'.$_product->getPreordernote().'</div>';
+        } ?>
         <?php if ($_options = $this->getOptionList()):?>
         <dl class="item-options">
             <?php foreach ($_options as $_option) : ?>

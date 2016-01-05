@@ -4346,6 +4346,7 @@ p.product-name a:hover {
 .products-grid .product-image {
   width: 100%;
   margin-bottom: 15px;
+  border: 0px !important;
 }
 
 .products-grid .product-image img {
@@ -11417,6 +11418,10 @@ li.trust-items {
   background-position: -150px 0 !important;
   width: 94px;
 }
+.trust-items-afterpay {
+  background-position: -247px 0 !important;
+  width: 99px;
+}
 
 #checkout-review-table th { font-weight: bold; }
 #checkout-review-table h3 { font-weight: 600; color: #0654ba; }
@@ -11432,11 +11437,23 @@ li.trust-items {
   #checkout-review-table tbody td:nth-child(2) {font-size: 70%; }
   #checkout-review-table tbody td:nth-child(3) {font-size: 70%; }
   #checkout-review-table tbody td:nth-child(4) {font-size: 80%; }
-
-
 }
 
+.preorder-item span {
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #0654ba;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #FFF;
+  margin-right: 5px;
+}
+.preorder-item {
+  font-weight: 600;
+}
 
-
-
-
+.product-info .preorder-item {
+  font-size: 80%;
+}

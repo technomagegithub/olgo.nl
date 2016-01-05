@@ -88,7 +88,7 @@
                         <?php echo $this->getPriceHtml($_product, true) ?>
                     </div>
                     <div class="product-secondary">
-                        <?php if(!$_product->canConfigure() && $_product->isSaleable()): ?>
+                        <?php if(!$_product->canConfigure() && $_product->isSaleable() && !$_product->getPreorder()): ?>
                             <p class="action"><button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button></p>
                         <?php elseif($_product->getStockItem() && $_product->getStockItem()->getIsInStock()): ?>
                             <p class="action"><a title="<?php echo $this->__('View Details') ?>" class="button" href="<?php echo $_product->getProductUrl() ?>"><?php echo $this->__('View Details') ?></a></p>
@@ -148,6 +148,12 @@
                 <div class="product-info">
                     <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped; ?> kopen bij olgo"><?php echo $_productNameStripped; ?></a></h2>
                     <span class="shortDescription"><?php echo $_product->getShortDescription();?></span>
+                    <?php if($_product->getPreorder()) {
+                    $preordernote = $_product->getPreordernote();
+                    if($_product->getPreorder() && $preordernote){
+                      // echo '<div class="preorder-item" style="margin-bottom: 5px;"><span>Pre Order</span>'.$preordernote.'</div>';
+                      echo '<div class="preorder-item" style="margin-bottom: 5px;">'.$preordernote.'</div>';
+                    } }?>
                     <?php
                     // Provides extra blocks on which to hang some features for products in the list
                     // Features providing UI elements targeting this block will display directly below the product name
